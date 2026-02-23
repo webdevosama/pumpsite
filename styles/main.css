@@ -1,12 +1,12 @@
 :root {
   /* Brand Colors */
-  --main-color: #1e2a4a;        /* Deep Navy */
-  --secondary-color: #94a3b8;   /* Blue-Grey */
-  --bg-color: #f8fafc;          /* Light Slate Gray (Off-white) */
+  --main-color: #1e3575;        /* Deep Navy */
+  --secondary-color: #899cb5;   /* Blue-Grey */
+  --bg-color: #dee8ef;          /* Light Slate Gray (Off-white) */
   --white: #ffffff;
   
   /* Derived Colors for transparency */
-  --secondary-transparent: rgba(148, 163, 184, 0.5);
+  --secondary-transparent: rgba(60, 95, 172, 0.468);
 }
 
 /* Base Body Styles using the source of truth */
@@ -14,7 +14,6 @@ body {
   background-color: var(--bg-color);
   color: var(--main-color);
 }
-
 /* --- Animated Wave Component --- */
 .waves-container {
   position: relative;
@@ -30,6 +29,7 @@ body {
   max-height: 150px;
   /* Prevent thin white line at bottom */
   margin-bottom: -1px; 
+  background-color: white; /* Fallback background color */
 }
 
 .parallax > use {
@@ -40,14 +40,16 @@ body {
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 10s;
-  fill: var(--secondary-transparent);
+  fill: currentColor; /* <--- CHANGED: Now adapts to parent text color */
+  opacity: 0.5;       /* <--- ADDED: Creates the transparent effect automatically */
 }
 
-/* Layer 2: Foreground (Solid/Main Color) */
+/* Layer 2: Foreground (Solid) */
 .parallax > use:nth-child(2) {
   animation-delay: -5s;
   animation-duration: 18s;
-  fill: var(--main-color);
+  fill: currentColor; /* <--- CHANGED: Now adapts to parent text color */
+  opacity: 1;
 }
 
 @keyframes move-forever {
