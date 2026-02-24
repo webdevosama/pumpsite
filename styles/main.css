@@ -1,10 +1,10 @@
 :root {
   /* Brand Colors */
-  --main-color: #1e3575; /* Deep Navy */
-  --secondary-color: #899cb5; /* Blue-Grey */
-  --bg-color: #dee8ef; /* Light Slate Gray (Off-white) */
+  --main-color: #1e3575;        /* Deep Navy */
+  --secondary-color: #899cb5;   /* Blue-Grey */
+  --bg-color: #dee8ef;          /* Light Slate Gray (Off-white) */
   --white: #ffffff;
-
+  
   /* Derived Colors for transparency */
   --secondary-transparent: rgba(60, 95, 172, 0.468);
 }
@@ -28,12 +28,12 @@ body {
   min-height: 100px;
   max-height: 150px;
   /* Prevent thin white line at bottom */
-  margin-bottom: -1px;
+  margin-bottom: -1px; 
   background-color: white; /* Fallback background color */
 }
 
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 
 /* Layer 1: Background (Lighter/Translucent) */
@@ -41,7 +41,7 @@ body {
   animation-delay: -2s;
   animation-duration: 10s;
   fill: currentColor; /* <--- CHANGED: Now adapts to parent text color */
-  opacity: 0.5; /* <--- ADDED: Creates the transparent effect automatically */
+  opacity: 0.5;       /* <--- ADDED: Creates the transparent effect automatically */
 }
 
 /* Layer 2: Foreground (Solid) */
@@ -53,20 +53,62 @@ body {
 }
 
 @keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
+  0% { transform: translate3d(-90px, 0, 0); }
+  100% { transform: translate3d(85px, 0, 0); }
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem; /* Space between the two groups */
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%; /* Ensures it fills the screen */
+  animation: scroll-left 30s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused; /* Pause on hover for better user interaction */
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Fixed width for consistency */
+}
+
+.marquee-item img {
+  height: 60px; /* Force consistent height for all logos */
+  width: auto;
+  object-fit: contain;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translate3d(85px, 0, 0);
+  to {
+    transform: translateX(calc(-100% - 2rem)); /* Moves exactly one full set + gap */
   }
 }
+
+
+
+
 
 /* --- Minimalist Mobile Links (No Buttons) --- */
 .mobile-nav-link {
   display: block;
-  width: 100%; /* Full width for a larger tap target */
-  padding: 1rem 0; /* Vertical spacing */
-  text-align: center; /* Keeps text centered */
+  width: 100%;             /* Full width for a larger tap target */
+  padding: 1rem 0;         /* Vertical spacing */
+  text-align: center;      /* Keeps text centered */
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
