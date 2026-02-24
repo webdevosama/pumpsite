@@ -27,4 +27,5 @@ window.onload = () => {
   loadComponent("contact", "/components/contact.html");
   loadComponent("featured-products", "/components/products.html");
   loadComponent("about", "/components/about.html");
+  loadComponent("partners", "/components/partners.html");
 };

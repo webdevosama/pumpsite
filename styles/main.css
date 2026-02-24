@@ -56,3 +56,45 @@ body {
   0% { transform: translate3d(-90px, 0, 0); }
   100% { transform: translate3d(85px, 0, 0); }
 }
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem; /* Space between the two groups */
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%; /* Ensures it fills the screen */
+  animation: scroll-left 30s linear infinite;
+}
+
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; /* Fixed width for consistency */
+}
+
+.marquee-item img {
+  height: 60px; /* Force consistent height for all logos */
+  width: auto;
+  object-fit: contain;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2rem)); /* Moves exactly one full set + gap */
+  }
+}
