@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Ibrahim Abu Hassanein & partners Ltd. - Supplying, installing, and maintaining pumps in Sudan since 1966."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim Abu Hassanein & Partners Ltd. | Premium Pumps Sudan</title>
+    <meta
+      name="description"
+      content="Specializing in the supply, installation, and maintenance of world-class water, gas, and oil pumps in Sudan since 1966."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Ibrahim Abu Hassanein & Partners Ltd." />
+    <meta
+      property="og:description"
+      content="Supplying Sudan with World-Class Pumping Solutions Since 1966."
+    />
+    <meta property="og:url" content="https://abuhassanien.netlify.app/" />
+    <meta
+      property="og:image"
+      content="https://abuhassanien.netlify.app/assets/og-image.jpg"
+    />
+    <meta property="og:type" content="website" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ibrahim Abu Hassanein & Partners Ltd.",
+        "url": "https://abuhassanien.netlify.app/",
+        "logo": "https://abuhassanien.netlify.app/assets/partners-logos/caprari.webp",
+        "description": "Leading supplier of industrial pumps in Sudan.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Khartoum",
+          "addressCountry": "Sudan"
+        }
+      }
+    </script>
+    <title>Ibrahim Abu Hassanein & partners Ltd.</title>
+
+    <!-- Tailwind & Custom CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+
+    <script type="module" src="/js/main.js"></script>
+  </head>
+
+  <body class="bg-bgCustom text-gray-800">
+    <div id="header"></div>
+
+    <main>
+      <section class="bg-main py-20 text-white">
+        <div class="container mx-auto px-4">
+          <h1 class="text-4xl md:text-5xl font-bold">Project Gallery</h1>
+          <p class="text-blue-200 mt-4 text-lg">
+            A showcase of our industrial installations and premium pumping
+            solutions across Sudan.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+            <div
+              class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl cursor-pointer"
+              onclick="openLightbox('/assets/irrigation.jpg')"
+            >
+              <img
+                src="/assets/irrigation.jpg"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                alt="Large Irrigation Project"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8"
+              >
+                <p class="text-white font-bold">
+                  Agricultural Irrigation Systems
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative group overflow-hidden rounded-3xl cursor-pointer"
+              onclick="openLightbox('/assets/partners-logos/caprari.webp')"
+            >
+              <img
+                src="/assets/partners-logos/caprari.webp"
+                class="w-full h-full object-contain bg-white p-4 transition-transform duration-500 group-hover:scale-110"
+                alt="Partner Tech"
+              />
+              <div
+                class="absolute inset-0 bg-main/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+              >
+                <span class="text-white text-3xl">+</span>
+              </div>
+            </div>
+
+            <div
+              class="md:row-span-2 relative group overflow-hidden rounded-3xl cursor-pointer"
+              onclick="openLightbox('/assets/og-image.jpg')"
+            >
+              <img
+                src="/assets/og-image.jpg"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                alt="Industrial Pump"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"
+              >
+                <p class="text-white text-sm font-bold">Submersible Pumps</p>
+              </div>
+            </div>
+
+            <div
+              class="relative group overflow-hidden rounded-3xl cursor-pointer"
+              onclick="openLightbox('/assets/irrigation.jpg')"
+            >
+              <img
+                src="/assets/irrigation.jpg"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                alt="Installation Site"
+              />
+            </div>
+
+            <div
+              class="md:col-span-2 relative group overflow-hidden rounded-3xl cursor-pointer"
+              onclick="openLightbox('/assets/og-image.jpg')"
+            >
+              <img
+                src="/assets/og-image.jpg"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                alt="Oil & Gas Pump"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-main/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"
+              >
+                <p class="text-white font-bold">Industrial Gas Sets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-main/95 z-[100] hidden flex-items-center justify-center p-4"
+      onclick="closeLightbox()"
+    >
+      <span class="absolute top-10 right-10 text-white text-4xl cursor-pointer"
+        >&times;</span
+      >
+      <img
+        id="lightbox-img"
+        class="max-w-full max-h-[80vh] rounded-xl shadow-2xl"
+        src=""
+        alt="Full View"
+      />
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>

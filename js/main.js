@@ -1,7 +1,7 @@
 import { configureTailwind } from "./tailwind.js";
 import { loadComponent } from "./load-scripts.js";
 import { initMap } from "./load-map.js";
-
+import { initGallery } from "./gallery.js";
 configureTailwind();
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -33,5 +33,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Only initialize the map if the specific container exists (Contact Page)
   if (document.getElementById("map-container")) {
     initMap("map-container");
+  }
+
+  // Initialize Gallery only if the lightbox exists
+  if (document.getElementById("lightbox")) {
+    initGallery();
   }
 });
