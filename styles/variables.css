@@ -1,0 +1,15 @@
+:root {
+  /* Brand Colors */
+  --main-color: #1e3575; 
+  --secondary-color: #899cb5; 
+  --bg-color: #dee8ef;
+  --white: #ffffff;
+  --secondary-transparent: rgba(60, 95, 172, 0.468);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  margin: 0;
+  font-family: sans-serif; /* Recommended base */
+}

@@ -1,27 +1,86 @@
 <nav class="site-header">
-  <div class="container">
-    <a href="../index.html" class="logo">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <a href="/index.html" class="logo text-xl font-bold tracking-tight">
       Ibrahim Abu Hassanein & Partners Ltd.
     </a>
 
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
+    <ul class="nav-links hidden md:flex gap-6 font-medium">
+      <li>
+        <a href="/index.html" class="hover:text-secondary transition-colors"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a href="/products.html" class="hover:text-secondary transition-colors"
+          >Products</a
+        >
+      </li>
+      <li>
+        <a href="/services.html" class="hover:text-secondary transition-colors"
+          >Services</a
+        >
+      </li>
+      <li>
+        <a href="/about.html" class="hover:text-secondary transition-colors"
+          >About Us</a
+        >
+      </li>
+      <li>
+        <a href="/contact.html" class="hover:text-secondary transition-colors"
+          >Contact</a
+        >
+      </li>
     </ul>
 
-    <button id="mobile-menu-btn" class="menu-toggle">☰</button>
+    <button
+      id="mobile-menu-btn"
+      class="menu-toggle  text-2xl focus:outline-none"
+      aria-label="Toggle Menu"
+    >
+      ☰
+    </button>
   </div>
 
-  <div id="mobile-menu" class="mobile-menu">
-    <ul>
-      <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="products.html" class="mobile-nav-link">Products</a></li>
-      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+  <div
+    id="mobile-menu"
+    class="mobile-menu  bg-main"
+  >
+    <ul class="flex flex-col py-4">
+      <li>
+        <a
+          href="/index.html"
+          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/products.html"
+          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
+          >Products</a
+        >
+      </li>
+      <li>
+        <a
+          href="/services.html"
+          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
+          >Services</a
+        >
+      </li>
+      <li>
+        <a
+          href="/about.html"
+          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
+          >About Us</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contact.html"
+          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
+          >Contact</a
+        >
+      </li>
     </ul>
   </div>
 </nav>

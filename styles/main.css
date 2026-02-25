@@ -15,6 +15,35 @@ body {
   color: var(--main-color);
 }
 
+/* Prevent the "wrecked" look during loading */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* Ensure the Hero component sits flush against the header */
+#hero {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#hero section {
+  margin: 0 !important;
+  display: flex; /* Ensures internal alignment doesn't create gaps */
+}
+
+/* If you use the wave animation at the top of a section, 
+   this -1px margin you already have is the secret sauce. */
+.waves {
+  margin-bottom: -1px;
+}
+
 .hero-vignette {
   box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.7);
 }

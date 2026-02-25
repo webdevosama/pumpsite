@@ -50,29 +50,53 @@
 
     <script type="module" src="/js/main.js"></script>
   </head>
-
   <body class="bg-bgCustom text-gray-800">
-    <!-- HEADER -->
     <div id="header"></div>
 
-    <!-- HERO SECTION -->
-    <div id="hero"></div>
+    <main>
+      <section class="relative py-24 bg-main text-white overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+            Our Legacy & Mission
+          </h1>
+          <p class="mt-4 text-xl text-blue-200 max-w-2xl">
+            Bridging Sudan’s water wealth with international pumping technology
+            since 1966.
+          </p>
+        </div>
+      </section>
 
-    <!-- QUICK HIGHLIGHTS -->
-    <div id="highlights"></div>
+      <section class="py-20 bg-white">
+        <div
+          class="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center"
+        >
+          <div>
+            <h2 class="text-3xl font-bold text-main mb-6">
+              Founded on Purpose
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Ibrahim Abu Hassanein & Co. was founded in 1966 by
+              <strong class="text-main">Ibrahim Abu Hassanein</strong>.
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="/assets/irrigation.jpg"
+              class="rounded-2xl shadow-2xl border-8 border-bgCustom"
+            />
+            <div
+              class="absolute -bottom-6 -left-6 bg-secondary text-white p-8 rounded-xl hidden lg:block"
+            >
+              <span class="text-4xl font-black block">60+</span>
+              <span class="text-sm uppercase tracking-widest font-bold"
+                >Years of Excellence</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <div id="partners"></div>
-
-    <!-- FEATURED PRODUCTS -->
-    <div id="featured-products"></div>
-
-    <!-- ABOUT US -->
-    <div id="about"></div>
-
-    <!-- CONTACT CTA -->
-    <div id="contact"></div>
-
-    <!-- FOOTER -->
     <div id="footer"></div>
   </body>
 </html>
