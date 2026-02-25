@@ -1,5 +1,6 @@
 import { configureTailwind } from "./tailwind.js";
 import { loadComponent } from "./load-scripts.js";
+import { initMap } from "./load-map.js";
 
 configureTailwind();
 
@@ -27,5 +28,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   } finally {
     // This is the "magic" line that prevents the messy loading look
     document.body.classList.add("loaded");
+  }
+
+  // Only initialize the map if the specific container exists (Contact Page)
+  if (document.getElementById("map-container")) {
+    initMap("map-container");
   }
 });
