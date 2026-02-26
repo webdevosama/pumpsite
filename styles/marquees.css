@@ -1,0 +1,35 @@
+/* --- Brand Identity & Global Fixes --- */
+:root {
+  --main-color: #1e3575;
+  --secondary-color: #899cb5;
+  --bg-color: #dee8ef;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  opacity: 0; /* Hidden until .loaded class is added via JS */
+  transition: opacity 0.4s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* Section Alignment Fixes */
+#hero {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#hero section {
+  margin: 0 !important;
+  display: flex;
+}
+
+.hero-vignette {
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.7);
+}

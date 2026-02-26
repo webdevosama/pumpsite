@@ -50,47 +50,196 @@
 
     <script type="module" src="/js/main.js"></script>
   </head>
-  <body class="bg-bgCustom text-gray-800">
+  <body class="bg-white text-gray-900 overflow-x-hidden">
     <div id="header"></div>
 
     <main>
-      <section class="relative py-24 bg-main text-white overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
-          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-            Our Legacy & Mission
+      <section class="relative pt-32 pb-20 bg-[#fbfbfb]">
+        <div class="container mx-auto px-6 text-center">
+          <div
+            class="inline-block px-4 py-1 rounded-full bg-main/5 text-main text-xs tracking-[0.3em] uppercase mb-6 border border-main/10"
+          >
+            Since 1966
+          </div>
+          <h1
+            class="text-5xl md:text-7xl font-bold text-main mb-6 tracking-tight"
+          >
+            Our Legacy & <span class="text-secondary">Mission.</span>
           </h1>
-          <p class="mt-4 text-xl text-blue-200 max-w-2xl">
+          <p
+            class="text-gray-500 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
+          >
             Bridging Sudan’s water wealth with international pumping technology
-            since 1966.
+            for over six decades.
           </p>
         </div>
       </section>
 
-      <section class="py-20 bg-white">
-        <div
-          class="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center"
-        >
-          <div>
-            <h2 class="text-3xl font-bold text-main mb-6">
-              Founded on Purpose
-            </h2>
-            <p class="text-gray-700 leading-relaxed mb-4">
-              Ibrahim Abu Hassanein & Co. was founded in 1966 by
-              <strong class="text-main">Ibrahim Abu Hassanein</strong>.
-            </p>
-          </div>
-          <div class="relative">
-            <img
-              src="/assets/irrigation.jpg"
-              class="rounded-2xl shadow-2xl border-8 border-bgCustom"
-            />
-            <div
-              class="absolute -bottom-6 -left-6 bg-secondary text-white p-8 rounded-xl hidden lg:block"
-            >
-              <span class="text-4xl font-black block">60+</span>
-              <span class="text-sm uppercase tracking-widest font-bold"
-                >Years of Excellence</span
+      <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="order-2 lg:order-1">
+              <div class="flex items-center gap-2 mb-6">
+                <span class="w-8 h-[2px] bg-secondary"></span>
+                <p
+                  class="text-xs font-bold tracking-widest text-secondary uppercase"
+                >
+                  Founded on Purpose
+                </p>
+              </div>
+              <h2 class="text-4xl font-bold text-main mb-8 leading-tight">
+                A Visionary Foundation by <br />Ibrahim Abu Hassanein
+              </h2>
+              <div
+                class="space-y-6 text-gray-500 font-light text-lg leading-relaxed"
               >
+                <p>
+                  Founded in 1966, our journey began with a simple but powerful
+                  goal: to provide reliable water solutions to the heart of
+                  Sudan.
+                  <strong class="text-main font-semibold"
+                    >Ibrahim Abu Hassanein</strong
+                  >
+                  recognized that the future of Sudanese agriculture and
+                  industry depended on precision engineering.
+                </p>
+                <p>
+                  Today, we continue that legacy by partnering with world-class
+                  manufacturers like
+                  <span class="text-main font-medium">Caprari</span> and
+                  <span class="text-main font-medium">Sigma</span>, ensuring
+                  that every pump we install is built for the harshest
+                  conditions.
+                </p>
+              </div>
+
+              <div class="mt-10">
+                <a
+                  href="contact.html"
+                  class="px-10 py-4 bg-main text-white rounded-full font-bold inline-flex items-center gap-3 hover:bg-secondary transition-all shadow-lg shadow-main/10 group"
+                >
+                  Work With Us
+                  <svg
+                    class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="relative order-1 lg:order-2">
+              <div
+                class="absolute -top-10 -right-10 w-64 h-64 bg-secondary/5 rounded-full -z-10 blur-3xl"
+              ></div>
+
+              <div
+                class="rounded-[50px] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.15)] border-8 border-white"
+              >
+                <img
+                  src="/assets/irrigation.jpg"
+                  class="w-full h-[600px] object-cover"
+                  alt="Irrigation Excellence"
+                />
+              </div>
+
+              <div
+                class="absolute -bottom-10 -left-10 bg-main text-white p-10 rounded-[40px] shadow-2xl hidden xl:block"
+              >
+                <div class="flex flex-col">
+                  <span class="text-6xl font-black text-secondary leading-none"
+                    >60+</span
+                  >
+                  <span
+                    class="text-xs uppercase tracking-[0.2em] font-bold mt-2 opacity-80"
+                    >Years of<br />Excellence</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 bg-[#fcfcfc] border-y border-gray-50">
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-3 gap-12 text-center">
+            <div class="space-y-4">
+              <div
+                class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto text-secondary"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h4 class="font-bold text-main">Reliability</h4>
+              <p class="text-gray-500 text-sm font-light">
+                Equipment tested for the demanding heat and dust of Sudan.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto text-secondary"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h4 class="font-bold text-main">Expertise</h4>
+              <p class="text-gray-500 text-sm font-light">
+                Six decades of engineering data and field experience.
+              </p>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto text-secondary"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h4 class="font-bold text-main">Sustainability</h4>
+              <p class="text-gray-500 text-sm font-light">
+                Efficient water management to preserve Sudan's resources.
+              </p>
             </div>
           </div>
         </div>

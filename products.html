@@ -121,85 +121,43 @@
         </button>
       </div>
 
-      <div
-        class="relative w-full max-w-7xl mx-auto h-[600px] flex items-center justify-center px-4"
-      >
-        <div
-          class="absolute left-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-20 scale-75 grayscale blur-[2px] hidden xl:block transition-all duration-700 border border-gray-200"
-        >
-          <img
-            src="/assets/gallery/4.jfif"
-            class="w-full h-full object-cover"
-          />
-        </div>
+      <div class="relative w-full max-w-7xl mx-auto h-[600px] flex items-center justify-center px-4">
+  
+  <div id="card-left" class="absolute left-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-40 scale-75 blur-md hidden xl:block transition-all duration-500 border border-gray-200">
+    <img src="/assets/gallery/4.jfif" class="w-full h-full object-cover" />
+  </div>
 
-        <div
-          class="z-20 w-full max-w-[500px] h-[600px] bg-white rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden flex flex-col transition-all duration-500"
-        >
-          <div
-            class="h-[55%] bg-[#fcfcfc] p-12 flex items-center justify-center relative border-b border-gray-50"
-          >
-            <img
-              src="/assets/gallery/7.png"
-              class="max-h-full object-contain drop-shadow-xl"
-              alt="Product"
-            />
-            <span
-              class="absolute top-8 right-10 text-gray-100 font-black text-8xl -z-10"
-              >01</span
-            >
-          </div>
-
-          <div class="h-[45%] p-10 bg-white flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2 mb-3">
+  <div id="card-center" class="z-20 w-full max-w-[500px] h-[600px] bg-white rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden flex flex-col transition-all duration-500">
+    
+    <div class="h-[55%] bg-[#fcfcfc] p-12 flex items-center justify-center relative border-b border-gray-50">
+        <img src="/assets/gallery/7.png" class="max-h-full object-contain drop-shadow-xl" alt="Product" />
+        <span class="absolute top-8 right-10 text-gray-100 font-black text-8xl -z-10">01</span>
+    </div>
+    
+    <div class="h-[45%] p-10 bg-white flex flex-col justify-between">
+        <div>
+            <div class="flex items-center gap-2 mb-3">
                 <span class="w-8 h-[2px] bg-secondary"></span>
-                <p
-                  class="text-xs font-bold tracking-widest text-secondary uppercase"
-                >
-                  Premium Series
-                </p>
-              </div>
-              <h3 class="text-3xl font-bold text-main mb-3 tracking-tight">
-                Caprari E-Series
-              </h3>
-              <p class="text-gray-500 font-normal leading-relaxed text-sm">
-                Italian engineering at its peak. The E-Series delivers high flow
-                rates for borehole water extraction with maximum energy
-                efficiency.
-              </p>
+                <p class="text-xs font-bold tracking-widest text-secondary uppercase">Premium Series</p>
             </div>
-
-            <button
-              class="w-full py-4 bg-main text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-secondary transition-all group shadow-lg shadow-main/10"
-            >
-              <span>Technical Specifications</span>
-              <svg
-                class="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </button>
-          </div>
+            <h3 class="text-3xl font-bold text-main mb-3 tracking-tight">Caprari E-Series</h3>
+            <p class="text-gray-500 font-normal leading-relaxed text-sm">
+                Italian engineering at its peak. The E-Series delivers high flow rates for borehole water extraction with maximum energy efficiency.
+            </p>
         </div>
+        
+        <button class="w-full py-4 bg-main text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-secondary transition-all group shadow-lg shadow-main/10">
+            <span>Technical Specifications</span>
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+    </div>
+  </div>
 
-        <div
-          class="absolute right-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-20 scale-75 grayscale blur-[2px] hidden xl:block transition-all duration-700 border border-gray-200"
-        >
-          <img
-            src="/assets/gallery/1.jfif"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
+  <div id="card-right" class="absolute right-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-40 scale-75 blur-md hidden xl:block transition-all duration-500 border border-gray-200">
+    <img src="/assets/gallery/1.jfif" class="w-full h-full object-cover" />
+  </div>
+
+</div>
 
       <div class="flex justify-center gap-6 mt-16">
         <button

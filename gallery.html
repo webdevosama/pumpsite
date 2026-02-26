@@ -51,141 +51,261 @@
     <script type="module" src="/js/main.js"></script>
   </head>
 
-  <body class="bg-[#f8f9fa] text-gray-800">
-  <div id="header"></div>
+  <body class="bg-bgCustom text-gray-800">
+    <div id="header"></div>
+    <section class="relative pt-60 pb-32 overflow-hidden bg-[#0a1633]">
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/assets/gallery/hero.jpg" 
+      alt="Gallery Hero" 
+      class="w-full h-full object-cover"
+    >
+    <div class="absolute inset-0 bg-[#0a1633]/70 mix-blend-multiply"></div>
+  </div>
 
-  <main>
-    <section class="py-24 bg-white">
-      <div class="container mx-auto px-4 md:px-8 text-center max-w-4xl">
-        <h1 class="text-4xl md:text-5xl font-light tracking-wide text-main mb-4 uppercase">Project Gallery</h1>
-        <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
-        <p class="text-gray-500 text-lg font-light">A curated exhibition of our industrial installations, agricultural systems, and premium pumping solutions across Sudan.</p>
-      </div>
-    </section>
-
-    <section class="pb-24 bg-white">
-      <div class="container mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
-          
-          <div class="md:col-span-4 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/1.jfif', 'High-Pressure Pumping Station')">
-            <img src="/assets/gallery/1.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 1" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">High-Pressure Pumping Station</p>
-            </div>
-          </div>
-
-          <div class="md:col-span-5 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/2.jfif', 'Agricultural Irrigation')">
-            <img src="/assets/gallery/2.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 2" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Agricultural Irrigation</p>
-            </div>
-          </div>
-
-          <div class="md:col-span-3 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/3.jfif', 'Industrial Setup')">
-            <img src="/assets/gallery/3.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 3" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Industrial Setup</p>
-            </div>
-          </div>
-
-          <div class="md:col-span-5 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/4.jfif', 'Deep Well Submersibles')">
-            <img src="/assets/gallery/4.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 4" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Deep Well Submersibles</p>
-            </div>
-          </div>
-
-          <div class="md:col-span-4 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/5.jfif', 'Oil & Gas Manifolds')">
-            <img src="/assets/gallery/5.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 5" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Oil & Gas Manifolds</p>
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <div class="inline-block px-6 py-2 rounded-full bg-white/5 backdrop-blur-2xl text-white/90 text-[10px] font-bold tracking-[0.6em] uppercase mb-10 border border-white/10 shadow-2xl">
+      Portfolio Archive
+    </div>
+    
+    <h1 class="text-4xl md:text-6xl font-black text-white mb-8 tracking-[0.2em] uppercase leading-none">
+      OUR <span class="text-white/60">GALLERY</span>
+    </h1>
+    
+    <p class="text-white/50 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed tracking-wide">
+      A curated exhibition of our industrial installations and 
+      pumping solutions across Sudan.
+    </p>
+  </div>
+</section>
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p1', '/assets/gallery/1.jfif', 'Project Title 01')
+            "
+          >
+            <img
+              src="/assets/gallery/1.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 1"
+            />
+            <div
+              class="absolute inset-0 bg-[#1e3575]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white text-[10px] font-bold uppercase tracking-widest bg-[#1e3575] px-3 py-1 rounded"
+                >View Info</span
+              >
             </div>
           </div>
 
-          <div class="md:col-span-3 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/6.jfif', 'Maintenance Division')">
-            <img src="/assets/gallery/6.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 6" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Maintenance Division</p>
-            </div>
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject(
+                'p2',
+                '/assets/gallery/2.jfif',
+                'Agricultural Irrigation',
+              )
+            "
+          >
+            <img
+              src="/assets/gallery/2.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 2"
+            />
           </div>
 
-          <div class="md:col-span-3 h-[350px] relative group overflow-hidden cursor-pointer bg-white border border-gray-100 p-8 flex items-center justify-center" onclick="openLightbox('/assets/gallery/7.png', 'Caprari Pump Specs')">
-            <img src="/assets/gallery/7.png" class="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105" alt="Project 7" loading="lazy">
-            <div class="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-              <p class="text-main font-semibold tracking-wide">View Specifications</p>
-            </div>
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p3', '/assets/gallery/3.jfif', 'System Installation')
+            "
+          >
+            <img
+              src="/assets/gallery/3.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 3"
+            />
           </div>
 
-          <div class="md:col-span-5 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/8.jfif', 'Urban Water Supply')">
-            <img src="/assets/gallery/8.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 8" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Urban Water Supply</p>
-            </div>
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p4', '/assets/gallery/4.jfif', 'Deep Well Setup')
+            "
+          >
+            <img
+              src="/assets/gallery/4.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 4"
+            />
           </div>
 
-          <div class="md:col-span-4 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/9.jfif', 'Field Installation')">
-            <img src="/assets/gallery/9.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 9" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Field Installation</p>
-            </div>
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p5', '/assets/gallery/5.jfif', 'Industrial Pump')
+            "
+          >
+            <img
+              src="/assets/gallery/5.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 5"
+            />
           </div>
 
-          <div class="md:col-span-4 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/10.jfif', 'Pipeline Integration')">
-            <img src="/assets/gallery/10.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 10" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Pipeline Integration</p>
-            </div>
-          </div>
-          <div class="md:col-span-4 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/11.jfif', 'Control Panels')">
-            <img src="/assets/gallery/11.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 11" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Control Panels</p>
-            </div>
-          </div>
-          <div class="md:col-span-4 h-[350px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/12.jfif', 'Testing Facility')">
-            <img src="/assets/gallery/12.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 12" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-6 left-6 right-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white font-light tracking-wide">Testing Facility</p>
-            </div>
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p6', '/assets/gallery/6.jfif', 'Maintenance Site')
+            "
+          >
+            <img
+              src="/assets/gallery/6.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 6"
+            />
           </div>
 
-          <div class="md:col-span-6 h-[400px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/13.jfif', 'Large Scale Extraction')">
-            <img src="/assets/gallery/13.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 13" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-8 left-8 right-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white text-lg font-light tracking-wide">Large Scale Extraction</p>
-            </div>
-          </div>
-          <div class="md:col-span-6 h-[400px] relative group overflow-hidden cursor-pointer bg-gray-100" onclick="openLightbox('/assets/gallery/14.jfif', 'Renewable Solar Pumps')">
-            <img src="/assets/gallery/14.jfif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 14" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div class="absolute bottom-8 left-8 right-8 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-              <p class="text-white text-lg font-light tracking-wide">Renewable Solar Pumps</p>
-            </div>
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-200 bg-[#dee8ef] p-4"
+            onclick="
+              showProject(
+                'p7',
+                '/assets/gallery/7.png',
+                'Technical Specification',
+              )
+            "
+          >
+            <img
+              src="/assets/gallery/7.png"
+              class="w-full h-full object-contain mix-blend-multiply"
+              alt="Gallery 7"
+            />
           </div>
 
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p8', '/assets/gallery/8.jfif', 'Site Inspection')
+            "
+          >
+            <img
+              src="/assets/gallery/8.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 8"
+            />
+          </div>
+
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p9', '/assets/gallery/9.jfif', 'Water Extraction')
+            "
+          >
+            <img
+              src="/assets/gallery/9.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 9"
+            />
+          </div>
+
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p10', '/assets/gallery/10.jfif', 'Municipal Supply')
+            "
+          >
+            <img
+              src="/assets/gallery/10.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 10"
+            />
+          </div>
+
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject(
+                'p11',
+                '/assets/gallery/11.jfif',
+                'Engineering Project',
+              )
+            "
+          >
+            <img
+              src="/assets/gallery/11.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 11"
+            />
+          </div>
+
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p12', '/assets/gallery/12.jfif', 'Field Operations')
+            "
+          >
+            <img
+              src="/assets/gallery/12.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 12"
+            />
+          </div>
+
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject(
+                'p13',
+                '/assets/gallery/13.jfif',
+                'Large Scale Extraction',
+              )
+            "
+          >
+            <img
+              src="/assets/gallery/13.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 13"
+            />
+          </div>
+
+          <div
+            class="relative aspect-square group overflow-hidden cursor-pointer rounded-xl border border-gray-100"
+            onclick="
+              showProject('p14', '/assets/gallery/14.jfif', 'Solar Pumping')
+            "
+          >
+            <img
+              src="/assets/gallery/14.jfif"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="Gallery 14"
+            />
+          </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col items-center justify-center p-4" onclick="closeLightbox()">
-    <button class="absolute top-6 right-8 text-white/50 hover:text-white text-5xl font-light transition-colors duration-300" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" class="max-w-full max-h-[75vh] object-contain shadow-2xl" src="" alt="Full View" onclick="event.stopPropagation()">
-    <p id="lightbox-caption" class="text-white/80 mt-6 text-xl font-light tracking-widest uppercase"></p>
-  </div>
+    <div
+      id="lightbox"
+      class="fixed inset-0 bg-main/95 z-[100] hidden flex-items-center justify-center p-4"
+      onclick="closeLightbox()"
+    >
+      <span class="absolute top-10 right-10 text-white text-4xl cursor-pointer"
+        >&times;</span
+      >
+      <img
+        id="lightbox-img"
+        class="max-w-full max-h-[80vh] rounded-xl shadow-2xl"
+        src=""
+        alt="Full View"
+      />
+    </div>
 
-  <div id="footer"></div>
-</body>
+    <div id="footer"></div>
+  </body>
 </html>

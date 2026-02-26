@@ -1,0 +1,39 @@
+/* --- Wave Component Engine --- */
+.waves-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.waves {
+  width: 100%;
+  height: 12vh;
+  min-height: 100px;
+  max-height: 150px;
+  margin-bottom: -1px; /* Prevents 1px gap */
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  fill: currentColor; /* Matches parent color */
+}
+
+/* Layer 1: Background (Translucent) */
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 10s;
+  opacity: 0.5;
+}
+
+/* Layer 2: Foreground (Solid) */
+.parallax > use:nth-child(2) {
+  animation-delay: -5s;
+  animation-duration: 18s;
+  opacity: 1;
+}
+
+@keyframes move-forever {
+  0% { transform: translate3d(-90px, 0, 0); }
+  100% { transform: translate3d(85px, 0, 0); }
+}
