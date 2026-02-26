@@ -1,49 +1,247 @@
-<section class="py-20 bg-slate-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-main mb-12">Featured Products</h2>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Ibrahim Abu Hassanein & partners Ltd. - Supplying, installing, and maintaining pumps in Sudan since 1966."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim Abu Hassanein & Partners Ltd. | Premium Pumps Sudan</title>
+    <meta
+      name="description"
+      content="Specializing in the supply, installation, and maintenance of world-class water, gas, and oil pumps in Sudan since 1966."
+    />
+    <meta name="robots" content="index, follow" />
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Product Card -->
-            <div
-                class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
-                <img src="assets/drinking-water.jpg" class="w-full h-48 object-cover" alt="Drinking Water Pump" />
-                <div class="p-6">
-                    <h3 class="text-xl font-bold">Drinking Water Pumps</h3>
-                    <p class="text-gray-600 mt-2 text-sm">Reliable solutions for municipal and domestic supply.</p>
-                    <a href="products.html" class="mt-4 inline-block text-main font-bold hover:underline">Learn More
-                        →</a>
-                </div>
-            </div>
+    <meta property="og:title" content="Ibrahim Abu Hassanein & Partners Ltd." />
+    <meta
+      property="og:description"
+      content="Supplying Sudan with World-Class Pumping Solutions Since 1966."
+    />
+    <meta property="og:url" content="https://abuhassanien.netlify.app/" />
+    <meta
+      property="og:image"
+      content="https://abuhassanien.netlify.app/assets/og-image.jpg"
+    />
+    <meta property="og:type" content="website" />
 
-            <!-- Product Card -->
-            <div
-                class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
-                <img src="assets/irrigation.jpg" class="w-full h-48 object-cover" alt="Irrigation Pump" />
-                <div class="p-6">
-                    <h3 class="text-xl font-bold">Irrigation Pumps</h3>
-                    <p class="text-gray-600 mt-2 text-sm">Efficient pumping for large scale agriculture and farming.</p>
-                    <a href="products.html" class="mt-4 inline-block text-main font-bold hover:underline">Learn More
-                        →</a>
-                </div>
-            </div>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ibrahim Abu Hassanein & Partners Ltd.",
+        "url": "https://abuhassanien.netlify.app/",
+        "logo": "https://abuhassanien.netlify.app/assets/partners-logos/caprari.webp",
+        "description": "Leading supplier of industrial pumps in Sudan.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Khartoum",
+          "addressCountry": "Sudan"
+        }
+      }
+    </script>
+    <title>Ibrahim Abu Hassanein & partners Ltd.</title>
 
-            <!-- Product Card -->
-            <div
-                class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
-                <img src="assets/industrial.jpg" class="w-full h-48 object-cover" alt="Industrial Pump" />
-                <div class="p-6">
-                    <h3 class="text-xl font-bold">Industrial Pumps</h3>
-                    <p class="text-gray-600 mt-2 text-sm">Heavy‑duty pumps for factories and construction projects.</p>
-                    <a href="products.html" class="mt-4 inline-block text-main font-bold hover:underline">Learn More
-                        →</a>
-                </div>
-            </div>
+    <!-- Tailwind & Custom CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+
+    <script type="module" src="/js/main.js"></script>
+  </head>
+
+  <body class="bg-white text-gray-900 overflow-x-hidden">
+    <div id="header"></div>
+
+    <section class="relative pt-32 pb-20 bg-[#fbfbfb]">
+      <div class="container mx-auto px-6 text-center">
+        <div
+          class="inline-block px-4 py-1 rounded-full bg-main/5 text-main text-xs tracking-[0.3em] uppercase mb-6 border border-main/10"
+        >
+          Established 1966
+        </div>
+        <h1
+          class="text-5xl md:text-7xl font-bold text-main mb-6 tracking-tight"
+        >
+          Engineering <span class="text-secondary">Excellence.</span>
+        </h1>
+        <p
+          class="text-gray-500 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
+        >
+          High-performance pumping solutions curated for Sudan's most demanding
+          industrial and agricultural environments.
+        </p>
+
+        <div class="mt-10">
+          <a
+            href="#catalog"
+            class="px-10 py-4 bg-main text-white rounded-full font-bold inline-flex items-center gap-3 hover:bg-secondary transition-all shadow-lg shadow-main/20"
+          >
+            Explore Catalog
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main id="catalog" class="py-24 relative bg-white">
+      <div class="flex flex-wrap justify-center gap-3 mb-20 px-4">
+        <button
+          class="px-8 py-2.5 rounded-full bg-main text-white font-bold shadow-md"
+        >
+          All Products
+        </button>
+        <button
+          class="px-8 py-2.5 rounded-full border-2 border-gray-100 text-gray-500 hover:border-main hover:text-main transition-all font-medium"
+        >
+          Submersible
+        </button>
+        <button
+          class="px-8 py-2.5 rounded-full border-2 border-gray-100 text-gray-500 hover:border-main hover:text-main transition-all font-medium"
+        >
+          Industrial
+        </button>
+        <button
+          class="px-8 py-2.5 rounded-full border-2 border-gray-100 text-gray-500 hover:border-main hover:text-main transition-all font-medium"
+        >
+          Irrigation
+        </button>
+      </div>
+
+      <div
+        class="relative w-full max-w-7xl mx-auto h-[600px] flex items-center justify-center px-4"
+      >
+        <div
+          class="absolute left-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-20 scale-75 grayscale blur-[2px] hidden xl:block transition-all duration-700 border border-gray-200"
+        >
+          <img
+            src="/assets/gallery/4.jfif"
+            class="w-full h-full object-cover"
+          />
         </div>
 
-        <div class="text-center mt-12">
-            <a href="products.html"
-                class="bg-main text-white px-8 py-3 rounded-lg shadow hover:opacity-90 font-semibold">View All
-                Products</a>
+        <div
+          class="z-20 w-full max-w-[500px] h-[600px] bg-white rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden flex flex-col transition-all duration-500"
+        >
+          <div
+            class="h-[55%] bg-[#fcfcfc] p-12 flex items-center justify-center relative border-b border-gray-50"
+          >
+            <img
+              src="/assets/gallery/7.png"
+              class="max-h-full object-contain drop-shadow-xl"
+              alt="Product"
+            />
+            <span
+              class="absolute top-8 right-10 text-gray-100 font-black text-8xl -z-10"
+              >01</span
+            >
+          </div>
+
+          <div class="h-[45%] p-10 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="w-8 h-[2px] bg-secondary"></span>
+                <p
+                  class="text-xs font-bold tracking-widest text-secondary uppercase"
+                >
+                  Premium Series
+                </p>
+              </div>
+              <h3 class="text-3xl font-bold text-main mb-3 tracking-tight">
+                Caprari E-Series
+              </h3>
+              <p class="text-gray-500 font-normal leading-relaxed text-sm">
+                Italian engineering at its peak. The E-Series delivers high flow
+                rates for borehole water extraction with maximum energy
+                efficiency.
+              </p>
+            </div>
+
+            <button
+              class="w-full py-4 bg-main text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-secondary transition-all group shadow-lg shadow-main/10"
+            >
+              <span>Technical Specifications</span>
+              <svg
+                class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-    </div>
-</section>
+
+        <div
+          class="absolute right-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-20 scale-75 grayscale blur-[2px] hidden xl:block transition-all duration-700 border border-gray-200"
+        >
+          <img
+            src="/assets/gallery/1.jfif"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-center gap-6 mt-16">
+        <button
+          onclick="moveSlider('prev')"
+          class="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center text-main hover:bg-main hover:text-white hover:border-main transition-all duration-300"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <button
+          onclick="moveSlider('next')"
+          class="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center text-main hover:bg-main hover:text-white hover:border-main transition-all duration-300"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+  </body>
+</html>

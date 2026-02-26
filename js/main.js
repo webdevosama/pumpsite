@@ -2,6 +2,9 @@ import { configureTailwind } from "./tailwind.js";
 import { loadComponent } from "./load-scripts.js";
 import { initMap } from "./load-map.js";
 import { initGallery } from "./gallery.js";
+import { initProductSlider } from "./products-slider.js";
+
+
 configureTailwind();
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -38,5 +41,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Initialize Gallery only if the lightbox exists
   if (document.getElementById("lightbox")) {
     initGallery();
+  }
+
+  // Only run if we are on the products page
+  if (document.getElementById("catalog")) {
+    initProductSlider();
   }
 });
