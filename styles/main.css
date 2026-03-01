@@ -1,22 +1,10 @@
-:root {
-  /* Brand Colors */
-  --main-color: #1e3575; /* Deep Navy */
-  --secondary-color: #899cb5; /* Blue-Grey */
-  --bg-color: #dee8ef; /* Light Slate Gray (Off-white) */
-  --white: #ffffff;
+/* styles/main.css */
+@import 'variables.css';
 
-  /* Derived Colors for transparency */
-  --secondary-transparent: rgba(60, 95, 172, 0.468);
-}
-
-/* Base Body Styles using the source of truth */
+/* Base & Fade‑in */
 body {
   background-color: var(--bg-color);
   color: var(--main-color);
-}
-
-/* Prevent the "wrecked" look during loading */
-body {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
@@ -25,7 +13,42 @@ body.loaded {
   opacity: 1;
 }
 
-/* Ensure the Hero component sits flush against the header */
+/* Fallback if JavaScript fails */
+noscript body {
+  opacity: 1;
+}
+
+/* Utility classes – use these instead of raw Tailwind colors */
+.text-main {
+  color: var(--main-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.border-main {
+  border-color: var(--main-color);
+}
+
+.border-secondary {
+  border-color: var(--secondary-color);
+}
+
+/* Offset for sticky header (adjust 80px to match your header height) */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Hero section */
 #hero {
   display: block;
   margin: 0;
@@ -35,20 +58,10 @@ body.loaded {
 
 #hero section {
   margin: 0 !important;
-  display: flex; /* Ensures internal alignment doesn't create gaps */
+  display: flex;
 }
 
-/* If you use the wave animation at the top of a section, 
-   this -1px margin you already have is the secret sauce. */
-.waves {
-  margin-bottom: -1px;
-}
-
-.hero-vignette {
-  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.7);
-}
-
-/* --- Animated Wave Component --- */
+/* Wave animation */
 .waves-container {
   position: relative;
   width: 100%;
@@ -61,28 +74,24 @@ body.loaded {
   height: 12vh;
   min-height: 100px;
   max-height: 150px;
-  /* Prevent thin white line at bottom */
   margin-bottom: -1px;
-  background-color: white; /* Fallback background color */
+  background-color: var(--white);
+  fill: currentColor;
 }
 
-.parallax > use {
+.parallax>use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-/* Layer 1: Background (Lighter/Translucent) */
-.parallax > use:nth-child(1) {
+.parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 10s;
-  fill: currentColor; /* <--- CHANGED: Now adapts to parent text color */
-  opacity: 0.5; /* <--- ADDED: Creates the transparent effect automatically */
+  opacity: 0.5;
 }
 
-/* Layer 2: Foreground (Solid) */
-.parallax > use:nth-child(2) {
+.parallax>use:nth-child(2) {
   animation-delay: -5s;
   animation-duration: 18s;
-  fill: currentColor; /* <--- CHANGED: Now adapts to parent text color */
   opacity: 1;
 }
 
@@ -90,16 +99,18 @@ body.loaded {
   0% {
     transform: translate3d(-90px, 0, 0);
   }
+
   100% {
     transform: translate3d(85px, 0, 0);
   }
 }
 
+/* Marquee (partners) */
 .marquee {
   display: flex;
   overflow: hidden;
   user-select: none;
-  gap: 2rem; /* Space between the two groups */
+  gap: 2rem;
 }
 
 .marquee-content {
@@ -109,15 +120,15 @@ body.loaded {
   gap: 2rem;
   min-width: 100%;
   animation: scroll-left 30s linear infinite;
-  animation-play-state: running; /* default state */
+  animation-play-state: running;
 }
 
 .marquee:hover .marquee-content {
-  animation-play-state: paused; /* pause when hovering anywhere in marquee */
+  animation-play-state: paused;
 }
 
 .marquee-item img {
-  height: 60px; /* Force consistent height for all logos */
+  height: 60px;
   width: auto;
   object-fit: contain;
 }
@@ -126,9 +137,9 @@ body.loaded {
   from {
     transform: translateX(0);
   }
+
   to {
-    transform: translateX(
-      calc(-100% - 2rem)
-    ); /* Moves exactly one full set + gap */
+    transform: translateX(calc(-100% - 2rem));
   }
 }
+

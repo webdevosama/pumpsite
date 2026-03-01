@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Ibrahim Abu Hassanein & partners Ltd. - Supplying, installing, and maintaining pumps in Sudan since 1966."
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
     <title>Ibrahim Abu Hassanein & Partners Ltd. | Premium Pumps Sudan</title>
     <meta
       name="description"
-      content="Specializing in the supply, installation, and maintenance of world-class water, gas, and oil pumps in Sudan since 1966."
+      content="Supplying, installing, and maintaining world-class water, gas, and oil pumps in Sudan since 1966."
     />
     <meta name="robots" content="index, follow" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Ibrahim Abu Hassanein & Partners Ltd." />
     <meta
       property="og:description"
@@ -26,6 +25,10 @@
     />
     <meta property="og:type" content="website" />
 
+    <!-- Favicon (place a favicon.ico in your root) -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Schema.org -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -41,36 +44,298 @@
         }
       }
     </script>
-    <title>Ibrahim Abu Hassanein & partners Ltd.</title>
 
     <!-- Tailwind & Custom CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/header.css" />
 
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    
+    <!-- not type="module" -->
     <script type="module" src="/js/main.js"></script>
+    <noscript>
+      <style>
+        body {
+          opacity: 1;
+        }
+      </style>
+      <style>
+        .counter {
+          display: none;
+        }
+        .counter-fallback {
+          display: inline;
+        }
+      </style>
+      <span class="counter-fallback">60+</span>
+    </noscript>
   </head>
-
   <body class="bg-bgCustom text-gray-800">
     <!-- HEADER -->
     <div id="header"></div>
 
     <!-- HERO SECTION -->
-    <div id="hero"></div>
+    <div id="hero">
+    </div>
 
-    <!-- QUICK HIGHLIGHTS -->
     <div id="highlights"></div>
-
-    <div id="partners"></div>
+    <!-- PARTNERS MARQUEE -->
+    <div id="partners">
+      <section class="py-10 bg-white border-y border-gray-100">
+        <div class="marquee">
+          <div class="marquee-content">
+            <a
+              href="https://www.caprari.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/caprari.webp" alt="Caprari"
+            /></a>
+            <a
+              href="https://www.sabarpumps.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/sapar.png" alt="Sapar"
+            /></a>
+            <a
+              href="https://www.felm.it/home-2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/felm2.png" alt="Felm"
+            /></a>
+            <a
+              href="https://pumpiran.co/EN/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img
+                src="assets/partners-logos/iran-pumps2.jpeg"
+                alt="Iran Pumps"
+            /></a>
+            <a
+              href="https://www.sigmagroup.cz/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/sigma.png" alt="Sigma"
+            /></a>
+            <a
+              href="https://www.dredgepumpchina.com/about-ocean-pump/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img
+                src="assets/partners-logos/ocean-pumps.avif"
+                alt="Ocean Pumps"
+            /></a>
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            <!-- duplicate for seamless scrolling -->
+            <a
+              href="https://www.caprari.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/caprari.webp" alt="Caprari"
+            /></a>
+            <a
+              href="https://www.sabarpumps.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/sapar.png" alt="Sapar"
+            /></a>
+            <a
+              href="https://www.felm.it/home-2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/felm2.png" alt="Felm"
+            /></a>
+            <a
+              href="https://pumpiran.co/EN/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img
+                src="assets/partners-logos/iran-pumps2.jpeg"
+                alt="Iran Pumps"
+            /></a>
+            <a
+              href="https://www.sigmagroup.cz/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img src="assets/partners-logos/sigma.png" alt="Sigma"
+            /></a>
+            <a
+              href="https://www.dredgepumpchina.com/about-ocean-pump/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="marquee-item"
+              ><img
+                src="assets/partners-logos/ocean-pumps.avif"
+                alt="Ocean Pumps"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- FEATURED PRODUCTS -->
-    <div id="featured-products"></div>
+    <div id="featured-products">
+      <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center text-main mb-12"
+          >
+            Featured Products
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+            >
+              <img
+                src="assets/drinking-water.jpg"
+                class="w-full h-48 object-cover"
+                alt="Drinking Water Pump"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold">Drinking Water Pumps</h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                  Reliable solutions for municipal and domestic supply.
+                </p>
+                <a
+                  href="products.html"
+                  class="mt-4 inline-block text-main font-bold hover:underline"
+                  >Learn More →</a
+                >
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+            >
+              <img
+                src="assets/irrigation.jpg"
+                class="w-full h-48 object-cover"
+                alt="Irrigation Pump"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold">Irrigation Pumps</h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                  Efficient pumping for large scale agriculture and farming.
+                </p>
+                <a
+                  href="products.html"
+                  class="mt-4 inline-block text-main font-bold hover:underline"
+                  >Learn More →</a
+                >
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+            >
+              <img
+                src="assets/industrial.jpg"
+                class="w-full h-48 object-cover"
+                alt="Industrial Pump"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold">Industrial Pumps</h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                  Heavy‑duty pumps for factories and construction projects.
+                </p>
+                <a
+                  href="products.html"
+                  class="mt-4 inline-block text-main font-bold hover:underline"
+                  >Learn More →</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a
+              href="products.html"
+              class="bg-main text-white px-8 py-3 rounded-lg shadow hover:opacity-90 font-semibold"
+              >View All Products</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- ABOUT US -->
-    <div id="about"></div>
+    <div id="about">
+      <section class="py-24 bg-white text-center">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-main">About Our Legacy</h2>
+          <p class="mt-6 text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Founded in 1966 by Ibrahim Abu Hassanein, our mission has always
+            been to bridge Sudan’s water wealth with international pumping
+            technology.
+          </p>
+          <a
+            href="about.html"
+            class="mt-8 inline-block text-main font-bold border-b-2 border-main pb-1 hover:text-secondary hover:border-secondary transition-all"
+            >Learn More About Us</a
+          >
+        </div>
+      </section>
+    </div>
 
-    <!-- CONTACT CTA -->
-    <div id="contact"></div>
+    <!-- CONTACT CTA with WAVES -->
+    <div id="contact">
+      <div>
+        <div class="waves-container text-main">
+          <svg
+            class="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" />
+              <use xlink:href="#gentle-wave" x="48" y="7" />
+            </g>
+          </svg>
+        </div>
+        <section
+          class="py-20 bg-main text-white text-center relative overflow-hidden"
+        >
+          <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Need a reliable water pump solution?
+            </h2>
+            <p class="mt-4 text-secondary">
+              Contact us today for a consultation or quote.
+            </p>
+            <a
+              href="contact.html"
+              class="mt-8 inline-block bg-white text-main px-10 py-4 rounded-full font-bold shadow-lg hover:bg-gray-100 transition-colors"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
 
     <!-- FOOTER -->
     <div id="footer"></div>

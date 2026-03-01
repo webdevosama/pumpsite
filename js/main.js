@@ -1,11 +1,11 @@
-import { configureTailwind } from "./tailwind.js";
 import { loadComponent } from "./load-scripts.js";
 import { initMap } from "./load-map.js";
 import { initGallery } from "./gallery.js";
 import { initProductSlider } from "./products-slider.js";
+import { initCounters } from "./counters.js";
 
-
-configureTailwind();
+// Note: If you moved to Tailwind CLI, you can likely remove configureTailwind()
+// as Tailwind is now handled by the CSS compiler, not a JS script.
 
 document.addEventListener("DOMContentLoaded", async () => {
   const components = [
@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     { id: "products", path: "/components/section-products.html" },
   ];
 
-  // Map only the elements present on the page
   const tasks = components
     .filter((comp) => document.getElementById(comp.id))
     .map((comp) => loadComponent(comp.id, comp.path));
@@ -29,22 +28,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (err) {
     console.warn("Some components failed to load, revealing page anyway.");
   } finally {
-    // This is the "magic" line that prevents the messy loading look
+    // Reveal the site
     document.body.classList.add("loaded");
   }
 
-  // Only initialize the map if the specific container exists (Contact Page)
-  if (document.getElementById("map-container")) {
-    initMap("map-container");
-  }
+  if (document.getElementById("map-container")) initMap("map-container");
+  if (document.getElementById("lightbox")) initGallery();
+  if (document.getElementById("catalog")) initProductSlider();
 
-  // Initialize Gallery only if the lightbox exists
-  if (document.getElementById("lightbox")) {
-    initGallery();
-  }
-
-  // Only run if we are on the products page
-  if (document.getElementById("catalog")) {
-    initProductSlider();
+  // Correct spelling: "highlights"
+  if (document.getElementById("highlights")) {
+    initCounters(); 
   }
 });

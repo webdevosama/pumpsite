@@ -1,86 +1,49 @@
+<!-- components/header.html -->
 <nav class="site-header">
   <div class="container mx-auto px-4 flex justify-between items-center">
-    <a href="/index.html" class="logo text-xl font-bold tracking-tight">
-      Ibrahim Abu Hassanein & Partners Ltd.
+    <!-- Logo: Short text version (replace with <img> later if needed) -->
+    <a href="/" class="logo">
+      <span class="font-bold tracking-tight">IAH<span class="text-secondary"> & </span>Partners</span>
+      <!-- Optional small tagline (hidden on mobile) -->
+      <span class="hidden sm:inline text-xs font-normal text-secondary/80 ml-2">since 1966</span>
     </a>
 
-    <ul class="nav-links hidden md:flex gap-6 font-medium">
+    <!-- Desktop Navigation -->
+    <ul class="nav-links hidden md:flex gap-6 font-medium items-center">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products.html">Products</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <!-- CTA Button -->
       <li>
-        <a href="/index.html" class="hover:text-secondary transition-colors"
-          >Home</a
-        >
-      </li>
-      <li>
-        <a href="/products.html" class="hover:text-secondary transition-colors"
-          >Products</a
-        >
-      </li>
-      <li>
-        <a href="/gallery.html" class="hover:text-secondary transition-colors"
-          >Gallery</a
-        >
-      </li>
-      <li>
-        <a href="/about.html" class="hover:text-secondary transition-colors"
-          >About Us</a
-        >
-      </li>
-      <li>
-        <a href="/contact.html" class="hover:text-secondary transition-colors"
-          >Contact</a
-        >
+        <a href="/contact.html" class="bg-secondary text-main px-5 py-2 rounded-full font-bold hover:bg-white transition-colors">
+          Get a Quote
+        </a>
       </li>
     </ul>
 
+    <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="menu-toggle  text-2xl focus:outline-none"
-      aria-label="Toggle Menu"
+      class="menu-toggle"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
     >
       ☰
     </button>
   </div>
 
-  <div
-    id="mobile-menu"
-    class="mobile-menu  bg-main"
-  >
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
     <ul class="flex flex-col py-4">
-      <li>
-        <a
-          href="/index.html"
-          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
-          >Home</a
-        >
-      </li>
-      <li>
-        <a
-          href="/products.html"
-          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
-          >Products</a
-        >
-      </li>
-      <li>
-        <a
-          href="/gallery.html"
-          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
-          >Gallery</a
-        >
-      </li>
-      <li>
-        <a
-          href="/about.html"
-          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
-          >About Us</a
-        >
-      </li>
-      <li>
-        <a
-          href="/contact.html"
-          class="mobile-nav-link block px-6 py-3 hover:bg-white/5"
-          >Contact</a
-        >
-      </li>
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+      <li><a href="/products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="/gallery.html" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="/about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="/contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/contact.html" class="mobile-nav-link font-bold text-secondary">Get a Quote</a></li>
     </ul>
   </div>
 </nav>

@@ -1,28 +1,196 @@
-<section class="py-20 bg-white">
-    <div class="container mx-auto grid md:grid-cols-3 gap-10 px-4">
-      <div class="p-8 bg-bgCustom rounded-2xl border border-gray-100 shadow-sm text-center">
-        <div class="w-12 h-12 bg-main rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">1
+<section class="py-24 bg-white relative overflow-hidden">
+  <!-- Subtle background decoration -->
+  <div class="absolute inset-0 opacity-5">
+    <div
+      class="absolute top-0 left-0 w-64 h-64 bg-main rounded-full filter blur-3xl"
+    ></div>
+    <div
+      class="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full filter blur-3xl"
+    ></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <!-- Section Header with decorative line -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="flex justify-center items-center gap-3 mb-4">
+        <div class="h-px w-12 bg-main/30"></div>
+        <span class="text-main font-semibold tracking-wider text-sm"
+          >OUR IMPACT</span
+        >
+        <div class="h-px w-12 bg-main/30"></div>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-main mb-4">
+        Numbers That Speak
+      </h2>
+      <p class="text-gray-600 text-lg">
+        For over six decades, we've been powering Sudan's water wealth—one
+        project, one customer, one partnership at a time.
+      </p>
+    </div>
+
+    <!-- Metrics Grid -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+    >
+      <!-- Card 1: Years Experience -->
+      <div
+        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
+      >
+        <!-- Background layers -->
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        ></div>
+        <div
+          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
+        ></div>
+
+        <!-- Content -->
+        <div class="relative">
+          <!-- Icon with circle background -->
+          <div
+            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
+          >
+            <i class="fa-solid fa-clock-rotate-left text-3xl text-main"></i>
+          </div>
+
+          <!-- Number -->
+          <div class="text-5xl font-bold text-main mb-3">
+            <span class="counter" data-target="60">0</span
+            ><span class="text-3xl text-main/60">+</span>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">
+            Years of Experience
+          </h3>
+
+          <!-- Description -->
+          <p class="text-sm text-gray-500">
+            Serving Sudan with excellence since 1966
+          </p>
+
+          <!-- Decorative line -->
+          <div
+            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
+          ></div>
         </div>
-        <h3 class="text-xl font-bold text-main">Wide Range</h3>
-        <p class="text-gray-600 mt-3">Drinking water, irrigation, industrial, gas, and oil pumps tailored to client
-          needs.</p>
       </div>
 
-      <div class="p-8 bg-bgCustom rounded-2xl border border-gray-100 shadow-sm text-center">
-        <div class="w-12 h-12 bg-main rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">2
+      <!-- Card 2: Projects Completed -->
+      <div
+        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        ></div>
+        <div
+          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
+        ></div>
+
+        <div class="relative">
+          <div
+            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
+          >
+            <i class="fa-solid fa-diagram-project text-3xl text-main"></i>
+          </div>
+
+          <div class="text-5xl font-bold text-main mb-3">
+            <span class="counter" data-target="850">0</span
+            ><span class="text-3xl text-main/60">+</span>
+          </div>
+
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">
+            Projects Completed
+          </h3>
+          <p class="text-sm text-gray-500">
+            Water, gas, oil & industrial sectors
+          </p>
+          <div
+            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
+          ></div>
         </div>
-        <h3 class="text-xl font-bold text-main">Trusted Techniques</h3>
-        <p class="text-gray-600 mt-3">Centrifugal, submersible, and horizontal mixed‑flow pumping solutions.</p>
       </div>
 
-      <div class="p-8 bg-bgCustom rounded-2xl border border-gray-100 shadow-sm text-center">
-        <div class="w-12 h-12 bg-main rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold">3
+      <!-- Card 3: Satisfied Clients -->
+      <div
+        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        ></div>
+        <div
+          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
+        ></div>
+
+        <div class="relative">
+          <div
+            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
+          >
+            <i class="fa-solid fa-users text-3xl text-main"></i>
+          </div>
+
+          <div class="text-5xl font-bold text-main mb-3">
+            <span class="counter" data-target="2500">0</span
+            ><span class="text-3xl text-main/60">+</span>
+          </div>
+
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">
+            Satisfied Clients
+          </h3>
+          <p class="text-sm text-gray-500">
+            Across Sudan and neighboring regions
+          </p>
+          <div
+            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
+          ></div>
         </div>
-        <h3 class="text-xl font-bold text-main">Global Partners</h3>
-        <p class="text-gray-600 mt-3">Partnered with Caprari, A&M, InterSigma, and other leading global manufacturers.
-        </p>
+      </div>
+
+      <!-- Card 4: Global Partners -->
+      <div
+        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        ></div>
+        <div
+          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
+        ></div>
+
+        <div class="relative">
+          <div
+            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
+          >
+            <i class="fa-solid fa-handshake text-3xl text-main"></i>
+          </div>
+
+          <div class="text-5xl font-bold text-main mb-3">
+            <span class="counter" data-target="12">0</span
+            ><span class="text-3xl text-main/60">+</span>
+          </div>
+
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">
+            Global Partners
+          </h3>
+          <p class="text-sm text-gray-500">Leading manufacturers worldwide</p>
+          <div
+            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
+          ></div>
+        </div>
       </div>
     </div>
 
-
-  </section>
+    <!-- Trust Badge -->
+    <div class="text-center mt-16">
+      <div
+        class="inline-flex items-center gap-3 px-6 py-3 bg-main/5 rounded-full"
+      >
+        <i class="fa-solid fa-circle-check text-main"></i>
+        <span class="text-gray-700 font-medium"
+          >Trusted by municipalities, agricultural schemes, and industrial
+          leaders</span
+        >
+      </div>
+    </div>
+  </div>
+</section>
