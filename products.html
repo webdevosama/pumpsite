@@ -1,205 +1,385 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Ibrahim Abu Hassanein & partners Ltd. - Supplying, installing, and maintaining pumps in Sudan since 1966."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ibrahim Abu Hassanein & Partners Ltd. | Premium Pumps Sudan</title>
-    <meta
-      name="description"
-      content="Specializing in the supply, installation, and maintenance of world-class water, gas, and oil pumps in Sudan since 1966."
-    />
-    <meta name="robots" content="index, follow" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Ibrahim Abu Hassanein & Partners Ltd.</title>
+  <meta name="description" content="Explore our range of industrial, submersible, irrigation, and drinking water pumps." />
+  <!-- ... other meta tags (same as before) ... -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- REMOVE the old products-slider.js – we use inline script only -->
+  <script type="module" src="/js/main.js"></script>
+  <noscript><style>body { opacity: 1; }</style></noscript>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+  <div id="header"></div>
 
-    <meta property="og:title" content="Ibrahim Abu Hassanein & Partners Ltd." />
-    <meta
-      property="og:description"
-      content="Supplying Sudan with World-Class Pumping Solutions Since 1966."
-    />
-    <meta property="og:url" content="https://abuhassanien.netlify.app/" />
-    <meta
-      property="og:image"
-      content="https://abuhassanien.netlify.app/assets/og-image.jpg"
-    />
-    <meta property="og:type" content="website" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Ibrahim Abu Hassanein & Partners Ltd.",
-        "url": "https://abuhassanien.netlify.app/",
-        "logo": "https://abuhassanien.netlify.app/assets/partners-logos/caprari.webp",
-        "description": "Leading supplier of industrial pumps in Sudan.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Khartoum",
-          "addressCountry": "Sudan"
-        }
-      }
-    </script>
-    <title>Ibrahim Abu Hassanein & partners Ltd.</title>
-
-    <!-- Tailwind & Custom CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-
-    <script type="module" src="/js/main.js"></script>
-  </head>
-
-  <body class="bg-white text-gray-900 overflow-x-hidden">
-    <div id="header"></div>
-
-    <section class="relative pt-32 pb-20 bg-[#fbfbfb]">
-      <div class="container mx-auto px-6 text-center">
-        <div
-          class="inline-block px-4 py-1 rounded-full bg-main/5 text-main text-xs tracking-[0.3em] uppercase mb-6 border border-main/10"
-        >
-          Established 1966
-        </div>
-        <h1
-          class="text-5xl md:text-7xl font-bold text-main mb-6 tracking-tight"
-        >
-          Engineering <span class="text-secondary">Excellence.</span>
-        </h1>
-        <p
-          class="text-gray-500 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
-        >
-          High-performance pumping solutions curated for Sudan's most demanding
-          industrial and agricultural environments.
-        </p>
-
-        <div class="mt-10">
-          <a
-            href="#catalog"
-            class="px-10 py-4 bg-main text-white rounded-full font-bold inline-flex items-center gap-3 hover:bg-secondary transition-all shadow-lg shadow-main/20"
-          >
-            Explore Catalog
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </a>
-        </div>
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 bg-slate-50 border-b border-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <div class="inline-block px-4 py-1 rounded-full bg-main/5 text-main text-xs font-bold tracking-[0.3em] uppercase mb-6 border border-main/10">
+        Industrial Portfolio
       </div>
-    </section>
-
-    <main id="catalog" class="py-24 relative bg-white">
-      <div class="flex flex-wrap justify-center gap-3 mb-20 px-4">
-        <button
-          class="px-8 py-2.5 rounded-full bg-main text-white font-bold shadow-md"
-        >
-          All Products
-        </button>
-        <button
-          class="px-8 py-2.5 rounded-full border-2 border-gray-100 text-gray-500 hover:border-main hover:text-main transition-all font-medium"
-        >
-          Submersible
-        </button>
-        <button
-          class="px-8 py-2.5 rounded-full border-2 border-gray-100 text-gray-500 hover:border-main hover:text-main transition-all font-medium"
-        >
-          Industrial
-        </button>
-        <button
-          class="px-8 py-2.5 rounded-full border-2 border-gray-100 text-gray-500 hover:border-main hover:text-main transition-all font-medium"
-        >
-          Irrigation
-        </button>
-      </div>
-
-      <div class="relative w-full max-w-7xl mx-auto h-[600px] flex items-center justify-center px-4">
-  
-  <div id="card-left" class="absolute left-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-40 scale-75 blur-md hidden xl:block transition-all duration-500 border border-gray-200">
-    <img src="/assets/gallery/4.jfif" class="w-full h-full object-cover" />
-  </div>
-
-  <div id="card-center" class="z-20 w-full max-w-[500px] h-[600px] bg-white rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden flex flex-col transition-all duration-500">
-    
-    <div class="h-[55%] bg-[#fcfcfc] p-12 flex items-center justify-center relative border-b border-gray-50">
-        <img src="/assets/gallery/7.png" class="max-h-full object-contain drop-shadow-xl" alt="Product" />
-        <span class="absolute top-8 right-10 text-gray-100 font-black text-8xl -z-10">01</span>
+      <h1 class="text-5xl md:text-7xl font-bold text-main mb-6 tracking-tight">
+        Engineering <span class="text-secondary">Excellence.</span>
+      </h1>
+      <p class="text-gray-500 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+        Discover our range of high-performance pumping solutions, engineered for the toughest environments in Sudan.
+      </p>
     </div>
-    
-    <div class="h-[45%] p-10 bg-white flex flex-col justify-between">
-        <div>
-            <div class="flex items-center gap-2 mb-3">
+  </section>
+
+  <!-- Sticky Filter Bar -->
+  <nav class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-100 py-6">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap justify-center gap-3">
+        <button class="filter-btn active px-8 py-2.5 rounded-full bg-main text-white font-bold shadow-lg transition-all" data-category="all">All Systems</button>
+        <button class="filter-btn px-8 py-2.5 rounded-full border border-gray-200 text-gray-500 hover:border-main hover:text-main transition-all font-medium" data-category="submersible">Submersible</button>
+        <button class="filter-btn px-8 py-2.5 rounded-full border border-gray-200 text-gray-500 hover:border-main hover:text-main transition-all font-medium" data-category="industrial">Industrial</button>
+        <button class="filter-btn px-8 py-2.5 rounded-full border border-gray-200 text-gray-500 hover:border-main hover:text-main transition-all font-medium" data-category="irrigation">Irrigation</button>
+        <button class="filter-btn px-8 py-2.5 rounded-full border border-gray-200 text-gray-500 hover:border-main hover:text-main transition-all font-medium" data-category="drinking">Drinking Water</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Grid -->
+  <main id="catalog" class="py-20">
+    <div class="container mx-auto px-6">
+      <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+    </div>
+  </main>
+
+  <!-- Slider Modal (the "old look") -->
+  <div id="slider-modal" class="fixed inset-0 bg-main/95 z-50 hidden items-center justify-center p-4" onclick="closeSliderModal(event)">
+    <div class="relative bg-white rounded-[50px] max-w-6xl w-full p-6" onclick="event.stopPropagation()">
+      <button onclick="closeSliderModal()" class="absolute top-4 right-4 text-4xl text-gray-400 hover:text-main z-30">&times;</button>
+
+      <div class="relative w-full flex items-center justify-center" id="slider-container">
+        <!-- Left preview -->
+        <div id="card-left" class="absolute left-0 w-[220px] md:w-[260px] lg:w-[280px] xl:w-[300px] h-[350px] md:h-[400px] lg:h-[450px] rounded-[40px] overflow-hidden opacity-40 scale-75 blur-[2px] hidden xl:block transition-all duration-500 border border-gray-200 shadow-xl">
+          <img src="" alt="" class="w-full h-full object-cover" id="left-img" />
+        </div>
+
+        <!-- Center main card -->
+        <div id="card-center" class="z-20 w-full max-w-[500px] h-[550px] md:h-[600px] bg-white rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden flex flex-col transition-all duration-500">
+          <div class="h-[55%] bg-[#fcfcfc] p-8 md:p-12 flex items-center justify-center relative border-b border-gray-50">
+            <img id="center-img" src="" class="max-h-full max-w-full object-contain drop-shadow-xl" alt="Product" />
+            <span id="product-number" class="absolute top-8 right-10 text-gray-100 font-black text-7xl md:text-8xl -z-10">01</span>
+          </div>
+          <div class="h-[45%] p-8 md:p-10 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
                 <span class="w-8 h-[2px] bg-secondary"></span>
-                <p class="text-xs font-bold tracking-widest text-secondary uppercase">Premium Series</p>
+                <p id="product-category" class="text-xs font-bold tracking-widest text-secondary uppercase">Premium Series</p>
+              </div>
+              <h3 id="product-title" class="text-2xl md:text-3xl font-bold text-main mb-3 tracking-tight">Caprari E-Series</h3>
+              <p id="product-description" class="text-gray-500 font-normal leading-relaxed text-sm"></p>
             </div>
-            <h3 class="text-3xl font-bold text-main mb-3 tracking-tight">Caprari E-Series</h3>
-            <p class="text-gray-500 font-normal leading-relaxed text-sm">
-                Italian engineering at its peak. The E-Series delivers high flow rates for borehole water extraction with maximum energy efficiency.
-            </p>
+            <button class="spec-btn w-full py-4 bg-main text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-secondary transition-all group shadow-lg shadow-main/10">
+              <span>Technical Specifications</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
         </div>
-        
-        <button class="w-full py-4 bg-main text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-secondary transition-all group shadow-lg shadow-main/10">
-            <span>Technical Specifications</span>
-            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+
+        <!-- Right preview -->
+        <div id="card-right" class="absolute right-0 w-[220px] md:w-[260px] lg:w-[280px] xl:w-[300px] h-[350px] md:h-[400px] lg:h-[450px] rounded-[40px] overflow-hidden opacity-40 scale-75 blur-[2px] hidden xl:block transition-all duration-500 border border-gray-200 shadow-xl">
+          <img src="" alt="" class="w-full h-full object-cover" id="right-img" />
+        </div>
+      </div>
+
+      <!-- Slider navigation -->
+      <div class="flex justify-center gap-6 mt-8">
+        <button id="slider-prev" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-main hover:bg-main hover:text-white transition-all">
+          <i class="fa-solid fa-chevron-left"></i>
         </button>
+        <button id="slider-next" class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-main hover:bg-main hover:text-white transition-all">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
     </div>
   </div>
 
-  <div id="card-right" class="absolute right-10 w-[300px] h-[450px] rounded-[40px] overflow-hidden opacity-40 scale-75 blur-md hidden xl:block transition-all duration-500 border border-gray-200">
-    <img src="/assets/gallery/1.jfif" class="w-full h-full object-cover" />
+  <!-- Technical Specs Modal -->
+  <div id="specs-modal" class="fixed inset-0 bg-main/95 z-[60] hidden items-center justify-center p-4" onclick="closeSpecsModal(event)">
+    <div class="bg-white max-w-2xl w-full rounded-[40px] p-10 relative" onclick="event.stopPropagation()">
+      <button onclick="closeSpecsModal()" class="absolute top-6 right-6 text-3xl text-gray-400 hover:text-main">&times;</button>
+      <h3 class="text-3xl font-bold text-main mb-6" id="modal-title">Technical Specifications</h3>
+      <div id="modal-content" class="space-y-4 text-gray-600"></div>
+    </div>
   </div>
 
-</div>
+  <div id="footer"></div>
 
-      <div class="flex justify-center gap-6 mt-16">
-        <button
-          onclick="moveSlider('prev')"
-          class="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center text-main hover:bg-main hover:text-white hover:border-main transition-all duration-300"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
+  <script>
+    // ---------- PRODUCT DATABASE (use your actual images) ----------
+    const products = [
+      {
+        id: 1,
+        category: 'submersible',
+        title: 'Caprari E-Series Submersible',
+        shortDesc: 'The industry standard for deep borehole extraction. Optimized for energy efficiency and long-term durability in sandy conditions.',
+        longDesc: 'The Caprari E-Series submersible pumps are designed for deep well applications. Features include stainless steel construction, high-efficiency motors, and advanced hydraulic design. Flow up to 350 l/s, head up to 450m.',
+        image: '/assets/gallery/7.png',
+        number: '01',
+        features: ['Flow up to 350 l/s', 'Head up to 450m', 'Cast Iron/SS Construction']
+      },
+      {
+        id: 2,
+        category: 'industrial',
+        title: 'NC Series Centrifugal',
+        shortDesc: 'Designed for continuous duty in industrial cooling, water supply, and pressurized systems.',
+        longDesc: 'Heavy-duty centrifugal pump for factories, refineries, and large-scale water transfer. Flow rates up to 1000 m³/h, head up to 120m.',
+        image: '/assets/gallery/1.jfif',
+        number: '02',
+        features: ['Flow up to 1000 m³/h', 'Head up to 120m', 'Cast Iron/SS options']
+      },
+      {
+        id: 3,
+        category: 'irrigation',
+        title: 'Irrigation Mixed-Flow Pump',
+        shortDesc: 'High-efficiency mixed-flow pump for large agricultural schemes and pivot systems.',
+        longDesc: 'Optimized for flood irrigation and center pivots. Excellent performance at medium heads with low energy consumption.',
+        image: '/assets/gallery/4.jfif',
+        number: '03',
+        features: ['Flow up to 800 m³/h', 'Head up to 40m', 'Corrosion-resistant coating']
+      },
+      {
+        id: 4,
+        category: 'drinking',
+        title: 'Drinking Water Booster Set',
+        shortDesc: 'Complete booster systems for municipal water supply and high-rise buildings.',
+        longDesc: 'Multi-pump configuration with variable frequency drives. Constant pressure, high reliability. Compliant with drinking water standards.',
+        image: '/assets/gallery/2.jfif',
+        number: '04',
+        features: ['Up to 6 pumps in parallel', 'VFD control', 'Stainless steel construction']
+      },
+      {
+        id: 5,
+        category: 'submersible',
+        title: 'Deep Well Submersible',
+        shortDesc: 'Robust submersible pump for deep boreholes up to 300m. Ideal for rural water supply.',
+        longDesc: 'Built to withstand sand and abrasive particles. Available in 4", 6", 8" diameters with flow rates from 5 to 200 m³/h.',
+        image: '/assets/gallery/3.jfif',
+        number: '05',
+        features: ['Depth up to 300m', 'Flow 5-200 m³/h', 'Abrasion-resistant']
+      },
+      {
+        id: 6,
+        category: 'industrial',
+        title: 'Vertical Turbine Pump',
+        shortDesc: 'Vertical turbine for industrial water intake, fire fighting, and cooling towers.',
+        longDesc: 'Multi-stage design with enclosed impellers. Customizable lengths and materials.',
+        image: '/assets/gallery/5.jfif',
+        number: '06',
+        features: ['Multi-stage', 'Custom lengths', 'Various materials']
+      }
+    ];
 
-        <button
-          onclick="moveSlider('next')"
-          class="w-16 h-16 rounded-full border border-gray-200 flex items-center justify-center text-main hover:bg-main hover:text-white hover:border-main transition-all duration-300"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-      </div>
-    </main>
+    // ---------- STATE ----------
+    let currentFilter = 'all';
+    let currentSliderProducts = [];
+    let currentSliderIndex = 0;
 
-    <div id="footer"></div>
-  </body>
+    // DOM Elements (with null checks)
+    const productGrid = document.getElementById('product-grid');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sliderModal = document.getElementById('slider-modal');
+    const centerImg = document.getElementById('center-img');
+    const centerTitle = document.getElementById('product-title');
+    const centerDesc = document.getElementById('product-description');
+    const centerCategory = document.getElementById('product-category');
+    const productNumber = document.getElementById('product-number');
+    const leftImg = document.getElementById('left-img');
+    const rightImg = document.getElementById('right-img');
+    const sliderPrev = document.getElementById('slider-prev');
+    const sliderNext = document.getElementById('slider-next');
+    const specModal = document.getElementById('specs-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+
+    // Helper to safely set text content
+    function safeSetText(el, text) {
+      if (el) el.textContent = text;
+    }
+
+    // ---------- RENDER GRID ----------
+    function renderGrid(filter = 'all') {
+      const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+      if (!productGrid) return;
+      productGrid.innerHTML = filtered.map(p => `
+        <div class="product-card group bg-white rounded-[32px] border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500" data-category="${p.category}" data-id="${p.id}">
+          <div class="relative h-80 bg-[#f8f9fa] p-12 flex items-center justify-center overflow-hidden">
+            <span class="absolute top-4 left-6 text-gray-200/50 font-black text-7xl select-none">${p.number}</span>
+            <img src="${p.image}" class="relative z-10 max-h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl" alt="${p.title}" />
+            <div class="absolute inset-0 bg-main/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-8">
+              <div class="text-white text-center">
+                <h4 class="font-bold mb-2">Key Features</h4>
+                <ul class="text-sm space-y-1 opacity-90">
+                  ${p.features.map(f => `<li>• ${f}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-8 h-[2px] bg-secondary"></span>
+              <p class="text-xs font-bold tracking-widest text-secondary uppercase">${p.category}</p>
+            </div>
+            <h3 class="text-2xl font-bold text-main mb-3">${p.title}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed mb-8">${p.shortDesc}</p>
+            <div class="flex gap-3">
+              <button class="view-specs-btn flex-1 py-4 bg-main text-white rounded-xl font-bold text-sm hover:bg-secondary transition-colors" data-id="${p.id}">
+                View Specs
+              </button>
+              <button class="px-4 py-4 border border-gray-200 text-main rounded-xl hover:bg-gray-50 transition-colors download-btn" data-id="${p.id}">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Attach click listeners
+      document.querySelectorAll('.view-specs-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const productId = parseInt(btn.getAttribute('data-id'));
+          openSliderModal(productId);
+        });
+      });
+      document.querySelectorAll('.download-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const productId = parseInt(btn.getAttribute('data-id'));
+          const product = products.find(p => p.id === productId);
+          alert(`Download datasheet for ${product?.title} – coming soon!`);
+        });
+      });
+    }
+
+    // ---------- FILTERS ----------
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-main', 'text-white', 'shadow-lg');
+          b.classList.add('border', 'border-gray-200', 'text-gray-500');
+        });
+        btn.classList.add('bg-main', 'text-white', 'shadow-lg');
+        btn.classList.remove('border', 'border-gray-200', 'text-gray-500');
+
+        currentFilter = btn.getAttribute('data-category');
+        renderGrid(currentFilter);
+      });
+    });
+
+    // ---------- SLIDER ----------
+    function openSliderModal(productId) {
+      if (!sliderModal) return;
+      // Set current list based on filter
+      currentSliderProducts = currentFilter === 'all' ? products : products.filter(p => p.category === currentFilter);
+      currentSliderIndex = currentSliderProducts.findIndex(p => p.id === productId);
+      if (currentSliderIndex === -1) currentSliderIndex = 0;
+      updateSlider();
+      sliderModal.classList.remove('hidden');
+      sliderModal.classList.add('flex');
+    }
+
+    function updateSlider() {
+      if (!currentSliderProducts.length) return;
+      const main = currentSliderProducts[currentSliderIndex];
+      const prev = currentSliderProducts[(currentSliderIndex - 1 + currentSliderProducts.length) % currentSliderProducts.length];
+      const next = currentSliderProducts[(currentSliderIndex + 1) % currentSliderProducts.length];
+
+      if (centerImg) centerImg.src = main.image;
+      safeSetText(centerTitle, main.title);
+      safeSetText(centerDesc, main.shortDesc);
+      safeSetText(centerCategory, main.category.toUpperCase());
+      safeSetText(productNumber, main.number);
+      if (leftImg) leftImg.src = prev.image;
+      if (rightImg) rightImg.src = next.image;
+    }
+
+    window.closeSliderModal = function(event) {
+      if (!sliderModal) return;
+      if (event && event.target === sliderModal) {
+        sliderModal.classList.add('hidden');
+        sliderModal.classList.remove('flex');
+      } else if (!event) {
+        sliderModal.classList.add('hidden');
+        sliderModal.classList.remove('flex');
+      }
+    };
+
+    if (sliderPrev) {
+      sliderPrev.addEventListener('click', () => {
+        if (currentSliderProducts.length === 0) return;
+        currentSliderIndex = (currentSliderIndex - 1 + currentSliderProducts.length) % currentSliderProducts.length;
+        updateSlider();
+      });
+    }
+    if (sliderNext) {
+      sliderNext.addEventListener('click', () => {
+        if (currentSliderProducts.length === 0) return;
+        currentSliderIndex = (currentSliderIndex + 1) % currentSliderProducts.length;
+        updateSlider();
+      });
+    }
+
+    // ---------- SPECS MODAL ----------
+    document.querySelectorAll('.spec-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (currentSliderProducts.length === 0) return;
+        const product = currentSliderProducts[currentSliderIndex];
+        if (!product) return;
+        if (modalTitle) modalTitle.textContent = `${product.title} – Specifications`;
+        if (modalContent) {
+          modalContent.innerHTML = `
+            <p><strong>Category:</strong> ${product.category}</p>
+            <p><strong>Description:</strong> ${product.longDesc}</p>
+            <p><strong>Model number:</strong> ${product.number}</p>
+            <ul class="list-disc pl-5 mt-2">
+              ${product.features.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+            <p class="mt-4 text-sm text-gray-500">Detailed datasheets available on request. Contact our sales team for more information.</p>
+          `;
+        }
+        if (specModal) {
+          specModal.classList.remove('hidden');
+          specModal.classList.add('flex');
+        }
+      });
+    });
+
+    window.closeSpecsModal = function(event) {
+      if (!specModal) return;
+      if (event && event.target === specModal) {
+        specModal.classList.add('hidden');
+        specModal.classList.remove('flex');
+      } else if (!event) {
+        specModal.classList.add('hidden');
+        specModal.classList.remove('flex');
+      }
+    };
+
+    // Keyboard navigation for slider
+    window.addEventListener('keydown', (e) => {
+      if (!sliderModal || !sliderModal.classList.contains('flex')) return;
+      if (e.key === 'ArrowLeft' && sliderPrev) {
+        sliderPrev.click();
+      } else if (e.key === 'ArrowRight' && sliderNext) {
+        sliderNext.click();
+      } else if (e.key === 'Escape') {
+        closeSliderModal();
+      }
+    });
+
+    // Initial render
+    renderGrid('all');
+  </script>
+</body>
 </html>
