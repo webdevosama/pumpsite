@@ -143,3 +143,6 @@ html {
   }
 }
 
+#product-grid>div {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
