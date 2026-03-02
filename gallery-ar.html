@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- === PRIMARY META TAGS === -->
+    <title>
+      Gallery | Ibrahim Abu Hassanein & Partners Ltd. – Pump Projects in Sudan
+    </title>
+    <meta
+      name="description"
+      content="Browse our portfolio of pump installations, irrigation projects, and industrial solutions across Sudan. See our work in action."
+    />
+    <meta
+      name="keywords"
+      content="pump gallery Sudan, irrigation projects, industrial pumps installation, water pumping projects, Caprari installations"
+    />
+    <meta name="author" content="Ibrahim Abu Hassanein & Partners Ltd." />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://abuhassanien.netlify.app/gallery.html"
+    />
+
+    <!-- === OPEN GRAPH === -->
+    <meta
+      property="og:title"
+      content="Project Gallery – Ibrahim Abu Hassanein & Partners Ltd."
+    />
+    <meta
+      property="og:description"
+      content="See our pumping solutions in action across Sudan."
+    />
+    <meta
+      property="og:url"
+      content="https://abuhassanien.netlify.app/gallery.html"
+    />
+    <meta
+      property="og:image"
+      content="https://abuhassanien.netlify.app/assets/og-image-gallery.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- === TWITTER CARD === -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Gallery – Ibrahim Abu Hassanein & Partners Ltd."
+    />
+    <meta
+      name="twitter:description"
+      content="Explore our portfolio of pump projects."
+    />
+    <meta
+      name="twitter:image"
+      content="https://abuhassanien.netlify.app/assets/og-image-gallery.jpg"
+    />
+
+    <!-- === FAVICON === -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- === SCHEMA.ORG (CollectionPage) === -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Project Gallery – Ibrahim Abu Hassanein & Partners Ltd.",
+        "description": "Images of our pump installations, irrigation systems, and industrial projects across Sudan.",
+        "url": "https://abuhassanien.netlify.app/gallery.html",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Ibrahim Abu Hassanein & Partners Ltd.",
+          "url": "https://abuhassanien.netlify.app/"
+        }
+      }
+    </script>
+
+    <!-- === STYLES & FONTS === -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- LightGallery CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css"
+    />
+
+    <!-- === SCRIPTS === -->
+    <script type="module" src="/js/main.js"></script>
+    <noscript
+      ><style>
+        body {
+          opacity: 1;
+        }
+      </style></noscript
+    >
+  </head>
+  <body class="bg-white text-gray-900 overflow-x-hidden">
+    <div id="header"></div>
+
+    <main>
+      <!-- Hero Section with background image (consistent dark style) -->
+      <section class="relative pt-60 pb-32 overflow-hidden bg-[#0a1633]">
+        <div class="absolute inset-0 z-0">
+          <img
+            src="/assets/gallery/hero.jpg"
+            alt="Gallery Hero"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-[#0a1633]/70 mix-blend-multiply"
+          ></div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+          <div
+            class="inline-block px-6 py-2 rounded-full bg-white/5 backdrop-blur-2xl text-white/90 text-[10px] font-bold tracking-[0.6em] uppercase mb-10 border border-white/10 shadow-2xl"
+          >
+            Portfolio Archive
+          </div>
+
+          <h1
+            class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+          >
+            OUR <span class="text-secondary">GALLERY</span>
+          </h1>
+
+          <p
+            class="text-white/70 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
+          >
+            A curated exhibition of our industrial installations and pumping
+            solutions across Sudan.
+          </p>
+        </div>
+      </section>
+
+      <!-- Gallery Grid with functional filters -->
+      <section class="py-20 bg-white" id="gallery">
+        <div class="container mx-auto px-6">
+          <!-- Filter buttons (now with data-filter attribute) -->
+          <div
+            class="flex justify-center gap-2 mb-12 flex-wrap"
+            id="filter-buttons"
+          >
+            <button
+              class="filter-btn px-6 py-2 rounded-full bg-main text-white text-sm font-medium hover:bg-secondary transition"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
+              data-filter="irrigation"
+            >
+              Irrigation
+            </button>
+            <button
+              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
+              data-filter="industrial"
+            >
+              Industrial
+            </button>
+            <button
+              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
+              data-filter="municipal"
+            >
+              Municipal
+            </button>
+            <button
+              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
+              data-filter="installation"
+            >
+              Installation
+            </button>
+          </div>
+
+          <!-- Image grid (lightgallery container) -->
+          <div
+            id="gallery-grid"
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
+            <!-- Gallery items with data-category attribute -->
+            <a
+              href="https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80"
+              class="gallery-item"
+              data-category="industrial"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Industrial pump"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Industrial Pump Installation</h4>
+                  <p>Khartoum refinery project, 2023</p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://images.unsplash.com/photo-1560518883-ce690c6e4d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80"
+              class="gallery-item"
+              data-category="irrigation"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1560518883-ce690c6e4d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Irrigation system"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Center Pivot Irrigation</h4>
+                  <p>Agricultural scheme, Gezira</p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+              class="gallery-item"
+              data-category="installation"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Pipeline installation"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Pipeline Installation</h4>
+                  <p>Water transmission line, Port Sudan</p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://images.unsplash.com/photo-1622898802018-1a9e6bbd7e1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+              class="gallery-item"
+              data-category="installation"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1622898802018-1a9e6bbd7e1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Submersible pump"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Submersible Pump Installation</h4>
+                  <p>Deep well, North Kordofan</p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://images.unsplash.com/photo-1581092160562-40aa08e6b9f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+              class="gallery-item"
+              data-category="municipal"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e6b9f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Technician at work"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Maintenance Team</h4>
+                  <p>Routine check, Khartoum</p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+              class="gallery-item"
+              data-category="industrial"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Control panel"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Pump Control System</h4>
+                  <p>Automated station, River Nile</p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              class="gallery-item"
+              data-category="municipal"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Water treatment"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Water Treatment Plant</h4>
+                  <p>Omdurman facility</p>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              class="gallery-item"
+              data-category="irrigation"
+              data-sub-html=".caption"
+            >
+              <div
+                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Irrigation canal"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <span
+                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
+                    >View</span
+                  >
+                </div>
+                <div class="caption hidden">
+                  <h4>Irrigation Canal</h4>
+                  <p>Gezira scheme</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to action -->
+      <section class="py-16 bg-[#fcfcfc] border-y border-gray-100">
+        <div class="container mx-auto px-6 text-center">
+          <h3 class="text-2xl font-bold text-main mb-3">
+            Have a project in mind?
+          </h3>
+          <p class="text-gray-600 mb-6 max-w-xl mx-auto">
+            Let's discuss how we can bring reliable pumping solutions to your
+            site.
+          </p>
+          <a
+            href="contact.html"
+            class="inline-flex items-center gap-2 px-8 py-4 bg-main text-white rounded-full font-bold hover:bg-secondary transition-colors shadow-lg shadow-main/10"
+          >
+            Contact Our Team
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- LightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.min.js"></script>
+
+    <!-- Filter and gallery initialization -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize lightGallery
+        const gallery = lightGallery(document.getElementById("gallery-grid"), {
+          selector: ".gallery-item",
+          plugins: [lgZoom, lgThumbnail, lgFullscreen],
+          speed: 500,
+          download: false,
+          counter: true,
+          thumbnail: true,
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const galleryItems = document.querySelectorAll(".gallery-item");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Update active button styling
+            filterButtons.forEach((btn) => {
+              btn.classList.remove("bg-main", "text-white");
+              btn.classList.add("bg-gray-100", "text-gray-700");
+            });
+            this.classList.remove("bg-gray-100", "text-gray-700");
+            this.classList.add("bg-main", "text-white");
+
+            const filter = this.getAttribute("data-filter");
+
+            galleryItems.forEach((item) => {
+              if (filter === "all") {
+                item.style.display = "block";
+              } else {
+                const category = item.getAttribute("data-category");
+                if (category === filter) {
+                  item.style.display = "block";
+                } else {
+                  item.style.display = "none";
+                }
+              }
+            });
+
+            // Refresh lightGallery to update layout (optional but good practice)
+            gallery.refresh();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

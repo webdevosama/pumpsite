@@ -1,0 +1,54 @@
+<!-- components/header-ar.html -->
+<nav class="site-header">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/ar/" class="logo">
+      <span class="font-bold tracking-tight">إ.أ.ح<span class="text-secondary"> و </span>شركاه</span>
+      <!-- Optional small tagline -->
+      <span class="hidden sm:inline text-xs font-normal text-secondary/80 mr-2">منذ 1966</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-links hidden md:flex gap-6 font-medium items-center">
+      <li><a href="/ar/">الرئيسية</a></li>
+      <li><a href="/ar/products.html">المنتجات</a></li>
+      <li><a href="/ar/gallery.html">معرض الصور</a></li>
+      <li><a href="/ar/about.html">من نحن</a></li>
+      <li><a href="/ar/contact.html">اتصل بنا</a></li>
+      <!-- CTA Button -->
+      <li>
+        <a href="/ar/contact.html" class="bg-secondary text-main px-5 py-2 rounded-full font-bold hover:bg-white transition-colors">
+          طلب عرض سعر
+        </a>
+      </li>
+      <li>
+  <a href="../../index.html" class="text-white border border-white/30 px-3 py-1 rounded-full text-sm hover:bg-white/10 transition">
+    English
+  </a>
+</li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="menu-toggle"
+      aria-label="القائمة"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <ul class="flex flex-col py-4">
+      <li><a href="/ar/" class="mobile-nav-link">الرئيسية</a></li>
+      <li><a href="/ar/products.html" class="mobile-nav-link">المنتجات</a></li>
+      <li><a href="/ar/gallery.html" class="mobile-nav-link">معرض الصور</a></li>
+      <li><a href="/ar/about.html" class="mobile-nav-link">من نحن</a></li>
+      <li><a href="/ar/contact.html" class="mobile-nav-link">اتصل بنا</a></li>
+      <li><a href="/ar/contact.html" class="mobile-nav-link font-bold text-secondary">طلب عرض سعر</a></li>
+    </ul>
+  </div>
+</nav>

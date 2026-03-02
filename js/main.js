@@ -8,15 +8,20 @@ import { initCounters } from "./counters.js";
 // as Tailwind is now handled by the CSS compiler, not a JS script.
 
 document.addEventListener("DOMContentLoaded", async () => {
+  const path = window.location.pathname;
+  const isArabic = path.includes("-ar.html"); // true for files ending with -ar.html
+  const componentBase = isArabic ? "/ar/" : "/components/";
+
+  // Then in your components array, use componentBase:
   const components = [
-    { id: "header", path: "/components/header.html" },
-    { id: "footer", path: "/components/footer.html" },
-    { id: "hero", path: "/components/section-hero.html" },
-    { id: "highlights", path: "/components/section-highlights.html" },
-    { id: "partners", path: "/components/section-partners.html" },
-    { id: "about", path: "/components/section-about.html" },
-    { id: "contact", path: "/components/section-contact.html" },
-    { id: "products", path: "/components/section-products.html" },
+    { id: "header", path: `${componentBase}header.html` },
+    { id: "footer", path: `${componentBase}footer.html` },
+    { id: "hero", path: `${componentBase}section-hero.html` },
+    { id: "highlights", path: `${componentBase}section-highlights.html` },
+    { id: "partners", path: `${componentBase}section-partners.html` },
+    { id: "about", path: `${componentBase}section-about.html` },
+    { id: "contact", path: `${componentBase}section-contact.html` },
+    { id: "products", path: `${componentBase}section-products.html` },
   ];
 
   const tasks = components
@@ -38,6 +43,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Correct spelling: "highlights"
   if (document.getElementById("highlights")) {
-    initCounters(); 
+    initCounters();
   }
 });
