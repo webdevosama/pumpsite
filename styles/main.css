@@ -105,7 +105,7 @@ html {
   }
 }
 
-/* Marquee (partners) */
+/* Marquee (partners) – supports both LTR and RTL */
 .marquee {
   display: flex;
   overflow: hidden;
@@ -119,6 +119,7 @@ html {
   justify-content: space-around;
   gap: 2rem;
   min-width: 100%;
+  /* Default LTR animation: scroll left */
   animation: scroll-left 30s linear infinite;
   animation-play-state: running;
 }
@@ -133,6 +134,7 @@ html {
   object-fit: contain;
 }
 
+/* LTR scroll animation */
 @keyframes scroll-left {
   from {
     transform: translateX(0);
@@ -143,6 +145,22 @@ html {
   }
 }
 
+/* RTL override: reverse direction for Arabic */
+[dir="rtl"] .marquee-content {
+  animation-name: scroll-right;
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(100% + 2rem));
+  }
+}
+
+/* Product grid transitions */
 #product-grid>div {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
