@@ -1,28 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- English Pages -->
   <url>
     <loc>https://abuhassanien.netlify.app/</loc>
-    <lastmod>2024-05-20</lastmod>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/"/>
   </url>
   <url>
-    <loc>https://abuhassanien.netlify.app/pages/products.html</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://abuhassanien.netlify.app/about</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/about"/>
   </url>
   <url>
-    <loc>https://abuhassanien.netlify.app/pages/services.html</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://abuhassanien.netlify.app/products</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/products"/>
   </url>
   <url>
-    <loc>https://abuhassanien.netlify.app/pages/about.html</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://abuhassanien.netlify.app/gallery</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/gallery"/>
   </url>
   <url>
-    <loc>https://abuhassanien.netlify.app/pages/contact.html</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://abuhassanien.netlify.app/contact</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/contact"/>
+  </url>
+
+  <!-- Arabic Pages (clean URLs via redirects) -->
+  <url>
+    <loc>https://abuhassanien.netlify.app/ar/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/"/>
+  </url>
+  <url>
+    <loc>https://abuhassanien.netlify.app/ar/about</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/about"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/about"/>
+  </url>
+  <url>
+    <loc>https://abuhassanien.netlify.app/ar/products</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/products"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/products"/>
+  </url>
+  <url>
+    <loc>https://abuhassanien.netlify.app/ar/gallery</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/gallery"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/gallery"/>
+  </url>
+  <url>
+    <loc>https://abuhassanien.netlify.app/ar/contact</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abuhassanien.netlify.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://abuhassanien.netlify.app/ar/contact"/>
   </url>
 </urlset>

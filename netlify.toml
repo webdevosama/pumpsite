@@ -1,0 +1,33 @@
+# netlify.toml
+
+# Basic settings
+[build]
+  publish = "."   # your publish directory (root, since you serve from root)
+
+# Redirects for Arabic language (clean URLs)
+[[redirects]]
+  from = "/ar/"
+  to = "/index-ar.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ar/*"
+  to = "/:splat-ar.html"
+  status = 200
+  force = true
+
+# Optional: Redirect any request for a non-existent file to a custom 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Optional: Add security headers (improves SEO and safety)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
