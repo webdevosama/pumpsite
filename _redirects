@@ -1,7 +1,6 @@
-# Redirect rules for Arabic language
-/ar/           /index-ar.html   200
-/ar/index.html /index-ar.html   200
-/ar/*          /:splat-ar.html  200
+# Arabic language redirects (rewrites with 200 status)
+/ar/             /index-ar.html    200
+/ar/index.html   /index-ar.html    200
+/ar/*            /:splat-ar.html   200
 
-# Custom 404 page
-/*              /index.html        404
+# Any additional redirects can go here
