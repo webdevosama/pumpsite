@@ -9,9 +9,20 @@ import { initCounters } from "./counters.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const path = window.location.pathname;
-  const isArabic = path.includes("-ar.html"); // true for files ending with -ar.html
+
+  // IMPROVED DETECTION:
+  // 1. Checks if URL contains "-ar"
+  // 2. Checks if URL starts with "/ar" (for clean URLs)
+  // 3. Checks if the <html> tag has lang="ar" (safest)
+  const isArabic =
+    path.includes("-ar") ||
+    path.startsWith("/ar") ||
+    document.documentElement.lang === "ar";
+
   const componentBase = isArabic ? "/ar/" : "/components/";
 
+  console.log("Language Detected:", isArabic ? "Arabic" : "English");
+  console.log("Loading components from:", componentBase);
   // Then in your components array, use componentBase:
   const components = [
     { id: "header", path: `${componentBase}header.html` },

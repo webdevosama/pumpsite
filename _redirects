@@ -1,6 +1,9 @@
-# Arabic language redirects (rewrites with 200 status)
-/ar/             /index-ar.html    200
-/ar/index.html   /index-ar.html    200
-/ar/*            /:splat-ar.html   200
+# English Pretty URLs
+/about      /about.html      200
+/products   /products.html   200
+/contact    /contact.html    200
 
-# Any additional redirects can go here
+# Arabic Pretty URLs
+/ar/about     /ar/about.html     200
+/ar/products  /ar/products.html  200
+/ar/contact   /ar/contact.html   200
