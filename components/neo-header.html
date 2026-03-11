@@ -1,0 +1,73 @@
+<!-- components/header.html -->
+<nav class="site-header">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo -->
+<a href="/" class="logo flex items-center">
+  <img src="/assets/logo.jpeg" alt="Ibrahim Abu Hassanein & Partners" class="h-1/6 md:h-22 w-auto mr-3">
+  <span class="hidden sm:inline text-xs font-normal text-gray-500">since 1966</span>
+</a>
+    <!-- Desktop Navigation -->
+    <ul class="nav-links hidden md:flex gap-6 font-medium items-center">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products.html">Products</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <!-- CTA Button - navy background, white text -->
+      <li>
+        <a
+          href="/contact.html"
+          class="bg-main text-white px-5 py-2 rounded-full font-bold hover:bg-secondary hover:text-main transition-colors"
+        >
+          Get a Quote
+        </a>
+      </li>
+      <!-- Language Switcher - navy border, navy text -->
+      <li>
+        <a
+          href="/ar/index-ar.html"
+          class="border border-main text-main px-3 py-1 rounded-full text-sm hover:bg-main hover:text-white transition-colors"
+        >
+          العربية
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="menu-toggle"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <ul class="flex flex-col py-4">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="/products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="/gallery.html" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="/about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="/contact.html" class="mobile-nav-link">Contact</a></li>
+      <li>
+        <a
+          href="/contact.html"
+          class="mobile-nav-link font-bold text-main bg-main/5"
+          >Get a Quote</a
+        >
+      </li>
+      <!-- Language Switcher in mobile menu -->
+      <li>
+        <a
+          href="/ar/index-ar.html"
+          class="mobile-nav-link font-bold text-main border-t border-gray-100 mt-2"
+          >العربية</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

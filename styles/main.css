@@ -164,3 +164,47 @@ html {
 #product-grid>div {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* ===== Button Styles ===== */
+/* Primary button: navy background, white text */
+button.bg-main,
+a.bg-main,
+[role="button"].bg-main {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.bg-main:hover,
+a.bg-main:hover,
+[role="button"].bg-main:hover {
+  background-color: var(--white) !important;
+  color: var(--main-color) !important;
+}
+
+/* Secondary/outline button: transparent background, navy border and text */
+button.border.border-main,
+a.border.border-main,
+[role="button"].border.border-main {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.border.border-main:hover,
+a.border.border-main:hover,
+[role="button"].border.border-main:hover {
+  background-color: var(--main-color) !important;
+  color: var(--white) !important;
+  border-color: var(--main-color) !important;
+}
+
+/* White background buttons (e.g., "Get a Quote" in header) */
+button.bg-white.text-main,
+a.bg-white.text-main,
+[role="button"].bg-white.text-main {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.bg-white.text-main:hover,
+a.bg-white.text-main:hover,
+[role="button"].bg-white.text-main:hover {
+  background-color: var(--main-color) !important;
+  color: var(--white) !important;
+}
