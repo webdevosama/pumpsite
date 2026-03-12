@@ -243,11 +243,13 @@
               >
                 طلب عرض سعر فني
               </a>
-              <button
-                class="px-8 py-5 border border-gray-200 text-main rounded-2xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
+              <a
+                id="datasheet-link"
+                class="datasheet-btn flex-1 px-8 py-5 border border-gray-200 text-main rounded-2xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-2 hidden"
+                target="_blank"
               >
                 <i class="fa-solid fa-file-pdf"></i> تحميل كتيب المواصفات
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -256,119 +258,34 @@
 
     <div id="footer"></div>
 
-    <script>
-      // ---------- PRODUCT DATABASE (ARABIC) ----------
-      const products = [
-        {
-          id: 1,
-          brand: "Caprari",
-          category: "submersible",
-          title: "كابراري E-Series غاطسة",
-          shortDesc: "مضخات آبار إيطالية فاخرة لاستخراج المياه العميقة.",
-          longDesc:
-            "مضخات كابراري E-Series الغاطسة مصممة لتطبيقات الآبار العميقة. تتميز بهيكل من الستانلس ستيل، محركات عالية الكفاءة، وتصميم هيدروليكي متقدم لأداء موثوق في الظروف القاسية.",
-          image: "/assets/gallery/7.png",
-          number: "01",
-          specs: {
-            "أقصى تدفق": "350 لتر/ث",
-            "أقصى رفع": "450 م",
-            الخامات: "حديد زهر / ستانلس",
-            الطاقة: "حتى 400 كيلوواط",
-          },
-        },
-        {
-          id: 2,
-          brand: "Felm",
-          category: "industrial",
-          title: "Felm NC Series طرد مركزي",
-          shortDesc: "مضخة طرد مركزي ثقيلة للاستخدام الصناعي المستمر.",
-          longDesc:
-            "مصممة للخدمة المستمرة في التبريد الصناعي، إمدادات المياه، والأنظمة المضغوطة. قوية وسهلة الصيانة. معدل تدفق يصل إلى 1000 متر مكعب/ساعة، رفع يصل إلى 120 متر.",
-          image: "/assets/gallery/1.jfif",
-          number: "02",
-          specs: {
-            "أقصى تدفق": "1000 م³/س",
-            "أقصى رفع": "120 م",
-            الخامات: "حديد زهر / ستانلس",
-            الطاقة: "حتى 500 كيلوواط",
-          },
-        },
-        {
-          id: 3,
-          brand: "Sigma",
-          category: "irrigation",
-          title: "Sigma Mixed-Flow للري",
-          shortDesc:
-            "مضخة مختلطة التدفق عالية الكفاءة للمشاريع الزراعية الكبيرة.",
-          longDesc:
-            "محسنة للري بالغمر والمحاور المركزية. أداء ممتاز عند الرفع المتوسط مع استهلاك منخفض للطاقة. طلاء مقاوم للتآكل لعمر طويل.",
-          image: "/assets/gallery/4.jfif",
-          number: "03",
-          specs: {
-            "أقصى تدفق": "800 م³/س",
-            "أقصى رفع": "40 م",
-            الخامات: "حديد زهر مع إيبوكسي",
-            الكفاءة: "تصل إلى 85٪",
-          },
-        },
-        {
-          id: 4,
-          brand: "Sapar",
-          category: "drinking",
-          title: "Sapar معزز مياه الشرب",
-          shortDesc: "أنظمة معززات متعددة المضخات لإمدادات المياه البلدية.",
-          longDesc:
-            "تكوين متعدد المضخات مع محركات متغيرة التردد. ضغط ثابت، موثوقية عالية. متوافق مع معايير مياه الشرب.",
-          image: "/assets/gallery/2.jfif",
-          number: "04",
-          specs: {
-            "أقصى تدفق": "600 م³/س",
-            "أقصى رفع": "100 م",
-            المضخات: "حتى 6 على التوازي",
-            التحكم: "محرك متغير التردد",
-          },
-        },
-        {
-          id: 5,
-          brand: "Iran Pumps",
-          category: "submersible",
-          title: "Iran Pumps آبار عميقة",
-          shortDesc: "مضخة قوية للآبار العميقة حتى 300 متر.",
-          longDesc:
-            "مصممة لتحمل الرمال والجسيمات الكاشطة. متوفرة بأقطار 4 و 6 و 8 بوصات بمعدلات تدفق من 5 إلى 200 متر مكعب/ساعة.",
-          image: "/assets/gallery/3.jfif",
-          number: "05",
-          specs: {
-            "أقصى عمق": "300 م",
-            "نطاق التدفق": "5-200 م³/س",
-            الأقطار: "4-8 بوصات",
-            التركيب: "مقاوم للجسيمات",
-          },
-        },
-        {
-          id: 6,
-          brand: "Ocean Pumps",
-          category: "industrial",
-          title: "Ocean Vertical Turbine",
-          shortDesc: "مضخة توربينية رأسية متعددة المراحل لسحب المياه الصناعي.",
-          longDesc:
-            "تصميم متعدد المراحل مع دفاعات مغلقة. يمكن تركيبها في الآبار أو الأحواض أو المسطحات المائية المفتوحة. أطوال وخامات قابلة للتخصيص.",
-          image: "/assets/gallery/5.jfif",
-          number: "06",
-          specs: {
-            "أقصى تدفق": "800 م³/س",
-            "أقصى رفع": "200 م",
-            المراحل: "متعددة المراحل",
-            التخصيص: "أطوال وخامات",
-          },
-        },
-      ];
+    <script type="module">
+      import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-      // ---------- STATE ----------
+      const SUPABASE_URL = "https://alsmjjizeoquuciyuhaf.supabase.co";
+      const SUPABASE_ANON_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsc21qaml6ZW9xdXVjaXl1aGFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5NzMzMjAsImV4cCI6MjA4ODU0OTMyMH0.rjnOo6ToIOwGcuRzhgyE9pkff2s3KcHrRvextt7gdeQ";
+      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+      // Arabic language flag
+      const isArabic = true;
+
+      // Translate category for display
+      function translateCategory(cat) {
+        const map = {
+          submersible: { ar: "غاطسة" },
+          industrial: { ar: "صناعية" },
+          irrigation: { ar: "ري" },
+          drinking: { ar: "مياه شرب" },
+        };
+        return map[cat]?.ar || cat;
+      }
+
+      // State
       let currentCategory = "all";
       let currentBrand = "all";
+      let products = [];
 
-      // DOM Elements
+      // DOM elements
       const productGrid = document.getElementById("product-grid");
       const catFilterBtns = document.querySelectorAll(".filter-cat-btn");
       const brandFilterContainer = document.getElementById(
@@ -376,26 +293,39 @@
       );
       const detailView = document.getElementById("product-detail-view");
 
-      // Extract unique brands
-      const uniqueBrands = ["all", ...new Set(products.map((p) => p.brand))];
+      // Fetch products from Supabase
+      async function fetchProducts() {
+        const { data, error } = await supabase
+          .from("products")
+          .select("*")
+          .order("order", { ascending: true });
+        if (error) {
+          console.error("Error fetching products:", error);
+          productGrid.innerHTML =
+            '<p class="text-center col-span-full py-20">فشل تحميل المنتجات.</p>';
+          return [];
+        }
+        return data;
+      }
 
       // Render brand filter buttons
       function renderBrandFilters() {
-        brandFilterContainer.innerHTML = uniqueBrands
+        const brands = ["all", ...new Set(products.map((p) => p.brand))];
+        brandFilterContainer.innerHTML = brands
           .map((brand) => {
             const isActive = brand === currentBrand;
             const activeClass = isActive
               ? "bg-main text-white"
               : "border border-gray-200 text-gray-500 hover:border-main hover:text-main";
+            const label = brand === "all" ? "جميع العلامات" : brand;
             return `
           <button class="filter-brand-btn px-6 py-2 rounded-full text-sm font-medium transition-all ${activeClass}" data-brand="${brand}">
-            ${brand === "all" ? "جميع العلامات" : brand}
+            ${label}
           </button>
         `;
           })
           .join("");
 
-        // Attach listeners
         document.querySelectorAll(".filter-brand-btn").forEach((btn) => {
           btn.addEventListener("click", () => {
             document.querySelectorAll(".filter-brand-btn").forEach((b) => {
@@ -404,7 +334,6 @@
             });
             btn.classList.add("bg-main", "text-white");
             btn.classList.remove("border", "border-gray-200", "text-gray-500");
-
             currentBrand = btn.getAttribute("data-brand");
             filterProducts();
           });
@@ -414,66 +343,54 @@
       // Filter products
       function filterProducts() {
         let filtered = products;
-
         if (currentCategory !== "all") {
           filtered = filtered.filter((p) => p.category === currentCategory);
         }
         if (currentBrand !== "all") {
           filtered = filtered.filter((p) => p.brand === currentBrand);
         }
-
         renderGrid(filtered);
       }
 
-      // Render grid
+      // Render product grid
       function renderGrid(filtered) {
         if (filtered.length === 0) {
-          productGrid.innerHTML = `<p class="text-center text-gray-500 col-span-full py-20">لا توجد منتجات تطابق اختيارك.</p>`;
+          productGrid.innerHTML =
+            '<p class="text-center text-gray-500 col-span-full py-20">لا توجد منتجات تطابق اختيارك.</p>';
           return;
         }
 
         productGrid.innerHTML = filtered
           .map((p) => {
-            // Translate category for display
-            let catDisplay = "";
-            switch (p.category) {
-              case "submersible":
-                catDisplay = "غاطسة";
-                break;
-              case "industrial":
-                catDisplay = "صناعية";
-                break;
-              case "irrigation":
-                catDisplay = "ري";
-                break;
-              case "drinking":
-                catDisplay = "مياه شرب";
-                break;
-              default:
-                catDisplay = p.category;
-            }
+            const title = p.title_ar || p.title_en;
+            const shortDesc = p.short_desc_ar || p.short_desc_en || "";
+            const categoryDisplay = translateCategory(p.category);
+            const imageUrl = p.main_image
+              ? `${p.main_image}?width=400&height=400&fit=cover`
+              : "";
+
             return `
-        <div onclick="openDetailView(${p.id})" class="group cursor-pointer bg-white rounded-3xl border border-gray-100 p-6 hover:shadow-2xl transition-all duration-500">
-          <div class="h-64 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 relative overflow-hidden">
-            <img src="${p.image}" loading="lazy" class="h-48 object-contain group-hover:scale-110 transition-transform duration-500" alt="${p.title}">
-            <div class="absolute top-2 left-2 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-bold text-main border border-gray-200">
-              ${p.brand}
+          <div onclick="openDetailView('${p.id}')" class="group cursor-pointer bg-white rounded-3xl border border-gray-100 p-6 hover:shadow-2xl transition-all duration-500">
+            <div class="h-64 bg-slate-50 rounded-2xl flex items-center justify-center mb-6 relative overflow-hidden">
+              <img src="${imageUrl}" loading="lazy" class="h-48 object-contain group-hover:scale-110 transition-transform duration-500" alt="${title}">
+              <div class="absolute top-2 right-2 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-bold text-main border border-gray-200">
+                ${p.brand}
+              </div>
+            </div>
+            <p class="text-secondary text-xs font-bold uppercase tracking-widest mb-2">${categoryDisplay}</p>
+            <h3 class="text-xl font-bold text-main mb-2">${title}</h3>
+            <p class="text-gray-500 text-sm mb-4">${shortDesc}</p>
+            <div class="flex justify-between items-center text-xs font-mono text-gray-400">
+              <span>موديل: ${p.model_number || "N/A"}</span>
+              <span class="text-main font-bold">عرض التفاصيل ←</span>
             </div>
           </div>
-          <p class="text-secondary text-xs font-bold uppercase tracking-widest mb-2">${catDisplay}</p>
-          <h3 class="text-xl font-bold text-main mb-2">${p.title}</h3>
-          <p class="text-gray-500 text-sm mb-4">${p.shortDesc}</p>
-          <div class="flex justify-between items-center text-xs font-mono text-gray-400">
-            <span>موديل: ${p.number}</span>
-            <span class="text-main font-bold">عرض التفاصيل ←</span>
-          </div>
-        </div>
-      `;
+        `;
           })
           .join("");
       }
 
-      // Category filters
+      // Category filter listeners
       catFilterBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           catFilterBtns.forEach((b) => {
@@ -482,7 +399,6 @@
           });
           btn.classList.add("bg-main", "text-white");
           btn.classList.remove("border", "border-gray-200", "text-gray-500");
-
           currentCategory = btn.getAttribute("data-category");
           filterProducts();
         });
@@ -493,42 +409,51 @@
         const product = products.find((p) => p.id === id);
         if (!product) return;
 
-        document.getElementById("detail-img").src = product.image;
-        document.getElementById("detail-title").innerText = product.title;
+        document.getElementById("detail-img").src = product.main_image || "";
+        document.getElementById("detail-title").innerText =
+          product.title_ar || product.title_en;
         document.getElementById("detail-long-desc").innerText =
-          product.longDesc;
-        // Translate category for detail
-        let catDisplay = "";
-        switch (product.category) {
-          case "submersible":
-            catDisplay = "غاطسة";
-            break;
-          case "industrial":
-            catDisplay = "صناعية";
-            break;
-          case "irrigation":
-            catDisplay = "ري";
-            break;
-          case "drinking":
-            catDisplay = "مياه شرب";
-            break;
-          default:
-            catDisplay = product.category;
-        }
-        document.getElementById("detail-category").innerText = catDisplay;
-        document.getElementById("detail-bg-number").innerText = product.number;
+          product.long_desc_ar || product.long_desc_en || "";
+        document.getElementById("detail-category").innerText =
+          translateCategory(product.category);
+        document.getElementById("detail-bg-number").innerText =
+          product.model_number || "";
 
         const specGrid = document.getElementById("detail-spec-grid");
-        specGrid.innerHTML = Object.entries(product.specs)
+        const specs = [];
+        if (product.max_flow)
+          specs.push({ label: "أقصى تدفق", value: product.max_flow });
+        if (product.max_head)
+          specs.push({ label: "أقصى رفع", value: product.max_head });
+        if (product.material)
+          specs.push({ label: "الخامات", value: product.material });
+        if (product.power)
+          specs.push({ label: "الطاقة", value: product.power });
+        if (product.efficiency)
+          specs.push({ label: "الكفاءة", value: product.efficiency });
+        if (product.diameter)
+          specs.push({ label: "القطر", value: product.diameter });
+
+        specGrid.innerHTML = specs
           .map(
-            ([key, value]) => `
+            (s) => `
         <div>
-          <p class="text-xs text-gray-400 uppercase font-bold mb-1">${key}</p>
-          <p class="text-xl font-bold text-main">${value}</p>
+          <p class="text-xs text-gray-400 uppercase font-bold mb-1">${s.label}</p>
+          <p class="text-xl font-bold text-main">${s.value}</p>
         </div>
       `,
           )
           .join("");
+
+        const datasheetLink = document.getElementById("datasheet-link");
+        if (datasheetLink) {
+          if (product.datasheet_url) {
+            datasheetLink.href = product.datasheet_url;
+            datasheetLink.classList.remove("hidden");
+          } else {
+            datasheetLink.classList.add("hidden");
+          }
+        }
 
         detailView.classList.remove("hidden");
         document.body.style.overflow = "hidden";
@@ -540,6 +465,7 @@
       };
 
       // Initialise
+      products = await fetchProducts();
       renderBrandFilters();
       filterProducts();
     </script>

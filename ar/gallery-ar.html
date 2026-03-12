@@ -77,7 +77,7 @@
       }
     </script>
 
-    <!-- === STYLES & FONTS (unchanged) === -->
+    <!-- === STYLES & FONTS === -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/styles/variables.css" />
     <link rel="stylesheet" href="/styles/main.css" />
@@ -92,6 +92,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css"
     />
+
+    <!-- Supabase JS -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
     <!-- === SCRIPTS === -->
     <script type="module" src="/js/main-ar.js"></script>
@@ -141,290 +144,20 @@
         </div>
       </section>
 
-      <!-- Gallery Grid with functional filters -->
+      <!-- Gallery Grid with dynamic content -->
       <section class="py-20 bg-white" id="gallery">
         <div class="container mx-auto px-6">
-          <!-- Filter buttons (translated) -->
+          <!-- Filter buttons container -->
           <div
             class="flex justify-center gap-2 mb-12 flex-wrap"
             id="filter-buttons"
-          >
-            <button
-              class="filter-btn px-6 py-2 rounded-full bg-main text-white text-sm font-medium hover:bg-secondary transition"
-              data-filter="all"
-            >
-              الكل
-            </button>
-            <button
-              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
-              data-filter="irrigation"
-            >
-              الري
-            </button>
-            <button
-              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
-              data-filter="industrial"
-            >
-              الصناعي
-            </button>
-            <button
-              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
-              data-filter="municipal"
-            >
-              البلدي
-            </button>
-            <button
-              class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition"
-              data-filter="installation"
-            >
-              التركيب
-            </button>
-          </div>
+          ></div>
 
-          <!-- Image grid (lightgallery container) – images unchanged, captions translated -->
+          <!-- Image grid container -->
           <div
             id="gallery-grid"
             class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-          >
-            <!-- Item 1: Industrial -->
-            <a
-              class="gallery-item"
-              data-category="industrial"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="/assets/gallery/1.jfif1"
-                  alt="مضخة صناعية"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>تركيب مضخة صناعية</h4>
-                  <p>مشروع مصفاة الخرطوم، 2023</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Item 2: Irrigation -->
-            <a
-              href="https://images.unsplash.com/photo-1560518883-ce690c6e4d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80"
-              class="gallery-item"
-              data-category="irrigation"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="/assets/gallery/2.jfif"
-                  alt="نظام ري"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>الري بالمحور المركزي</h4>
-                  <p>مشروع زراعي، الجزيرة</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Item 3: Installation -->
-            <a
-              href="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-              class="gallery-item"
-              data-category="installation"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="/assets/gallery/3.jfif"
-                  alt="تركيب خط أنابيب"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>تركيب خط أنابيب</h4>
-                  <p>خط نقل المياه، بورتسودان</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Item 4: Installation -->
-            <a
-              href="https://images.unsplash.com/photo-1622898802018-1a9e6bbd7e1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
-              class="gallery-item"
-              data-category="installation"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1622898802018-1a9e6bbd7e1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="مضخة غاطسة"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>تركيب مضخة غاطسة</h4>
-                  <p>بئر عميق، شمال كردفان</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Item 5: Municipal -->
-            <a
-              href="https://images.unsplash.com/photo-1581092160562-40aa08e6b9f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-              class="gallery-item"
-              data-category="municipal"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e6b9f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="فريق الصيانة"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>فريق الصيانة</h4>
-                  <p>فحص دوري، الخرطوم</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Item 6: Industrial -->
-            <a
-              href="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-              class="gallery-item"
-              data-category="industrial"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="لوحة تحكم"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>نظام تحكم المضخات</h4>
-                  <p>محطة آلية، نهر النيل</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Item 7: Municipal -->
-            <a
-              href="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              class="gallery-item"
-              data-category="municipal"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="محطة معالجة"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>محطة معالجة المياه</h4>
-                  <p>منشأة أم درمان</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Item 8: Irrigation -->
-            <a
-              href="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              class="gallery-item"
-              data-category="irrigation"
-              data-sub-html=".caption"
-            >
-              <div
-                class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1581091870593-3f0e9f8e7b8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="قناة ري"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div
-                  class="absolute inset-0 bg-main/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                >
-                  <span
-                    class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded"
-                    >عرض</span
-                  >
-                </div>
-                <div class="caption hidden">
-                  <h4>قناة ري</h4>
-                  <p>مشروع الجزيرة</p>
-                </div>
-              </div>
-            </a>
-          </div>
+          ></div>
         </div>
       </section>
 
@@ -443,7 +176,6 @@
           >
             اتصل بفريقنا
             <i class="fa-solid fa-arrow-left"></i>
-            <!-- arrow-left for RTL -->
           </a>
         </div>
       </section>
@@ -451,17 +183,142 @@
 
     <div id="footer"></div>
 
-    <!-- LightGallery JS (unchanged) -->
+    <!-- LightGallery JS -->
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/fullscreen/lg-fullscreen.min.js"></script>
 
-    <!-- Filter and gallery initialization (same logic) -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      (async function () {
+        // --- Configuration ---
+        const SUPABASE_URL = "https://alsmjjizeoquuciyuhaf.supabase.co";
+        const SUPABASE_ANON_KEY =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsc21qaml6ZW9xdXVjaXl1aGFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5NzMzMjAsImV4cCI6MjA4ODU0OTMyMH0.rjnOo6ToIOwGcuRzhgyE9pkff2s3KcHrRvextt7gdeQ";
+
+        // Detect language – for this page it's Arabic
+        const isArabic = true;
+
+        // Category display names (Arabic already)
+        const categoryNames = {
+          irrigation: { ar: "الري" },
+          industrial: { ar: "صناعي" },
+          municipal: { ar: "بلدي" },
+          installation: { ar: "تركيب" },
+        };
+
+        // Initialize Supabase client
+        const { createClient } = supabase;
+        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // DOM elements
+        const filterContainer = document.getElementById("filter-buttons");
+        const gridContainer = document.getElementById("gallery-grid");
+
+        // Fetch gallery items
+        const { data: galleryItems, error } = await supabaseClient
+          .from("gallery")
+          .select("*")
+          .order("order", { ascending: true });
+
+        if (error) {
+          console.error("Error fetching gallery:", error);
+          gridContainer.innerHTML =
+            '<p class="text-center col-span-full py-20">فشل تحميل المعرض.</p>';
+          return;
+        }
+
+        if (!galleryItems || galleryItems.length === 0) {
+          gridContainer.innerHTML =
+            '<p class="text-center col-span-full py-20">لا توجد صور في المعرض بعد.</p>';
+          return;
+        }
+
+        // Unique categories
+        const categories = [
+          ...new Set(galleryItems.map((item) => item.category).filter(Boolean)),
+        ];
+
+        // Render filter buttons (Arabic)
+        filterContainer.innerHTML = `
+        <button class="filter-btn px-6 py-2 rounded-full bg-main text-white text-sm font-medium hover:bg-secondary transition" data-filter="all">
+          الكل
+        </button>
+        ${categories
+          .map((cat) => {
+            const displayName = categoryNames[cat]?.ar || cat;
+            return `
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-main hover:text-white transition" data-filter="${cat}">
+              ${displayName}
+            </button>
+          `;
+          })
+          .join("")}
+      `;
+
+        // Helper to escape HTML
+        function escapeHtml(unsafe) {
+          if (!unsafe) return "";
+          return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+        }
+
+        // Render gallery items
+        function renderGalleryItems(filter = "all") {
+          const filtered =
+            filter === "all"
+              ? galleryItems
+              : galleryItems.filter((item) => item.category === filter);
+
+          gridContainer.innerHTML = filtered
+            .map((item) => {
+              const title = item.title_ar || item.title_en || "";
+              const description =
+                item.description_ar || item.description_en || "";
+              const categoryDisplay =
+                categoryNames[item.category]?.ar || item.category;
+
+              const thumbnailUrl = item.image_url + "?width=600&quality=80";
+              const fullUrl = item.image_url;
+
+              // Build caption HTML (escaped)
+              const caption = `<h4>${escapeHtml(title)}</h4>${description ? `<p>${escapeHtml(description)}</p>` : ""}`;
+
+              return `
+            <a href="${fullUrl}" class="gallery-item relative block" data-category="${item.category || ""}" data-sub-html="${caption.replace(/"/g, "&quot;")}">
+              <div class="relative aspect-square group overflow-hidden rounded-xl border border-gray-100 hover:shadow-xl transition-shadow">
+                <img src="${thumbnailUrl}" alt="${escapeHtml(title || "صورة المعرض")}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                
+                ${
+                  categoryDisplay
+                    ? `
+                  <span class="absolute top-2 left-2 bg-main/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm z-10">
+                    ${escapeHtml(categoryDisplay)}
+                  </span>
+                `
+                    : ""
+                }
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end items-center p-4">
+                  ${title ? `<span class="text-white text-sm font-medium text-center mb-2">${escapeHtml(title)}</span>` : ""}
+                  <span class="text-white text-[10px] font-bold uppercase tracking-widest bg-main px-3 py-1 rounded">عرض</span>
+                </div>
+              </div>
+            </a>
+          `;
+            })
+            .join("");
+        }
+
+        // Initial render
+        renderGalleryItems("all");
+
         // Initialize lightGallery
-        const gallery = lightGallery(document.getElementById("gallery-grid"), {
+        let gallery = lightGallery(gridContainer, {
           selector: ".gallery-item",
           plugins: [lgZoom, lgThumbnail, lgFullscreen],
           speed: 500,
@@ -470,13 +327,10 @@
           thumbnail: true,
         });
 
-        // Filter functionality
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const galleryItems = document.querySelectorAll(".gallery-item");
-
+        // Filter buttons
+        const filterButtons = filterContainer.querySelectorAll(".filter-btn");
         filterButtons.forEach((button) => {
           button.addEventListener("click", function () {
-            // Update active button styling
             filterButtons.forEach((btn) => {
               btn.classList.remove("bg-main", "text-white");
               btn.classList.add("bg-gray-100", "text-gray-700");
@@ -485,25 +339,20 @@
             this.classList.add("bg-main", "text-white");
 
             const filter = this.getAttribute("data-filter");
+            renderGalleryItems(filter);
 
-            galleryItems.forEach((item) => {
-              if (filter === "all") {
-                item.style.display = "block";
-              } else {
-                const category = item.getAttribute("data-category");
-                if (category === filter) {
-                  item.style.display = "block";
-                } else {
-                  item.style.display = "none";
-                }
-              }
+            if (gallery) gallery.destroy();
+            gallery = lightGallery(gridContainer, {
+              selector: ".gallery-item",
+              plugins: [lgZoom, lgThumbnail, lgFullscreen],
+              speed: 500,
+              download: false,
+              counter: true,
+              thumbnail: true,
             });
-
-            // Refresh lightGallery to update layout
-            gallery.refresh();
           });
         });
-      });
+      })();
     </script>
   </body>
 </html>
