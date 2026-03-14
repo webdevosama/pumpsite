@@ -1,0 +1,140 @@
+/* styles/gallery.css */
+@import 'variables.css';
+
+/* Filter buttons */
+.filter-btn {
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+    background-color: var(--main-color) !important;
+    color: white !important;
+    box-shadow: 0 8px 20px -8px rgba(30, 53, 117, 0.3);
+}
+
+.filter-btn:not(.active) {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0;
+}
+
+.filter-btn:not(.active):hover {
+    background-color: #e2e8f0 !important;
+    border-color: var(--secondary-color);
+}
+
+/* Gallery grid cards */
+.gallery-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-card img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Gallery grid cards */
+.gallery-card .overlay {
+    background: linear-gradient(to top,
+            rgba(30, 53, 117, 0.9) 0%,
+            /* main-color with opacity */
+            transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Modal */
+#image-modal {
+    transition: opacity 0.3s ease;
+}
+
+#image-modal.show {
+    opacity: 1;
+    display: flex;
+}
+
+#image-modal .modal-content {
+    transition: transform 0.3s ease;
+    transform: scale(0.95);
+}
+
+#image-modal.show .modal-content {
+    transform: scale(1);
+}
+
+/* Modal backdrop */
+#modal-backdrop {
+    background: var(--main-color);
+    opacity: 0.95;
+    backdrop-filter: blur(8px);
+}
+
+/* Modal close button */
+#close-modal {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+    z-index: 60;
+    /* ensure it's above everything */
+}
+
+#close-modal:hover {
+    background: var(--secondary-color);
+    transform: rotate(90deg);
+}
+
+/* Modal navigation buttons */
+.modal-nav-btn {
+    transition: all 0.2s;
+    background: white;
+    color: var(--main-color);
+    border: 1px solid #e2e8f0;
+}
+
+.modal-nav-btn:hover {
+    background: var(--main-color);
+    color: white;
+    border-color: var(--main-color);
+}
+
+.modal-nav-btn.next {
+    background: var(--main-color);
+    color: white;
+}
+
+.modal-nav-btn.next:hover {
+    background: var(--secondary-color);
+}
+
+/* Modal image transition */
+#modal-img {
+    transition: opacity 0.3s ease-in-out, transform 0.4s ease;
+}
+
+/* Slide effects */
+.modal-content.slide-next #modal-img {
+    transform: translateX(-30px) scale(0.95);
+    opacity: 0.5;
+}
+
+.modal-content.slide-prev #modal-img {
+    transform: translateX(30px) scale(0.95);
+    opacity: 0.5;
+}
