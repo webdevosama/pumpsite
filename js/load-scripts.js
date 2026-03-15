@@ -37,13 +37,22 @@ function initMobileMenu() {
 
   if (btn && menu) {
     btn.onclick = () => {
-      // Toggle 'active' to match your CSS .mobile-menu.active
       const isOpen = menu.classList.toggle("active");
+      btn.setAttribute("aria-expanded", isOpen);
       btn.innerText = isOpen ? "✕" : "☰";
+
+      if (isOpen) {
+        // Focus first link after a short delay to allow rendering
+        setTimeout(() => {
+          const firstLink = menu.querySelector("a");
+          if (firstLink) firstLink.focus();
+        }, 100);
+      } else {
+        btn.focus();
+      }
     };
   }
 }
-
 function highlightActiveLink() {
   const path = window.location.pathname.split("/").pop() || "index.html";
   const links = document.querySelectorAll("nav a");
