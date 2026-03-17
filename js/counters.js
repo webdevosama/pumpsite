@@ -1,21 +1,16 @@
-/* counters.js */
+// Quick counters logic for your script file
 export function initCounters() {
-  // Added 'export' here
   const counters = document.querySelectorAll(".counter");
   counters.forEach((counter) => {
     const target = +counter.getAttribute("data-target");
-    if (isNaN(target)) return; // Safety check
+    const count = +counter.innerText;
+    const increment = target / 200; // Adjust speed here
 
-    const increment = target / 100;
-    const updateCount = () => {
-      const count = +counter.innerText;
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 20);
-      } else {
-        counter.innerText = target;
-      }
-    };
-    updateCount();
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(initCounters, 1);
+    } else {
+      counter.innerText = target;
+    }
   });
 }

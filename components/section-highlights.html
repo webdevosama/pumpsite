@@ -1,196 +1,92 @@
-<section class="py-24 bg-white relative overflow-hidden">
-  <!-- Subtle background decoration -->
-  <div class="absolute inset-0 opacity-5">
-    <div
-      class="absolute top-0 left-0 w-64 h-64 bg-main rounded-full filter blur-3xl"
-    ></div>
-    <div
-      class="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full filter blur-3xl"
-    ></div>
-  </div>
-
+<!-- components/section-highlights.html -->
+<section id="highlights" class="py-24 bg-white relative overflow-hidden">
+  <!-- Decorative grid background -->
+  <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(#1e3575 1px, transparent 1px); background-size: 30px 30px;"></div>
+  
   <div class="container mx-auto px-6 relative z-10">
-    <!-- Section Header with decorative line -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="flex justify-center items-center gap-3 mb-4">
-        <div class="h-px w-12 bg-main/30"></div>
-        <span class="text-main font-semibold tracking-wider text-sm"
-          >OUR IMPACT</span
-        >
-        <div class="h-px w-12 bg-main/30"></div>
+    <div class="max-w-3xl mb-16 reveal-left">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-10 h-[2px] bg-secondary"></span>
+        <span class="text-secondary font-bold text-xs uppercase tracking-[0.3em]">The Sudan Advantage</span>
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold text-main mb-4">
-        Numbers That Speak
+      <h2 class="text-4xl font-bold text-main leading-tight">
+        Trusted Infrastructure <br />
+        <span class="text-gray-400 font-light italic">By the Numbers</span>
       </h2>
-      <p class="text-gray-600 text-lg">
-        For over six decades, we've been powering Sudan's water wealth—one
-        project, one customer, one partnership at a time.
-      </p>
     </div>
 
-    <!-- Metrics Grid -->
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
-    >
-      <!-- Card 1: Years Experience -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
-        <!-- Background layers -->
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <!-- Content -->
-        <div class="relative">
-          <!-- Icon with circle background -->
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-clock-rotate-left text-3xl text-main"></i>
-          </div>
-
-          <!-- Number -->
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="60">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <!-- Title -->
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            Years of Experience
-          </h3>
-
-          <!-- Description -->
-          <p class="text-sm text-gray-500">
-            Serving Sudan with excellence since 1966
-          </p>
-
-          <!-- Decorative line -->
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <!-- Stat cards with reveal and hover effect -->
+      <div class="group text-center reveal-left">
+        <div class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary">
+          <i class="fa-solid fa-clock-rotate-left text-4xl"></i>
         </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span class="counter text-5xl font-bold text-main tracking-tighter" data-target="60">0</span>
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">Years of Legacy</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Serving Sudan's water needs since 1966.</p>
       </div>
 
-      <!-- Card 2: Projects Completed -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <div class="relative">
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-diagram-project text-3xl text-main"></i>
-          </div>
-
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="850">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            Projects Completed
-          </h3>
-          <p class="text-sm text-gray-500">
-            Water, gas, oil & industrial sectors
-          </p>
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
+      <div class="group text-center reveal-left">
+        <div class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary">
+          <i class="fa-solid fa-diagram-project text-4xl"></i>
         </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span class="counter text-5xl font-bold text-main tracking-tighter" data-target="850">0</span>
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">Major Projects</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Across agriculture and industry.</p>
       </div>
 
-      <!-- Card 3: Satisfied Clients -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <div class="relative">
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-users text-3xl text-main"></i>
-          </div>
-
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="2500">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            Satisfied Clients
-          </h3>
-          <p class="text-sm text-gray-500">
-            Across Sudan and neighboring regions
-          </p>
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
+      <div class="group text-center reveal-left">
+        <div class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary">
+          <i class="fa-solid fa-users-gear text-4xl"></i>
         </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span class="counter text-5xl font-bold text-main tracking-tighter" data-target="2500">0</span>
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">Active Clients</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Trusted by national schemes.</p>
       </div>
 
-      <!-- Card 4: Global Partners -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <div class="relative">
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-handshake text-3xl text-main"></i>
-          </div>
-
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="12">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            Global Partners
-          </h3>
-          <p class="text-sm text-gray-500">Leading manufacturers worldwide</p>
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
+      <div class="group text-center reveal-left">
+        <div class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary">
+          <i class="fa-solid fa-industry text-4xl"></i>
         </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span class="counter text-5xl font-bold text-main tracking-tighter" data-target="12">0</span>
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">Global Partners</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Leading manufacturers worldwide.</p>
       </div>
     </div>
 
-    <!-- Trust Badge -->
-    <div class="text-center mt-16">
-      <div
-        class="inline-flex items-center gap-3 px-6 py-3 bg-main/5 rounded-full"
-      >
-        <i class="fa-solid fa-circle-check text-main"></i>
-        <span class="text-gray-700 font-medium"
-          >Trusted by municipalities, agricultural schemes, and industrial
-          leaders</span
-        >
+    <!-- Trust badge -->
+    <div class="mt-24 pt-12 border-t border-gray-100 flex flex-wrap items-center justify-between gap-8 reveal-left">
+      <div class="flex items-center gap-4">
+        <div class="flex -space-x-3">
+          <div class="w-12 h-12 rounded-full border-4 border-white bg-slate-100 flex items-center justify-center shadow-sm">
+            <i class="fa-solid fa-award text-main"></i>
+          </div>
+          <div class="w-12 h-12 rounded-full border-4 border-white bg-slate-100 flex items-center justify-center shadow-sm">
+            <i class="fa-solid fa-check-double text-main"></i>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-main font-bold uppercase tracking-tight">ISO Certified Equipment</p>
+          <p class="text-xs text-gray-400 font-medium tracking-wide">Professional Engineering Support & Quality Assurance</p>
+        </div>
       </div>
+
+      <a href="/gallery.html" class="flex items-center gap-3 text-main font-bold hover:text-secondary transition-colors group">
+        <span>View Project Gallery</span>
+        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-2 transition-transform"></i>
+      </a>
     </div>
   </div>
 </section>

@@ -1,0 +1,14 @@
+{
+  "name": "Ibrahim Abu Hassanein & Partners",
+  "short_name": "IAH Partners",
+  "icons": [
+    {
+      "src": "/assets/logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#1e3575",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
