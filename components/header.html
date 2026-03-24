@@ -1,50 +1,54 @@
-<!-- components/header.html -->
-<nav class="site-header bg-main/95 backdrop-blur-sm text-white sticky top-0 z-50 transition-all duration-300">
-  <div class="container mx-auto px-4 flex justify-between items-center h-20">
-    <!-- Logo -->
-    <a href="/" class="flex items-center gap-2">
-      <span class="text-2xl font-bold tracking-tight">IAH<span class="text-secondary"> & </span>Partners</span>
-      <span class="hidden sm:inline-block text-xs font-light text-white/70 border-l border-white/30 pl-2">since
-        1966</span>
+<nav class="site-header">
+  <div class="header-container">
+    <a href="/" class="logo-group">
+      <div class="logo-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+      <div class="logo-text">
+        <span class="brand">IAH<span>&</span>Partners</span>
+        <span class="subtext">Engineering Sudan</span>
+      </div>
     </a>
 
-    <!-- Desktop Navigation -->
-    <ul class="hidden md:flex items-center gap-6 font-medium">
-      <li><a href="/" class="hover:text-secondary transition">Home</a></li>
-      <li><a href="/products.html" class="hover:text-secondary transition">Products</a></li>
-      <li><a href="/gallery.html" class="hover:text-secondary transition">Gallery</a></li>
-      <li><a href="/about.html" class="hover:text-secondary transition">About</a></li>
-      <li><a href="/contact.html" class="hover:text-secondary transition">Contact</a></li>
-      <li>
-        <a href="/contact.html"
-          class="bg-secondary text-main px-5 py-2.5 rounded-full font-bold hover:bg-white transition">
-          Get a Quote
-        </a>
-      </li>
-      <li>
-        <a href="/ar/index-ar.html"
-          class="border border-white/30 px-4 py-2 rounded-full text-sm hover:bg-white/10 transition">
-          العربية
-        </a>
-      </li>
-    </ul>
+    <div class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/products.html" class="nav-link">Products</a></li>
+        <li><a href="/gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="/contact.html" class="btn-cta-glow">Get a Quote</a>
+      <a href="/ar/index-ar.html" class="lang-switch">العربية</a>
+    </div>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="menu-toggle md:hidden text-2xl" aria-label="Menu" aria-expanded="false">
+    <button
+      id="mobile-menu-btn"
+      class="menu-trigger-icon"
+      aria-label="Open Menu"
+    >
       ☰
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu md:hidden bg-main overflow-hidden transition-all duration-300 max-h-0">
-    <ul class="flex flex-col px-4 pb-4">
-      <li><a href="/" class="block py-3 border-b border-white/10 hover:text-secondary">Home</a></li>
-      <li><a href="/products.html" class="block py-3 border-b border-white/10 hover:text-secondary">Products</a></li>
-      <li><a href="/gallery.html" class="block py-3 border-b border-white/10 hover:text-secondary">Gallery</a></li>
-      <li><a href="/about.html" class="block py-3 border-b border-white/10 hover:text-secondary">About</a></li>
-      <li><a href="/contact.html" class="block py-3 border-b border-white/10 hover:text-secondary">Contact</a></li>
-      <li><a href="/contact.html" class="block py-3 font-bold text-secondary">Get a Quote</a></li>
-      <li><a href="/ar/index-ar.html" class="block py-3 font-bold text-secondary">العربية</a></li>
+  <div id="menu-backdrop" class="menu-backdrop"></div>
+
+  <div id="mobile-menu" class="mobile-drawer">
+    <button
+      id="close-menu-btn"
+      class="close-trigger-icon"
+      aria-label="Close Menu"
+    >
+      &times;
+    </button>
+    <ul class="mobile-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products.html">Products</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li>
+        <a href="/contact.html" class="btn-cta-glow mobile-cta">Get a Quote</a>
+      </li>
+      <li><a href="/ar/index-ar.html" class="lang-link-ar">العربية</a></li>
     </ul>
   </div>
 </nav>

@@ -1,72 +1,48 @@
-<!-- components/header-ar.html -->
 <nav class="site-header">
-  <div class="container mx-auto px-4 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="index-ar.html" class="logo">
-      <span class="font-bold tracking-tight"
-        >إ.أ.ح<span class="text-secondary"> و </span>شركاه</span
-      >
-      <!-- Optional small tagline -->
-      <span class="hidden sm:inline text-xs font-normal text-secondary/80 mr-2"
-        >منذ 1966</span
-      >
+  <div class="header-container">
+    <a href="/ar/index-ar.html" class="logo-group">
+      <div class="logo-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+      <div class="logo-text">
+        <span class="brand">إ.أ.ح<span>&</span>شركاه</span>
+        <span class="subtext">هندسة السودان</span>
+      </div>
     </a>
 
-    <!-- Desktop Navigation -->
-    <ul class="nav-links hidden md:flex gap-6 font-medium items-center">
-      <li><a href="index-ar.html">الرئيسية</a></li>
-      <li><a href="products-ar.html">المنتجات</a></li>
-      <li><a href="gallery-ar.html">معرض الصور</a></li>
-      <li><a href="about-ar.html">من نحن</a></li>
-      <li><a href="contact-ar.html">اتصل بنا</a></li>
-      <!-- CTA Button -->
-      <li>
-        <a
-          href="contact-ar.html"
-          class="bg-secondary text-main px-5 py-2 rounded-full font-bold hover:bg-white transition-colors"
-        >
-          طلب عرض سعر
-        </a>
-      </li>
-      <li>
-        <a
-          href="/"
-          class="text-white border border-white/30 px-3 py-1 rounded-full text-sm hover:bg-white/10 transition"
-        >
-          English
-        </a>
-      </li>
-    </ul>
+    <div class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="/ar/index-ar.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="/ar/products-ar.html" class="nav-link">المنتجات</a></li>
+        <li><a href="/ar/gallery-ar.html" class="nav-link">معرض الأعمال</a></li>
+        <li><a href="/ar/about-ar.html" class="nav-link">من نحن</a></li>
+        <li><a href="/ar/contact-ar.html" class="nav-link">اتصل بنا</a></li>
+      </ul>
+      <a href="/ar/contact-ar.html" class="btn-cta-glow">طلب عرض سعر</a>
+      <a href="/" class="lang-switch">English</a>
+    </div>
 
-    <!-- Mobile Menu Button -->
-    <button
-      id="mobile-menu-btn"
-      class="menu-toggle"
-      aria-label="القائمة"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
+    <button id="mobile-menu-btn" class="menu-trigger-icon" aria-label="القائمة">
       ☰
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu">
-    <ul class="flex flex-col py-4">
-      <li><a href="index-ar.html" class="mobile-nav-link">الرئيسية</a></li>
-      <li><a href="products-ar.html" class="mobile-nav-link">المنتجات</a></li>
-      <li><a href="gallery-ar.html" class="mobile-nav-link">معرض الصور</a></li>
-      <li><a href="about-ar.html" class="mobile-nav-link">من نحن</a></li>
-      <li><a href="contact-ar.html" class="mobile-nav-link">اتصل بنا</a></li>
+  <div id="menu-backdrop" class="menu-backdrop"></div>
+
+  <div id="mobile-menu" class="mobile-drawer">
+    <button id="close-menu-btn" class="close-trigger-icon" aria-label="إغلاق">
+      &times;
+    </button>
+    <ul class="mobile-links">
+      <li><a href="/ar/index-ar.html">الرئيسية</a></li>
+      <li><a href="/ar/products-ar.html">المنتجات</a></li>
+      <li><a href="/ar/gallery-ar.html">معرض الأعمال</a></li>
+      <li><a href="/ar/about-ar.html">من نحن</a></li>
+      <li><a href="/ar/contact-ar.html">اتصل بنا</a></li>
       <li>
-        <a
-          href="contact-ar.html"
-          class="mobile-nav-link font-bold text-secondary"
+        <a href="/ar/contact-ar.html" class="btn-cta-glow mobile-cta"
           >طلب عرض سعر</a
         >
       </li>
-            <li><a href="/" class="mobile-nav-link font-bold text-secondary">English</a></li>
-
+      <li><a href="/" class="lang-link-ar">English</a></li>
     </ul>
   </div>
 </nav>

@@ -73,41 +73,78 @@
   <link rel="stylesheet" href="styles/header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <!-- Leaflet CSS for map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
   <!-- === SCRIPTS === -->
   <script type="module" src="/js/main.js"></script>
   <noscript><style>body { opacity: 1; }</style></noscript>
+
+  <style>
+    /* Quick Support Links */
+    .quick-support-link {
+      transition: all 0.3s ease;
+    }
+    .quick-support-link:hover {
+      background-color: var(--main-color) !important;
+      color: #ffffff !important;
+    }
+
+    /* Contact Card Icons */
+    .contact-card-icon {
+      transition: all 0.3s ease;
+    }
+    .contact-card:hover .contact-card-icon {
+      background-color: var(--main-color) !important;
+      color: #ffffff !important;
+    }
+
+    /* Branch Buttons – consistent with "Send Inquiry" button */
+    .branch-btn {
+      padding: 8px 20px;
+      background-color: rgba(10, 22, 51, 0.1);
+      color: var(--main-color);
+      border: none;
+      border-radius: 9999px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .branch-btn:hover {
+      background-color: var(--secondary-color);
+      color: var(--main-color);
+    }
+    .branch-btn.active {
+      background-color: var(--main-color);
+      color: white;
+    }
+  </style>
 </head>
+
 <body class="bg-white text-gray-900 overflow-x-hidden">
   <div id="header"></div>
 
   <main>
-    <!-- Hero Section (refined) -->
-    <section class="relative pt-32 pb-20 bg-[#fbfbfb]">
-      <div class="container mx-auto px-6 text-center">
-        <div class="inline-block px-4 py-1 rounded-full bg-main/5 text-main text-xs tracking-[0.3em] uppercase mb-6 border border-main/10">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 bg-[#fbfbfb] overflow-hidden">
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <div class="inline-block px-4 py-1 rounded-full bg-main/5 text-main text-xs tracking-[0.3em] uppercase mb-6 border border-main/10 reveal-left">
           Global Support
         </div>
-        <h1 class="text-5xl md:text-7xl font-bold text-main mb-6 tracking-tight">
+        <h1 class="text-5xl md:text-7xl font-bold text-main mb-6 tracking-tight reveal-left" style="transition-delay: 100ms">
           How can we <span class="text-secondary">Help?</span>
         </h1>
-        <p class="text-gray-500 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+        <p class="text-gray-500 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed reveal-left" style="transition-delay: 200ms">
           Our engineering team is ready to support your pumping and irrigation infrastructure across Sudan.
         </p>
       </div>
+      <div class="absolute inset-0 opacity-[0.02] pointer-events-none" style="background-image: radial-gradient(#0a1633 1px, transparent 1px); background-size: 30px 30px;"></div>
     </section>
 
     <!-- Contact Details & Form -->
     <section class="py-24 relative bg-white">
       <div class="container mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
-          
           <!-- Left side: Contact info -->
           <div class="space-y-12">
-            <div>
+            <div class="reveal-left">
               <div class="flex items-center gap-2 mb-4">
                 <span class="w-8 h-[2px] bg-secondary"></span>
                 <p class="text-xs font-bold tracking-widest text-secondary uppercase">Contact Channels</p>
@@ -120,52 +157,52 @@
 
             <div class="grid gap-6">
               <!-- Office address -->
-              <div class="group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all hover:shadow-xl hover:shadow-gray-200/50">
-                <div class="bg-white p-4 rounded-2xl shadow-sm text-secondary group-hover:bg-main group-hover:text-white transition-colors">
+              <div class="contact-card group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal-left" style="transition-delay: 100ms">
+                <div class="contact-card-icon bg-white p-4 rounded-2xl shadow-sm text-secondary transition-all duration-300">
                   <i class="fa-solid fa-location-dot text-xl w-6 h-6 text-center"></i>
                 </div>
                 <div>
                   <h4 class="font-bold text-main text-lg mb-1">Main Office</h4>
-                  <p class="text-gray-500 font-light">Gamhoria Ave, Khartoum, Sudan<br/>P.O. Box 1133</p>
+                  <p class="text-gray-500 font-light">Gamhoria Ave, Khartoum, Sudan<br />P.O. Box 1133</p>
                 </div>
               </div>
 
               <!-- Phone numbers -->
-              <div class="group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all hover:shadow-xl hover:shadow-gray-200/50">
-                <div class="bg-white p-4 rounded-2xl shadow-sm text-secondary group-hover:bg-main group-hover:text-white transition-colors">
+              <div class="contact-card group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal-left" style="transition-delay: 200ms">
+                <div class="contact-card-icon bg-white p-4 rounded-2xl shadow-sm text-secondary transition-all duration-300">
                   <i class="fa-solid fa-phone text-xl w-6 h-6 text-center"></i>
                 </div>
                 <div>
                   <h4 class="font-bold text-main text-lg mb-1">Phone Numbers</h4>
-                  <p class="text-gray-500 font-light">+249 183 772033<br/>+249 183 774136</p>
+                  <p class="text-gray-500 font-light">+249 183 772033<br />+249 183 774136</p>
                 </div>
               </div>
 
               <!-- Email -->
-              <div class="group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all hover:shadow-xl hover:shadow-gray-200/50">
-                <div class="bg-white p-4 rounded-2xl shadow-sm text-secondary group-hover:bg-main group-hover:text-white transition-colors">
+              <div class="contact-card group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal-left" style="transition-delay: 300ms">
+                <div class="contact-card-icon bg-white p-4 rounded-2xl shadow-sm text-secondary transition-all duration-300">
                   <i class="fa-solid fa-envelope text-xl w-6 h-6 text-center"></i>
                 </div>
                 <div>
                   <h4 class="font-bold text-main text-lg mb-1">Email</h4>
-                  <p class="text-gray-500 font-light">info@abuhassanien.com<br/>support@pumps-sudan.com</p>
+                  <p class="text-gray-500 font-light">info@abuhassanien.com<br />support@pumps-sudan.com</p>
                 </div>
               </div>
 
               <!-- Business hours -->
-              <div class="group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all hover:shadow-xl hover:shadow-gray-200/50">
-                <div class="bg-white p-4 rounded-2xl shadow-sm text-secondary group-hover:bg-main group-hover:text-white transition-colors">
+              <div class="contact-card group flex items-start gap-6 p-8 bg-[#fcfcfc] rounded-[32px] border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 reveal-left" style="transition-delay: 400ms">
+                <div class="contact-card-icon bg-white p-4 rounded-2xl shadow-sm text-secondary transition-all duration-300">
                   <i class="fa-solid fa-clock text-xl w-6 h-6 text-center"></i>
                 </div>
                 <div>
                   <h4 class="font-bold text-main text-lg mb-1">Office Hours</h4>
-                  <p class="text-gray-500 font-light">Sun–Thu: 8:00 AM – 5:00 PM<br/>Fri–Sat: Closed (Emergency support available)</p>
+                  <p class="text-gray-500 font-light">Sun–Thu: 8:00 AM – 5:00 PM<br />Fri–Sat: Closed (Emergency support available)</p>
                 </div>
               </div>
             </div>
 
             <!-- Emergency note -->
-            <div class="bg-secondary/5 p-6 rounded-3xl border border-secondary/10">
+            <div class="bg-secondary/5 p-6 rounded-3xl border border-secondary/10 reveal-left" style="transition-delay: 500ms">
               <p class="text-sm text-gray-600 flex items-center gap-3">
                 <i class="fa-solid fa-truck-fast text-secondary text-xl"></i>
                 <span><strong class="text-main">24/7 Emergency support</strong> for critical pump failures – call our hotline: <span class="font-bold text-main">+249 912 345 678</span></span>
@@ -173,12 +210,12 @@
             </div>
           </div>
 
-          <!-- Right side: Enhanced contact form -->
-          <div class="bg-white p-10 rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.08)] border border-gray-100 relative overflow-hidden">
+          <!-- Right side: Contact form -->
+          <div class="bg-white p-10 rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.08)] border border-gray-100 relative overflow-hidden hover:shadow-2xl transition-all duration-500 reveal-left" style="transition-delay: 150ms">
             <div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/5 rounded-full"></div>
-            
+
             <h3 class="text-2xl font-bold text-main mb-8">Send a Message</h3>
-            <form action="#" method="POST" class="space-y-6">
+            <form action="#" method="POST" class="space-y-6" id="contact-form">
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 ml-1">Full Name *</label>
@@ -200,7 +237,7 @@
                   <input type="text" placeholder="Your company name" class="w-full p-4 rounded-2xl bg-[#f8f9fa] border-transparent focus:bg-white focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all" />
                 </div>
               </div>
-              
+
               <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 ml-1">Subject *</label>
                 <select required class="w-full p-4 rounded-2xl bg-[#f8f9fa] border-transparent focus:bg-white focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all appearance-none cursor-pointer">
@@ -227,58 +264,81 @@
                 <span>Send Inquiry</span>
                 <i class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
               </button>
+              <div id="form-message" class="text-sm text-center mt-4 hidden"></div>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Map Section with actual interactive map -->
-    <section class="py-24 bg-[#fbfbfb]">
-      <div class="container mx-auto px-6">
-        <div class="flex items-center justify-between mb-8">
-          <h3 class="text-3xl font-bold text-main tracking-tight">Visit Our Office</h3>
-          <a href="https://maps.app.goo.gl/YOUR_GOOGLE_MAPS_LINK" target="_blank" rel="noopener" class="text-secondary font-bold text-sm uppercase tracking-widest hover:underline">Open in Google Maps</a>
-        </div>
-        <div id="map-container" class="w-full h-[500px] rounded-[50px] overflow-hidden shadow-2xl border border-white relative">
-          <div id="map" class="w-full h-full bg-gray-100 flex items-center justify-center">
-            <!-- Map will be loaded by load-map.js -->
-            <p class="text-gray-400 animate-pulse font-light tracking-widest uppercase">Loading interactive map...</p>
+    <!-- Branch Locations Map -->
+    <section class="py-24 bg-[#fbfbfb] relative overflow-hidden">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 reveal-left">
+          <h3 class="text-3xl font-bold text-main tracking-tight">Our Regional Branches</h3>
+          <div class="flex flex-wrap gap-3">
+            <button class="branch-btn active" data-location="JG49+8V9, Al Khurtum, Sudan">Khartoum (HQ)</button>
+            <button class="branch-btn" data-location="HX9V+FC2, Ad-Dāmar, Sudan">Ad-Dāmar</button>
+            <button class="branch-btn" data-location="4FWC+F48, Dongola, Sudan">Dongola</button>
+            <button class="branch-btn" data-location="CG2G+954, Wad Madani, Sudan">Wad Madani</button>
           </div>
         </div>
-
-        <!-- Additional location info -->
-        <div class="grid md:grid-cols-3 gap-6 mt-10 text-center">
-          <div class="p-6 bg-white rounded-2xl border border-gray-100">
-            <i class="fa-solid fa-car text-2xl text-main mb-3"></i>
-            <p class="text-sm text-gray-600">Parking available behind the building</p>
-          </div>
-          <div class="p-6 bg-white rounded-2xl border border-gray-100">
-            <i class="fa-solid fa-language text-2xl text-main mb-3"></i>
-            <p class="text-sm text-gray-600">Support in English & العربية</p>
-          </div>
-          <div class="p-6 bg-white rounded-2xl border border-gray-100">
-            <i class="fa-solid fa-clock text-2xl text-main mb-3"></i>
-            <p class="text-sm text-gray-600">Response within 24 hours</p>
-          </div>
+        <div id="map-container" class="w-full h-[500px] rounded-[50px] overflow-hidden shadow-2xl border border-white relative reveal-left" style="transition-delay: 100ms">
+          <iframe id="branch-map" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=JG49+8V9,Al+Khurtum,Sudan&output=embed">
+          </iframe>
         </div>
       </div>
     </section>
 
-    <!-- Optional: FAQ teaser or quick links -->
+    <!-- Quick Support Links -->
     <section class="py-16 bg-white border-t border-gray-100">
       <div class="container mx-auto px-6 text-center">
-        <h4 class="text-lg font-semibold text-main mb-4">Quick Support</h4>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="#" class="px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">Product Catalog</a>
-          <a href="#" class="px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">Maintenance Guide</a>
-          <a href="#" class="px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">FAQs</a>
-          <a href="#" class="px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">Request a Quote</a>
+        <h4 class="text-lg font-semibold text-main mb-4 reveal-left">Quick Support</h4>
+        <div class="flex flex-wrap justify-center gap-4 reveal-left" style="transition-delay: 100ms">
+          <a href="#" class="quick-support-link px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">Product Catalog</a>
+          <a href="#" class="quick-support-link px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">Maintenance Guide</a>
+          <a href="#" class="quick-support-link px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">FAQs</a>
+          <a href="#" class="quick-support-link px-6 py-3 bg-main/5 rounded-full text-main hover:bg-main hover:text-white transition-colors">Request a Quote</a>
         </div>
       </div>
     </section>
   </main>
 
   <div id="footer"></div>
+
+  <!-- Simple form feedback simulation -->
+  <script>
+    document.getElementById("contact-form")?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const msg = document.getElementById("form-message");
+      msg.classList.remove("hidden");
+      msg.innerHTML = '<span class="text-green-600">✓ Message sent successfully. We\'ll get back to you soon.</span>';
+      setTimeout(() => msg.classList.add("hidden"), 5000);
+    });
+  </script>
+
+  <!-- Branch map switcher -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll('.branch-btn');
+      const mapIframe = document.getElementById('branch-map');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active button style
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Build the new embed URL using the standard Google Maps format
+          const location = encodeURIComponent(btn.getAttribute('data-location'));
+          const newMapUrl = `https://www.google.com/maps?q=${location}&output=embed`;
+
+          // Update the iframe src
+          mapIframe.src = newMapUrl;
+        });
+      });
+    });
+  </script>
 </body>
 </html>

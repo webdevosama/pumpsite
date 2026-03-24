@@ -1,16 +1,68 @@
-<!-- نبذة عن إرثنا - About Section (Arabic) -->
-<section class="py-24 bg-white text-center">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-main">عن إرثنا العريق</h2>
-    <p class="mt-6 text-gray-600 max-w-2xl mx-auto leading-relaxed">
-      تأسست الشركة عام 1966 على يد الحاج إبراهيم أبو حسنين، ومنذ ذلك الحين
-      ورسالتنا هي ربط ثروة السودان المائية بأحدث تقنيات الضخ العالمية.
-    </p>
-    <a
-      href="/ar/about.html"
-      class="mt-8 inline-block text-main font-bold border-b-2 border-main pb-1 hover:text-secondary hover:border-secondary transition-all"
-    >
-      المزيد عن مسيرتنا
-    </a>
+<!-- /ar/components/section-about.html -->
+<section id="about" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      
+      <!-- Image side (stays same, just translated alt text) -->
+      <div class="w-full lg:w-5/12 relative reveal-left">
+        <div class="relative max-w-sm mx-auto">
+          <div class="absolute -inset-4 border-2 border-secondary/20 rounded-3xl translate-x-2 translate-y-2 -z-10"></div>
+          
+          <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 aspect-square flex items-center justify-center">
+            <img src="/assets/drinking-water.jpg" alt="الهندسة الدقيقة" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+          </div>
+
+          <div class="absolute -bottom-6 -right-6 bg-secondary text-main p-5 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform">
+            <p class="text-xs font-black uppercase tracking-widest leading-none">تأسست</p>
+            <p class="text-2xl font-black">1966</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text side (RTL aligned) -->
+      <div class="w-full lg:w-7/12 space-y-8 reveal-left">
+        <div>
+          <span class="text-secondary font-bold text-xs uppercase tracking-[0.3em] block text-right">هندسة مستقبل السودان</span>
+          <h2 class="text-4xl font-bold text-main mt-4 mb-6 leading-tight text-right">
+            ربط الاحتياجات المحلية <br/>
+            <span class="text-secondary">بتكنولوجيا عالمية المستوى</span>
+          </h2>
+          <p class="text-gray-600 text-lg font-light leading-relaxed text-right">
+            تأسست الشركة على يد <strong class="text-main">إبراهيم أبو حسنين</strong>، وقضينا أكثر من 60 عاماً في إتقان فن إدارة المياه. نحن لا نورد المضخات فقط، بل نمد الزراعة والصناعة السودانية بشريان الحياة.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-8 py-6 border-y border-gray-100 text-right">
+          <div>
+            <p class="text-3xl font-black text-main">٦٠+</p>
+            <p class="text-[10px] uppercase text-gray-400 font-bold">عاماً</p>
+          </div>
+          <div>
+            <p class="text-3xl font-black text-main">٥٠٠+</p>
+            <p class="text-[10px] uppercase text-gray-400 font-bold">مشروعاً</p>
+          </div>
+          <div>
+            <p class="text-3xl font-black text-main">٨</p>
+            <p class="text-[10px] uppercase text-gray-400 font-bold">شريك عالمي</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-6 items-center justify-end">
+          <a href="/ar/about-ar.html" class="bg-main text-white px-8 py-4 rounded-full font-bold hover:bg-secondary transition-all shadow-md group inline-flex items-center gap-2">
+            <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+            <span>قصتنا الكاملة</span>
+          </a>
+          
+          <div class="flex items-center gap-3">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full bg-slate-100 border-2 border-white flex items-center justify-center"><i class="fa-solid fa-shield-halved text-[10px] text-main"></i></div>
+              <div class="w-8 h-8 rounded-full bg-slate-100 border-2 border-white flex items-center justify-center"><i class="fa-solid fa-certificate text-[10px] text-main"></i></div>
+            </div>
+            <p class="text-xs text-gray-400 font-medium">معدات معتمدة ودعم فني</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </section>

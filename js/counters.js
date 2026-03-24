@@ -1,16 +1,22 @@
-// Quick counters logic for your script file
+// counters.js
 export function initCounters() {
   const counters = document.querySelectorAll(".counter");
   counters.forEach((counter) => {
     const target = +counter.getAttribute("data-target");
-    const count = +counter.innerText;
-    const increment = target / 200; // Adjust speed here
+    if (isNaN(target)) return;
 
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(initCounters, 1);
-    } else {
-      counter.innerText = target;
-    }
+    let current = 0;
+    const increment = target / 100; // adjust speed here
+
+    const update = () => {
+      current += increment;
+      if (current < target) {
+        counter.innerText = Math.ceil(current);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
   });
 }

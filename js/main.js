@@ -1,6 +1,5 @@
 // main.js
 import { loadComponent } from "./load-scripts.js";
-import { initMap } from "./load-map.js";
 import { initCounters } from "./counters.js";
 import { initHeroCarousel } from "./hero-carousel.js";
 import { initScrollReveal } from "./scroll-reveal.js";
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     await Promise.all(activeTasks);
 
     if (document.getElementById("hero")) initHeroCarousel();
-    if (document.getElementById("map-container")) initMap("map-container");
     if (document.getElementById("highlights")) initCounters();
     initScrollReveal(); // Initialize scroll animations
   } catch (err) {
@@ -42,3 +40,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+
+// Call this after your header component is loaded
+// Example: loadComponent('header', 'components/header.html').then(initMobileMenu);

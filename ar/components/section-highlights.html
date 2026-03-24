@@ -1,191 +1,152 @@
-<!-- قسم الإنجازات - Highlights Section (Arabic) -->
-<section class="py-24 bg-white relative overflow-hidden">
-  <!-- خلفية زخرفية خفيفة -->
-  <div class="absolute inset-0 opacity-5">
-    <div
-      class="absolute top-0 left-0 w-64 h-64 bg-main rounded-full filter blur-3xl"
-    ></div>
-    <div
-      class="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full filter blur-3xl"
-    ></div>
-  </div>
+<!-- /ar/components/section-highlights.html -->
+<section id="highlights" class="py-24 bg-white relative overflow-hidden">
+  <div
+    class="absolute inset-0 opacity-[0.02]"
+    style="
+      background-image: radial-gradient(#1e3575 1px, transparent 1px);
+      background-size: 30px 30px;
+    "
+  ></div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <!-- رأس القسم مع خط زخرفي -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="flex justify-center items-center gap-3 mb-4">
-        <div class="h-px w-12 bg-main/30"></div>
-        <span class="text-main font-semibold tracking-wider text-sm"
-          >أثرنا بالأرقام</span
+    <div class="max-w-3xl mb-16 reveal-left">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-10 h-[2px] bg-secondary"></span>
+        <span
+          class="text-secondary font-bold text-xs uppercase tracking-[0.3em]"
+          >ميزة السودان</span
         >
-        <div class="h-px w-12 bg-main/30"></div>
       </div>
-      <h2 class="text-4xl md:text-5xl font-bold text-main mb-4">
-        أرقام تتحدث عنا
+      <h2 class="text-4xl font-bold text-main leading-tight">
+        بنية تحتية موثوقة <br />
+        <span class="text-gray-400 font-light italic">بالأرقام</span>
       </h2>
-      <p class="text-gray-600 text-lg">
-        على مدى ستة عقود، نمد السودان بثروته المائية—مشروع بعد مشروع، عميل بعد
-        عميل، شراكة بعد شراكة.
-      </p>
     </div>
 
-    <!-- شبكة المؤشرات -->
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
-    >
-      <!-- البطاقة 1: سنوات الخبرة -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <div class="group text-center reveal-left">
         <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <div class="relative">
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-clock-rotate-left text-3xl text-main"></i>
-          </div>
-
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="60">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            سنوات الخبرة
-          </h3>
-
-          <p class="text-sm text-gray-500">
-            نخدم السودان بتميز منذ 1966
-          </p>
-
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
-        </div>
-      </div>
-
-      <!-- البطاقة 2: المشاريع المنجزة -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <div class="relative">
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-diagram-project text-3xl text-main"></i>
-          </div>
-
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="850">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            مشروع مكتمل
-          </h3>
-          <p class="text-sm text-gray-500">
-            قطاعات المياه والغاز والنفط والصناعة
-          </p>
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
-        </div>
-      </div>
-
-      <!-- البطاقة 3: العملاء الراضون -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <div class="relative">
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-users text-3xl text-main"></i>
-          </div>
-
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="2500">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            عميل راضٍ
-          </h3>
-          <p class="text-sm text-gray-500">
-            في السودان والمناطق المجاورة
-          </p>
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
-        </div>
-      </div>
-
-      <!-- البطاقة 4: الشركاء العالميون -->
-      <div
-        class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-3"
-      >
-        <div
-          class="absolute inset-0 bg-gradient-to-br from-main/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        ></div>
-        <div
-          class="absolute inset-0 border border-main/10 rounded-2xl group-hover:border-main/30 transition-colors duration-500"
-        ></div>
-
-        <div class="relative">
-          <div
-            class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-main/10 to-main/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-500"
-          >
-            <i class="fa-solid fa-handshake text-3xl text-main"></i>
-          </div>
-
-          <div class="text-5xl font-bold text-main mb-3">
-            <span class="counter" data-target="12">0</span
-            ><span class="text-3xl text-main/60">+</span>
-          </div>
-
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">
-            شريك عالمي
-          </h3>
-          <p class="text-sm text-gray-500">
-            أبرز المصنعين حول العالم
-          </p>
-          <div
-            class="w-12 h-1 bg-main/20 mx-auto mt-4 rounded-full group-hover:w-16 group-hover:bg-main/40 transition-all duration-500"
-          ></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- شارة الثقة -->
-    <div class="text-center mt-16">
-      <div
-        class="inline-flex items-center gap-3 px-6 py-3 bg-main/5 rounded-full"
-      >
-        <i class="fa-solid fa-circle-check text-main"></i>
-        <span class="text-gray-700 font-medium"
-          >موثوق من البلديات والمشاريع الزراعية والقيادات الصناعية</span
+          class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary"
         >
+          <i class="fa-solid fa-clock-rotate-left text-4xl"></i>
+        </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span
+            class="counter text-5xl font-bold text-main tracking-tighter"
+            data-target="60"
+            >0</span
+          >
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">
+          سنوات من العطاء
+        </h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">
+          نخدم احتياجات السودان المائية منذ 1966.
+        </p>
       </div>
+
+      <div class="group text-center reveal-left">
+        <div
+          class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary"
+        >
+          <i class="fa-solid fa-diagram-project text-4xl"></i>
+        </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span
+            class="counter text-5xl font-bold text-main tracking-tighter"
+            data-target="850"
+            >0</span
+          >
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">
+          مشروعاً كبيراً
+        </h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">
+          في الزراعة والصناعة.
+        </p>
+      </div>
+
+      <div class="group text-center reveal-left">
+        <div
+          class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary"
+        >
+          <i class="fa-solid fa-users-gear text-4xl"></i>
+        </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span
+            class="counter text-5xl font-bold text-main tracking-tighter"
+            data-target="2500"
+            >0</span
+          >
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">
+          عميل نشط
+        </h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">
+          موثوقون من قبل المشاريع الوطنية.
+        </p>
+      </div>
+
+      <div class="group text-center reveal-left">
+        <div
+          class="mb-4 text-main transition-all duration-300 group-hover:-translate-y-2 group-hover:text-secondary"
+        >
+          <i class="fa-solid fa-industry text-4xl"></i>
+        </div>
+        <div class="flex items-baseline justify-center gap-1">
+          <span
+            class="counter text-5xl font-bold text-main tracking-tighter"
+            data-target="12"
+            >0</span
+          >
+          <span class="text-2xl font-bold text-secondary">+</span>
+        </div>
+        <h4 class="text-sm font-bold text-main uppercase tracking-wider mt-2">
+          شريك عالمي
+        </h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">
+          أبرز المصنعين حول العالم.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="mt-24 pt-12 border-t border-gray-100 flex flex-wrap items-center justify-between gap-8 reveal-left"
+    >
+      <div class="flex items-center gap-4">
+        <div class="flex -space-x-3">
+          <div
+            class="w-12 h-12 rounded-full border-4 border-white bg-slate-100 flex items-center justify-center shadow-sm"
+          >
+            <i class="fa-solid fa-award text-main"></i>
+          </div>
+          <div
+            class="w-12 h-12 rounded-full border-4 border-white bg-slate-100 flex items-center justify-center shadow-sm"
+          >
+            <i class="fa-solid fa-check-double text-main"></i>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-main font-bold uppercase tracking-tight">
+            معدات معتمدة آيزو
+          </p>
+          <p class="text-xs text-gray-400 font-medium tracking-wide">
+            دعم هندسي احترافي وضمان جودة
+          </p>
+        </div>
+      </div>
+      <a
+        href="/ar/gallery-ar.html"
+        class="flex items-center gap-3 text-main font-bold hover:text-secondary transition-colors group"
+      >
+        <span>استعرض معرض المشاريع</span>
+        <i
+          class="fa-solid fa-arrow-left-long group-hover:-translate-x-2 transition-transform"
+        ></i>
+      </a>
     </div>
   </div>
 </section>

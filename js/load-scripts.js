@@ -3,6 +3,8 @@
  * @param {string} id - The ID of the placeholder div
  * @param {string} file - Path to the HTML file
  */
+import { initMobileMenu, highlightActiveLink } from "./header.js";
+
 export async function loadComponent(id, file) {
   const element = document.getElementById(id);
   if (!element) return;
@@ -31,35 +33,3 @@ export async function loadComponent(id, file) {
   }
 }
 
-function initMobileMenu() {
-  const btn = document.getElementById("mobile-menu-btn");
-  const menu = document.getElementById("mobile-menu");
-
-  if (btn && menu) {
-    btn.onclick = () => {
-      const isOpen = menu.classList.toggle("active");
-      btn.setAttribute("aria-expanded", isOpen);
-      btn.innerText = isOpen ? "✕" : "☰";
-
-      if (isOpen) {
-        // Focus first link after a short delay to allow rendering
-        setTimeout(() => {
-          const firstLink = menu.querySelector("a");
-          if (firstLink) firstLink.focus();
-        }, 100);
-      } else {
-        btn.focus();
-      }
-    };
-  }
-}
-function highlightActiveLink() {
-  const path = window.location.pathname.split("/").pop() || "index.html";
-  const links = document.querySelectorAll("nav a");
-  links.forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href && href.includes(path)) {
-      link.classList.add("text-secondary", "font-bold");
-    }
-  });
-}
