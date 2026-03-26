@@ -1,482 +1,384 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- === PRIMARY META TAGS === -->
-    <title>
-      Gallery | Ibrahim Abu Hassanein & Partners Ltd. – Pump Projects in Sudan
-    </title>
-    <meta
-      name="description"
-      content="Browse our portfolio of pump installations, irrigation projects, and industrial solutions across Sudan. See our work in action."
-    />
-    <meta
-      name="keywords"
-      content="pump gallery Sudan, irrigation projects, industrial pumps installation, water pumping projects, Caprari installations"
-    />
-    <meta name="author" content="Ibrahim Abu Hassanein & Partners Ltd." />
-    <meta name="robots" content="index, follow" />
-    <link
-      rel="canonical"
-      href="https://abuhassanien.netlify.app/gallery.html"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- === OPEN GRAPH === -->
-    <meta
-      property="og:title"
-      content="Project Gallery – Ibrahim Abu Hassanein & Partners Ltd."
-    />
-    <meta
-      property="og:description"
-      content="See our pumping solutions in action across Sudan."
-    />
-    <meta
-      property="og:url"
-      content="https://abuhassanien.netlify.app/gallery.html"
-    />
-    <meta
-      property="og:image"
-      content="https://abuhassanien.netlify.app/assets/og-image-gallery.jpg"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
+  <!-- === PRIMARY META TAGS === -->
+  <title>Gallery | Ibrahim Abu Hassanein & Partners Ltd. – Pump Projects in Sudan</title>
+  <meta name="description"
+    content="Browse our portfolio of pump installations, irrigation projects, and industrial solutions across Sudan. See our work in action." />
+  <meta name="keywords"
+    content="pump gallery Sudan, irrigation projects, industrial pumps installation, water pumping projects, Caprari installations" />
+  <meta name="author" content="Ibrahim Abu Hassanein & Partners Ltd." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://abuhassanien.netlify.app/gallery.html" />
 
-    <!-- === TWITTER CARD === -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Gallery – Ibrahim Abu Hassanein & Partners Ltd."
-    />
-    <meta
-      name="twitter:description"
-      content="Explore our portfolio of pump projects."
-    />
-    <meta
-      name="twitter:image"
-      content="https://abuhassanien.netlify.app/assets/og-image-gallery.jpg"
-    />
+  <!-- === OPEN GRAPH === -->
+  <meta property="og:title" content="Project Gallery – Ibrahim Abu Hassanein & Partners Ltd." />
+  <meta property="og:description" content="See our pumping solutions in action across Sudan." />
+  <meta property="og:url" content="https://abuhassanien.netlify.app/gallery.html" />
+  <meta property="og:image" content="https://abuhassanien.netlify.app/assets/og-image-gallery.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
 
-    <!-- === FAVICON === -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <!-- === TWITTER CARD === -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery – Ibrahim Abu Hassanein & Partners Ltd." />
+  <meta name="twitter:description" content="Explore our portfolio of pump projects." />
+  <meta name="twitter:image" content="https://abuhassanien.netlify.app/assets/og-image-gallery.jpg" />
 
-    <!-- === SCHEMA.ORG (CollectionPage) === -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Project Gallery – Ibrahim Abu Hassanein & Partners Ltd.",
-        "description": "Images of our pump installations, irrigation systems, and industrial projects across Sudan.",
-        "url": "https://abuhassanien.netlify.app/gallery.html",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Ibrahim Abu Hassanein & Partners Ltd.",
-          "url": "https://abuhassanien.netlify.app/"
-        }
+  <!-- === FAVICON === -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- === SCHEMA.ORG (CollectionPage) === -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Project Gallery – Ibrahim Abu Hassanein & Partners Ltd.",
+      "description": "Images of our pump installations, irrigation systems, and industrial projects across Sudan.",
+      "url": "https://abuhassanien.netlify.app/gallery.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Ibrahim Abu Hassanein & Partners Ltd.",
+        "url": "https://abuhassanien.netlify.app/"
       }
-    </script>
+    }
+  </script>
 
-    <!-- === STYLES & FONTS === -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/gallery.css" />
-    <!-- new gallery CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+  <!-- === STYLES & FONTS === -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/gallery.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <!-- LightGallery CSS (if still needed for other parts, but we're not using it) -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery.min.css" /> -->
+  <!-- Supabase JS -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
-    <!-- Supabase JS -->
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <!-- === SCRIPTS === -->
+  <script type="module" src="/js/main.js"></script>
+  <noscript>
+    <style>
+      body {
+        opacity: 1;
+      }
+    </style>
+  </noscript>
 
-    <!-- === SCRIPTS === -->
-    <script type="module" src="/js/main.js"></script>
-    <noscript>
-      <style>
-        body {
-          opacity: 1;
-        }
-      </style>
-    </noscript>
-  </head>
+  <style>
+    /* Gallery cards: slower entrance with staggered delay */
+    .gallery-card {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 1.2s cubic-bezier(0.23, 1, 0.32, 1),
+        transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+      transition-delay: calc(var(--delay, 0) * 0.05s);
+    }
 
-  <body class="bg-white text-gray-900 overflow-x-hidden">
-    <div id="header"></div>
+    .gallery-card.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
-    <main>
-      <!-- Hero Section (unchanged) -->
-      <section class="relative pt-60 pb-32 overflow-hidden bg-[#0a1633]">
-        <div class="absolute inset-0 z-0">
-          <img
-            src="/assets/gallery/hero.jpg"
-            alt="Gallery Hero"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute inset-0 bg-[#0a1633]/70 mix-blend-multiply"
-          ></div>
+    .counter-badge {
+      transition: all 0.3s ease;
+    }
+
+    .back-to-top {
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+  <div id="header"></div>
+
+  <main>
+    <!-- Hero Section (unchanged) -->
+    <section class="relative pt-60 pb-32 overflow-hidden bg-[#0a1633]">
+      <div class="absolute inset-0 z-0">
+        <img src="/assets/gallery/hero.jpg" alt="Gallery Hero" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#0a1633]/70 mix-blend-multiply"></div>
+      </div>
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <div
+          class="inline-block px-6 py-2 rounded-full bg-white/5 backdrop-blur-2xl text-white/90 text-[10px] font-bold tracking-[0.6em] uppercase mb-10 border border-white/10 shadow-2xl">
+          Portfolio Archive
         </div>
-        <div class="container mx-auto px-6 text-center relative z-10">
-          <div
-            class="inline-block px-6 py-2 rounded-full bg-white/5 backdrop-blur-2xl text-white/90 text-[10px] font-bold tracking-[0.6em] uppercase mb-10 border border-white/10 shadow-2xl"
-          >
-            Portfolio Archive
-          </div>
-          <h1
-            class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
-          >
-            OUR <span class="text-secondary">GALLERY</span>
-          </h1>
-          <p
-            class="text-white/70 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
-          >
-            A curated exhibition of our industrial installations and pumping
-            solutions across Sudan.
-          </p>
-        </div>
-      </section>
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+          OUR <span class="text-secondary">GALLERY</span>
+        </h1>
+        <p class="text-white/70 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+          A curated exhibition of our industrial installations and pumping solutions across Sudan.
+        </p>
+      </div>
+    </section>
 
-      <section class="py-20 bg-white" id="gallery">
-        <div class="container mx-auto px-6">
-          <div
-            id="filter-buttons"
-            class="flex justify-center gap-2 mb-12 flex-wrap"
-          ></div>
-
-          <div
-            id="gallery-grid"
-            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
-          >
-            <!-- Skeleton loaders -->
-            <div
-              class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"
-            ></div>
-            <div
-              class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"
-            ></div>
-            <div
-              class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"
-            ></div>
-            <div
-              class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"
-            ></div>
+    <section class="py-20 bg-white" id="gallery">
+      <div class="container mx-auto px-6">
+        <!-- Filter bar with counter -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+          <div id="filter-buttons" class="flex justify-center gap-2 flex-wrap"></div>
+          <div id="project-counter" class="text-sm text-gray-500 font-medium">
+            <span id="counter-current">0</span> / <span id="counter-total">0</span> projects
           </div>
         </div>
-      </section>
 
-      <!-- Modal -->
+        <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <!-- Skeleton loaders -->
+          <div class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"></div>
+          <div class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"></div>
+          <div class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"></div>
+          <div class="animate-pulse bg-gray-100 aspect-[4/5] rounded-2xl"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal (unchanged) -->
+    <div id="image-modal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-10 opacity-0 transition-opacity duration-300">
+      <div class="absolute inset-0 bg-main/95 backdrop-blur-xl cursor-pointer" id="modal-backdrop"></div>
       <div
-        id="image-modal"
-        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-10 opacity-0 transition-opacity duration-300"
-      >
+        class="relative w-full max-w-6xl max-h-full flex flex-col md:flex-row bg-white rounded-[2rem] overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 modal-content">
+        <button id="close-modal"
+          class="absolute top-4 right-4 md:top-6 md:right-6 z-50 w-10 h-10 md:w-12 md:h-12 bg-black/50 hover:bg-red-500 text-white rounded-full flex items-center justify-center transition-all shadow-lg backdrop-blur-sm">
+          <i class="fa-solid fa-xmark text-xl md:text-2xl"></i>
+        </button>
         <div
-          class="absolute inset-0 bg-main/95 backdrop-blur-xl cursor-pointer"
-          id="modal-backdrop"
-        ></div>
-
-        <div
-          class="relative w-full max-w-6xl max-h-full flex flex-col md:flex-row bg-white rounded-[2rem] overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 modal-content"
-        >
-          <!-- Close button - improved visibility -->
-          <button
-            id="close-modal"
-            class="absolute top-4 right-4 md:top-6 md:right-6 z-50 w-10 h-10 md:w-12 md:h-12 bg-black/50 hover:bg-red-500 text-white rounded-full flex items-center justify-center transition-all shadow-lg backdrop-blur-sm"
-          >
-            <i class="fa-solid fa-xmark text-xl md:text-2xl"></i>
-          </button>
-
-          <div
-            class="w-full md:w-2/3 bg-gray-50 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-gray-100"
-          >
-            <img
-              id="modal-img"
-              src=""
-              alt="Project Image"
-              class="max-w-full max-h-[60vh] md:max-h-full object-contain p-4"
-            />
-          </div>
-
-          <div
-            class="w-full md:w-1/3 p-8 md:p-12 flex flex-col justify-center bg-white"
-          >
-            <span
-              id="modal-category"
-              class="text-secondary text-xs font-black uppercase tracking-[0.3em] mb-4 inline-block"
-            ></span>
-            <h2
-              id="modal-title"
-              class="text-3xl font-bold text-main mb-6 leading-tight"
-            ></h2>
-            <div class="w-12 h-1 bg-secondary mb-6"></div>
-            <p
-              id="modal-desc"
-              class="text-gray-600 leading-relaxed text-lg"
-            ></p>
-
-            <div class="mt-12 pt-8 border-t border-gray-100 flex gap-4">
-              <button
-                id="prev-btn"
-                class="flex-1 py-4 border border-gray-200 rounded-2xl hover:bg-gray-50 transition-colors text-main font-bold flex items-center justify-center gap-2"
-              >
-                <i class="fa-solid fa-chevron-left text-xs"></i> Prev
-              </button>
-              <button
-                id="next-btn"
-                class="flex-1 py-4 bg-main text-white rounded-2xl hover:bg-secondary transition-colors font-bold flex items-center justify-center gap-2"
-              >
-                Next <i class="fa-solid fa-chevron-right text-xs"></i>
-              </button>
-            </div>
+          class="w-full md:w-2/3 bg-gray-50 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-gray-100">
+          <img id="modal-img" src="" alt="Project Image"
+            class="max-w-full max-h-[60vh] md:max-h-full object-contain p-4 transition-opacity duration-300" />
+        </div>
+        <div class="w-full md:w-1/3 p-8 md:p-12 flex flex-col justify-center bg-white">
+          <span id="modal-category"
+            class="text-secondary text-xs font-black uppercase tracking-[0.3em] mb-4 inline-block"></span>
+          <h2 id="modal-title" class="text-3xl font-bold text-main mb-6 leading-tight"></h2>
+          <div class="w-12 h-1 bg-secondary mb-6"></div>
+          <p id="modal-desc" class="text-gray-600 leading-relaxed text-lg"></p>
+          <div class="mt-12 pt-8 border-t border-gray-100 flex gap-4">
+            <button id="prev-btn"
+              class="flex-1 py-4 border border-gray-200 rounded-2xl hover:bg-gray-50 transition-colors text-main font-bold flex items-center justify-center gap-2">
+              <i class="fa-solid fa-chevron-left text-xs"></i> Prev
+            </button>
+            <button id="next-btn"
+              class="flex-1 py-4 bg-main text-white rounded-2xl hover:bg-secondary transition-colors font-bold flex items-center justify-center gap-2">
+              Next <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Call to action -->
-      <section class="py-16 bg-[#fcfcfc] border-y border-gray-100">
-        <div class="container mx-auto px-6 text-center">
-          <h3 class="text-2xl font-bold text-main mb-3">
-            Have a project in mind?
-          </h3>
-          <p class="text-gray-600 mb-6 max-w-xl mx-auto">
-            Let's discuss how we can bring reliable pumping solutions to your
-            site.
-          </p>
-          <a
-            href="contact.html"
-            class="inline-flex items-center gap-2 px-8 py-4 bg-main text-white rounded-full font-bold hover:bg-secondary transition-colors shadow-lg shadow-main/10"
-          >
-            Contact Our Team
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </section>
-    </main>
+    <!-- Call to action -->
+    <section class="py-16 bg-[#fcfcfc] border-y border-gray-100">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold text-main mb-3">Have a project in mind?</h3>
+        <p class="text-gray-600 mb-6 max-w-xl mx-auto">Let's discuss how we can bring reliable pumping solutions to your
+          site.</p>
+        <a href="contact.html"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-main text-white rounded-full font-bold hover:bg-secondary transition-colors shadow-lg shadow-main/10">
+          Contact Our Team <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
 
-    <div id="footer"></div>
+    <!-- Back to top button -->
+    <button id="back-to-top"
+      class="back-to-top fixed bottom-8 right-8 z-50 bg-secondary text-main p-3 rounded-full shadow-lg hover:bg-white transition-all">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </main>
 
-    <script>
-      (async function () {
-        const SUPABASE_URL = "https://alsmjjizeoquuciyuhaf.supabase.co";
-        const SUPABASE_ANON_KEY =
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsc21qaml6ZW9xdXVjaXl1aGFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5NzMzMjAsImV4cCI6MjA4ODU0OTMyMH0.rjnOo6ToIOwGcuRzhgyE9pkff2s3KcHrRvextt7gdeQ";
+  <div id="footer"></div>
 
-        const path = window.location.pathname;
-        const isArabic = path.includes("-ar.") || path.includes("/ar/");
+  <script>
+    (async function () {
+      const SUPABASE_URL = "https://alsmjjizeoquuciyuhaf.supabase.co";
+      const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsc21qaml6ZW9xdXVjaXl1aGFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5NzMzMjAsImV4cCI6MjA4ODU0OTMyMH0.rjnOo6ToIOwGcuRzhgyE9pkff2s3KcHrRvextt7gdeQ";
 
-        const { createClient } = supabase;
-        const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      const path = window.location.pathname;
+      const isArabic = path.includes("-ar.") || path.includes("/ar/");
 
-        // DOM elements
-        const filterContainer = document.getElementById("filter-buttons");
-        const gridContainer = document.getElementById("gallery-grid");
-        const modal = document.getElementById("image-modal");
-        const modalImg = document.getElementById("modal-img");
-        const modalTitle = document.getElementById("modal-title");
-        const modalDesc = document.getElementById("modal-desc");
-        const modalCategory = document.getElementById("modal-category");
-        const closeModalBtn = document.getElementById("close-modal");
-        const backdrop = document.getElementById("modal-backdrop");
-        const prevBtn = document.getElementById("prev-btn");
-        const nextBtn = document.getElementById("next-btn");
+      const { createClient } = supabase;
+      const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-        // Category display names
-        const categoryNames = {
-          irrigation: { en: "Irrigation", ar: "الري" },
-          industrial: { en: "Industrial", ar: "صناعي" },
-          municipal: { en: "Municipal", ar: "بلدي" },
-          installation: { en: "Installation", ar: "تركيب" },
-        };
+      const filterContainer = document.getElementById("filter-buttons");
+      const gridContainer = document.getElementById("gallery-grid");
+      const modal = document.getElementById("image-modal");
+      const modalImg = document.getElementById("modal-img");
+      const modalTitle = document.getElementById("modal-title");
+      const modalDesc = document.getElementById("modal-desc");
+      const modalCategory = document.getElementById("modal-category");
+      const closeModalBtn = document.getElementById("close-modal");
+      const backdrop = document.getElementById("modal-backdrop");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      const counterCurrent = document.getElementById("counter-current");
+      const counterTotal = document.getElementById("counter-total");
+      const backToTopBtn = document.getElementById("back-to-top");
 
-        let allItems = [];
-        let currentFiltered = [];
-        let currentIndex = 0;
+      const categoryNames = {
+        irrigation: { en: "Irrigation", ar: "الري" },
+        industrial: { en: "Industrial", ar: "صناعي" },
+        municipal: { en: "Municipal", ar: "بلدي" },
+        installation: { en: "Installation", ar: "تركيب" },
+      };
 
-        // Fetch data
-        const { data, error } = await supabaseClient
-          .from("gallery")
-          .select("*")
-          .order("order", { ascending: true });
+      let allItems = [];
+      let currentFiltered = [];
+      let currentIndex = 0;
 
-        if (error) {
-          console.error("Error fetching gallery:", error);
-          gridContainer.innerHTML =
-            '<p class="text-center col-span-full py-20">Failed to load gallery.</p>';
-          return;
-        }
-        allItems = data;
+      // Fetch data
+      const { data, error } = await supabaseClient
+        .from("gallery")
+        .select("*")
+        .order("order", { ascending: true });
 
-        // Generate filter buttons
-        const categories = [
-          ...new Set(allItems.map((i) => i.category).filter(Boolean)),
-        ];
-        const allText = isArabic ? "الكل" : "All Projects";
+      if (error) {
+        console.error("Error fetching gallery:", error);
+        gridContainer.innerHTML = '<p class="text-center col-span-full py-20">Failed to load gallery.</p>';
+        return;
+      }
+      allItems = data;
+      counterTotal.innerText = allItems.length;
 
-        filterContainer.innerHTML = `
-      <button class="filter-btn active px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="all">
-        ${allText}
-      </button>
-      ${categories
-        .map((cat) => {
-          const display = categoryNames[cat]
-            ? categoryNames[cat][isArabic ? "ar" : "en"]
-            : cat;
+      // Generate filter buttons
+      const categories = [...new Set(allItems.map(i => i.category).filter(Boolean))];
+      const allText = isArabic ? "الكل" : "All Projects";
+
+      filterContainer.innerHTML = `
+        <button class="filter-btn active px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="all">
+          ${allText}
+        </button>
+        ${categories.map(cat => {
+        const display = categoryNames[cat] ? categoryNames[cat][isArabic ? "ar" : "en"] : cat;
+        return `<button class="filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="${cat}">${display}</button>`;
+      }).join("")}
+      `;
+
+      // Render gallery grid with staggered delay
+      function renderGallery(filter = "all") {
+        currentFiltered = filter === "all" ? allItems : allItems.filter(i => i.category === filter);
+        counterCurrent.innerText = currentFiltered.length;
+
+        gridContainer.innerHTML = currentFiltered.map((item, idx) => {
+          const title = isArabic ? (item.title_ar || item.title_en) : (item.title_en || item.title_ar);
+          const catLabel = categoryNames[item.category] ? categoryNames[item.category][isArabic ? "ar" : "en"] : item.category;
           return `
-          <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="${cat}">
-            ${display}
-          </button>
-        `;
-        })
-        .join("")}
-    `;
-
-        // Render gallery grid
-        function renderGallery(filter = "all") {
-          currentFiltered =
-            filter === "all"
-              ? allItems
-              : allItems.filter((i) => i.category === filter);
-
-          gridContainer.innerHTML = currentFiltered
-            .map((item, idx) => {
-              const title = isArabic
-                ? item.title_ar || item.title_en
-                : item.title_en || item.title_ar;
-              const catLabel = categoryNames[item.category]
-                ? categoryNames[item.category][isArabic ? "ar" : "en"]
-                : item.category;
-
-              return `
-            <div class="gallery-card relative" onclick="openModal(${idx})">
-              <img src="${item.image_url}?width=600" alt="${title}" class="w-full h-full aspect-[4/5] object-cover">
+            <div class="gallery-card reveal-left" data-index="${idx}" style="--delay: ${idx}" onclick="openModal(${idx})">
+              <img src="${item.image_url}?width=600" alt="${title}" loading="lazy" class="w-full h-full aspect-[4/5] object-cover">
               <div class="overlay absolute inset-0 flex flex-col justify-end p-5">
                 <span class="text-secondary text-xs font-bold uppercase tracking-wider">${catLabel}</span>
                 <h3 class="text-white font-semibold text-base mt-1">${title}</h3>
               </div>
             </div>
           `;
-            })
-            .join("");
-        }
+        }).join("");
 
-        // Modal functions
-        window.openModal = (idx) => {
-          currentIndex = idx;
+        // Trigger scroll reveal with slower, earlier activation
+        const newCards = document.querySelectorAll(".gallery-card");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+        );
+        newCards.forEach(card => observer.observe(card));
+      }
+
+      // Modal functions (unchanged)
+      window.openModal = (idx) => {
+        currentIndex = idx;
+        updateModalContent();
+        modal.style.display = "flex";
+        setTimeout(() => modal.classList.add("show"), 10);
+        document.body.style.overflow = "hidden";
+      };
+
+      function updateModalContent() {
+        const item = currentFiltered[currentIndex];
+        if (!item) return;
+        modalImg.style.opacity = "0";
+        setTimeout(() => {
+          modalImg.src = item.image_url;
+          modalTitle.textContent = isArabic ? (item.title_ar || item.title_en) : (item.title_en || item.title_ar);
+          modalDesc.textContent = isArabic ? (item.description_ar || item.description_en) : (item.description_en || item.description_ar);
+          modalCategory.textContent = categoryNames[item.category] ? categoryNames[item.category][isArabic ? "ar" : "en"] : item.category;
+          modalImg.style.opacity = "1";
+        }, 200);
+      }
+
+      function closeModal() {
+        modal.classList.remove("show");
+        setTimeout(() => { modal.style.display = "none"; }, 300);
+        document.body.style.overflow = "auto";
+      }
+
+      function nextImage() {
+        const modalContent = document.querySelector(".modal-content");
+        modalContent.classList.add("slide-next");
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % currentFiltered.length;
           updateModalContent();
-          modal.style.display = "flex";
-          setTimeout(() => modal.classList.add("show"), 10);
-          document.body.style.overflow = "hidden";
-        };
+          modalContent.classList.remove("slide-next");
+        }, 200);
+      }
 
-        // After opening modal
-        function trapFocus(e) {
-          if (!modal.classList.contains("show")) return;
-          const focusable = modal.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-          );
-          const first = focusable[0];
-          const last = focusable[focusable.length - 1];
+      function prevImage() {
+        const modalContent = document.querySelector(".modal-content");
+        modalContent.classList.add("slide-prev");
+        setTimeout(() => {
+          currentIndex = (currentIndex - 1 + currentFiltered.length) % currentFiltered.length;
+          updateModalContent();
+          modalContent.classList.remove("slide-prev");
+        }, 200);
+      }
 
-          if (e.key === "Tab") {
-            if (e.shiftKey) {
-              if (document.activeElement === first) {
-                e.preventDefault();
-                last.focus();
-              }
-            } else {
-              if (document.activeElement === last) {
-                e.preventDefault();
-                first.focus();
-              }
-            }
-          }
-        }
+      // Event listeners
+      closeModalBtn.addEventListener("click", closeModal);
+      backdrop.addEventListener("click", closeModal);
+      nextBtn.addEventListener("click", nextImage);
+      prevBtn.addEventListener("click", prevImage);
 
-        document.addEventListener("keydown", trapFocus);
+      document.addEventListener("keydown", (e) => {
+        if (!modal.classList.contains("show")) return;
+        if (e.key === "Escape") closeModal();
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+      });
 
-        function updateModalContent() {
-          const item = currentFiltered[currentIndex];
-          if (!item) return;
+      filterContainer.addEventListener("click", (e) => {
+        if (!e.target.classList.contains("filter-btn")) return;
+        document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+        e.target.classList.add("active");
+        renderGallery(e.target.dataset.filter);
+      });
 
-          modalImg.style.opacity = "0";
-          setTimeout(() => {
-            modalImg.src = item.image_url;
-            modalTitle.textContent = isArabic
-              ? item.title_ar || item.title_en
-              : item.title_en || item.title_ar;
-            modalDesc.textContent = isArabic
-              ? item.description_ar || item.description_en
-              : item.description_en || item.description_ar;
-            modalCategory.textContent = categoryNames[item.category]
-              ? categoryNames[item.category][isArabic ? "ar" : "en"]
-              : item.category;
-            modalImg.style.opacity = "1";
-          }, 200);
-        }
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) backToTopBtn.classList.add("visible");
+        else backToTopBtn.classList.remove("visible");
+      });
+      backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-        function closeModal() {
-          modal.classList.remove("show");
-          setTimeout(() => {
-            modal.style.display = "none";
-          }, 300);
-          document.body.style.overflow = "auto";
-        }
+      renderGallery("all");
+    })();
+  </script>
+</body>
 
-        // Animated navigation
-        function nextImage() {
-          const modalContent = document.querySelector(".modal-content");
-          modalContent.classList.add("slide-next");
-          setTimeout(() => {
-            currentIndex = (currentIndex + 1) % currentFiltered.length;
-            updateModalContent();
-            modalContent.classList.remove("slide-next");
-          }, 200);
-        }
-
-        function prevImage() {
-          const modalContent = document.querySelector(".modal-content");
-          modalContent.classList.add("slide-prev");
-          setTimeout(() => {
-            currentIndex =
-              (currentIndex - 1 + currentFiltered.length) %
-              currentFiltered.length;
-            updateModalContent();
-            modalContent.classList.remove("slide-prev");
-          }, 200);
-        }
-
-        // Event listeners
-        closeModalBtn.addEventListener("click", closeModal);
-        backdrop.addEventListener("click", closeModal);
-        nextBtn.addEventListener("click", nextImage);
-        prevBtn.addEventListener("click", prevImage);
-
-        // Keyboard navigation
-        document.addEventListener("keydown", (e) => {
-          if (!modal.classList.contains("show")) return;
-          if (e.key === "Escape") closeModal();
-          if (e.key === "ArrowRight") nextImage();
-          if (e.key === "ArrowLeft") prevImage();
-        });
-
-        // Filter clicks
-        filterContainer.addEventListener("click", (e) => {
-          if (!e.target.classList.contains("filter-btn")) return;
-          document
-            .querySelectorAll(".filter-btn")
-            .forEach((btn) => btn.classList.remove("active"));
-          e.target.classList.add("active");
-          renderGallery(e.target.dataset.filter);
-        });
-
-        // Initialize
-        renderGallery("all");
-      })();
-    </script>
-  </body>
 </html>
