@@ -1,22 +1,21 @@
-# netlify.toml
-
 [build]
   publish = "."
 
-# Arabic language routing
+# Redirect the Arabic homepage
 [[redirects]]
   from = "/ar/"
-  to = "/index-ar.html"
+  to = "/ar/index-ar.html"
   status = 200
   force = true
 
+# Redirect clean Arabic URLs like /ar/about → /ar/about-ar.html
 [[redirects]]
   from = "/ar/*"
-  to = "/:splat-ar.html"
+  to = "/ar/:splat-ar.html"
   status = 200
   force = true
 
-# Security headers
+# Security headers (unchanged)
 [[headers]]
   for = "/*"
   [headers.values]
