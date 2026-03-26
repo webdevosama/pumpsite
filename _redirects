@@ -1,9 +1,0 @@
-# English Pretty URLs
-/about      /about.html      200
-/products   /products.html   200
-/contact    /contact.html    200
-
-# Arabic Pretty URLs
-/ar/about     /ar/about.html     200
-/ar/products  /ar/products.html  200
-/ar/contact   /ar/contact.html   200
