@@ -36,3 +36,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.body.classList.add("loaded");
   }
 });
+
+// what to do next.

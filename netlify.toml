@@ -1,21 +1,6 @@
 [build]
   publish = "."
 
-# Redirect the Arabic homepage
-[[redirects]]
-  from = "/ar/"
-  to = "/ar/index-ar.html"
-  status = 200
-  force = true
-
-# Redirect clean Arabic URLs like /ar/about → /ar/about-ar.html
-[[redirects]]
-  from = "/ar/*"
-  to = "/ar/:splat-ar.html"
-  status = 200
-  force = true
-
-# Security headers (unchanged)
 [[headers]]
   for = "/*"
   [headers.values]
