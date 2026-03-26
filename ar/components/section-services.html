@@ -1,100 +1,116 @@
-<!-- /ar/components/section-services.html -->
-<section id="services" class="py-24 bg-slate-50 overflow-hidden">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16 reveal-left">
-      <div class="max-w-2xl">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="w-10 h-[2px] bg-secondary"></span>
-          <span class="text-secondary font-bold text-xs uppercase tracking-[0.3em]">حلول متخصصة</span>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-bold text-main leading-tight">
-          هندسة الضخ لـ <br />
-          <span class="text-gray-400 font-light">قطاعات السودان الحيوية</span>
-        </h2>
+<section id="services" class="py-24 bg-slate-50 relative overflow-hidden" dir="rtl">
+  <div class="absolute inset-0 opacity-40 pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    
+    <div class="text-center max-w-3xl mx-auto mb-20 reveal-left">
+      <div class="flex justify-center items-center gap-3 mb-6">
+        <div class="h-px w-12 bg-secondary/50"></div>
+        <span class="text-secondary font-mono font-bold tracking-[0.4em] text-xs uppercase glow-blue">حلول متخصصة</span>
+        <div class="h-px w-12 bg-secondary/50"></div>
       </div>
-      <p class="text-gray-500 max-w-xs text-sm leading-relaxed mb-2 font-medium">
-        اختيار الخبراء والدعم الفني لأنظمة الضخ عالية الأداء في جميع أنحاء البلاد.
+      <h2 class="text-4xl md:text-5xl font-bold text-main mb-6 tracking-tight">
+        هندسة الضخ <br />
+        <span class="text-gray-400 font-light italic">لقطاعات السودان الحيوية</span>
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed">
+        دفع عجلة التقدم الوطني منذ 1966 من خلال الاختيار الخبير والدعم الفني عالي الأداء.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Agriculture -->
-      <div class="group relative bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-left" style="transition-delay: 100ms;">
-        <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 group-hover:scale-110 transition-all duration-1000">
-          <img src="/assets/irrigation.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="الزراعة">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      
+      <div class="group bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-left" style="transition-delay: 100ms;">
+        <div class="relative h-64 overflow-hidden">
+          <img src="/assets/hd (7).jpg" alt="الزراعة" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0">
+          <div class="absolute inset-0 bg-main/30 group-hover:bg-transparent transition-colors duration-500"></div>
         </div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-white/40 via-white/30 to-white/10"></div>
-
-        <div class="relative z-10 p-10">
-          <div class="w-16 h-16 bg-main/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-main transition-all duration-500">
-            <i class="fa-solid fa-leaf text-3xl text-main"></i>
+        
+        <div class="p-10 pt-12 relative">
+          <div class="absolute -top-10 left-10 w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center transition-all duration-500 group-hover:bg-main group-hover:-translate-y-2 z-10 border border-gray-50">
+            <i class="fa-solid fa-leaf text-3xl text-main group-hover:text-secondary group-hover:glow-blue transition-colors duration-300"></i>
           </div>
+          
           <h3 class="text-2xl font-bold text-main mb-4 tracking-tight">الري الزراعي</h3>
           <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium">
             تحسين توزيع المياه للمشاريع الكبيرة والمزارع الخاصة لضمان الأمن الغذائي.
           </p>
+          
           <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> استخراج الآبار العميقة</li>
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> محطات ضخ الأنهار</li>
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> توريد أنظمة المحاور المركزية</li>
+            <li class="flex items-center gap-3 text-[10px] font-mono font-bold text-main/70 uppercase tracking-widest"><i class="fa-solid fa-circle-check text-secondary"></i> استخراج الآبار العميقة</li>
+            <li class="flex items-center gap-3 text-[10px] font-mono font-bold text-main/70 uppercase tracking-widest"><i class="fa-solid fa-circle-check text-secondary"></i> توريد أنظمة المحاور</li>
           </ul>
-          <a href="/ar/contact-ar.html" class="text-sm font-bold text-secondary flex items-center gap-2 group-hover:gap-4 transition-all">
-            استشارة متخصص <i class="fa-solid fa-chevron-left text-xs"></i>
+
+          <a href="/ar/contact.html" class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest group-hover:text-main transition-colors">
+            <span>استشارة متخصص</span> 
+            <i class="fa-solid fa-arrow-left-long transition-transform group-hover:-translate-x-2"></i>
           </a>
         </div>
       </div>
 
-      <!-- Industrial -->
-      <div class="group relative bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-left" style="transition-delay: 250ms;">
-        <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 group-hover:scale-110 transition-all duration-1000">
-          <img src="/assets/industrial.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="الصناعة">
+      <div class="group bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-left" style="transition-delay: 250ms;">
+        <div class="relative h-64 overflow-hidden">
+          <img src="/assets/hd (9).jpg" alt="الصناعة" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0">
+          <div class="absolute inset-0 bg-main/30 group-hover:bg-transparent transition-colors duration-500"></div>
         </div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-white/40 via-white/30 to-white/10"></div>
-
-        <div class="relative z-10 p-10">
-          <div class="w-16 h-16 bg-main/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-main transition-all duration-500">
-            <i class="fa-solid fa-industry text-3xl text-main"></i>
+        
+        <div class="p-10 pt-12 relative">
+          <div class="absolute -top-10 left-10 w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center transition-all duration-500 group-hover:bg-main group-hover:-translate-y-2 z-10 border border-gray-50">
+            <i class="fa-solid fa-industry text-3xl text-main group-hover:text-secondary group-hover:glow-blue transition-colors duration-300"></i>
           </div>
-          <h3 class="text-2xl font-bold text-main mb-4 tracking-tight">التطبيقات الصناعية</h3>
+          
+          <h3 class="text-2xl font-bold text-main mb-4 tracking-tight">الطاقة الصناعية</h3>
           <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium">
-            أنظمة ضخ ثقيلة مصممة للعمل المستمر في المصانع والإنشاءات.
+            أنظمة ضخ ثقيلة مصممة للتشغيل المستمر في المعالجة والإنشاءات.
           </p>
+          
           <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> التبريد والتدفئة</li>
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> رفع الضغط</li>
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> معالجة المياه العادمة</li>
+            <li class="flex items-center gap-3 text-[10px] font-mono font-bold text-main/70 uppercase tracking-widest"><i class="fa-solid fa-circle-check text-secondary"></i> رفع الضغط</li>
+            <li class="flex items-center gap-3 text-[10px] font-mono font-bold text-main/70 uppercase tracking-widest"><i class="fa-solid fa-circle-check text-secondary"></i> معالجة المياه العادمة</li>
           </ul>
-          <a href="/ar/contact-ar.html" class="text-sm font-bold text-secondary flex items-center gap-2 group-hover:gap-4 transition-all">
-            احصل على المواصفات الفنية <i class="fa-solid fa-chevron-left text-xs"></i>
+
+          <a href="/ar/contact.html" class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest group-hover:text-main transition-colors">
+            <span>المواصفات الفنية</span> 
+            <i class="fa-solid fa-arrow-left-long transition-transform group-hover:-translate-x-2"></i>
           </a>
         </div>
       </div>
 
-      <!-- Municipal -->
-      <div class="group relative bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-left" style="transition-delay: 400ms;">
-        <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 group-hover:scale-110 transition-all duration-1000">
-          <img src="/assets/drinking-water.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0" alt="البلديات">
+      <div class="group bg-white rounded-[32px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-700 reveal-left" style="transition-delay: 400ms;">
+        <div class="relative h-64 overflow-hidden">
+          <img src="/assets/hd (10).jpg" alt="البلديات" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0">
+          <div class="absolute inset-0 bg-main/30 group-hover:bg-transparent transition-colors duration-500"></div>
         </div>
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-white/40 via-white/30 to-white/10"></div>
-
-        <div class="relative z-10 p-10">
-          <div class="w-16 h-16 bg-main/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-main transition-all duration-500">
-            <i class="fa-solid fa-city text-3xl text-main"></i>
+        
+        <div class="p-10 pt-12 relative">
+          <div class="absolute -top-10 left-10 w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center transition-all duration-500 group-hover:bg-main group-hover:-translate-y-2 z-10 border border-gray-50">
+            <i class="fa-solid fa-city text-3xl text-main group-hover:text-secondary group-hover:glow-blue transition-colors duration-300"></i>
           </div>
-          <h3 class="text-2xl font-bold text-main mb-4 tracking-tight">القطاع البلدي والسكني</h3>
+          
+          <h3 class="text-2xl font-bold text-main mb-4 tracking-tight">التزويد البلدي</h3>
           <p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium">
             توفير مياه شرب موثوقة وحلول صرف صحي للمدن والأحياء.
           </p>
+          
           <ul class="space-y-3 mb-8">
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> شبكات إمدادات المياه</li>
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> الصرف الصحي</li>
-            <li class="flex items-center gap-3 text-xs font-bold text-main uppercase tracking-wide"><i class="fa-solid fa-circle-check text-secondary"></i> أنظمة مكافحة الحرائق</li>
+            <li class="flex items-center gap-3 text-[10px] font-mono font-bold text-main/70 uppercase tracking-widest"><i class="fa-solid fa-circle-check text-secondary"></i> شبكات إمدادات المياه</li>
+            <li class="flex items-center gap-3 text-[10px] font-mono font-bold text-main/70 uppercase tracking-widest"><i class="fa-solid fa-circle-check text-secondary"></i> أنظمة مكافحة الحرائق</li>
           </ul>
-          <a href="/ar/contact-ar.html" class="text-sm font-bold text-secondary flex items-center gap-2 group-hover:gap-4 transition-all">
-            استفسار مشروع <i class="fa-solid fa-chevron-left text-xs"></i>
+
+          <a href="/ar/contact.html" class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest group-hover:text-main transition-colors">
+            <span>استفسار مشروع</span> 
+            <i class="fa-solid fa-arrow-left-long transition-transform group-hover:-translate-x-2"></i>
           </a>
         </div>
       </div>
+
+    </div>
+
+    <div class="text-center mt-20 reveal-left">
+      <a href="/ar/products.html" class="btn-tech inline-flex items-center gap-3 px-10 py-4 bg-main text-white rounded-full font-bold shadow-2xl group transition-all">
+        <span class="font-mono text-sm tracking-widest">تصفح جميع المنتجات</span>
+        <i class="fa-solid fa-arrow-left group-hover:-translate-x-2 transition-transform"></i>
+      </a>
     </div>
   </div>
 </section>

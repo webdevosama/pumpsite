@@ -3,21 +3,12 @@
  * Background image carousel for hero section.
  */
 const BG_IMAGES = [
-  '/assets/gallery/hero.jpg',
-  '/assets/gallery/1.jfif',
-  '/assets/gallery/2.jfif',
-  '/assets/gallery/3.jfif',
-  '/assets/gallery/4.jfif',
-  '/assets/gallery/5.jfif',
-  '/assets/gallery/6.jfif',
-  '/assets/gallery/7.png',
-  '/assets/gallery/8.jfif',
-  '/assets/gallery/9.jfif',
-  '/assets/gallery/10.jfif',
-  '/assets/gallery/11.jfif',
-  '/assets/gallery/12.jfif',
-  '/assets/gallery/13.jfif',
-  '/assets/gallery/14.jfif',
+  '/assets/hd (1).jpg',
+  '/assets/hd (2).jpg',
+  '/assets/hd (3).jpg',
+  '/assets/hd (4).jpg',
+  '/assets/hd (5).jpg',
+  '/assets/hd (6).jpg',
 ];
 
 export function initHeroCarousel() {
