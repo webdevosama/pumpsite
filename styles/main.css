@@ -350,10 +350,14 @@ a.bg-white.text-main:hover,
 
 /* styles/main.css */
 :root {
-  --main-color: #0a1633;
-  --secondary-color: #00d4ff;
-  /* Ghost Blue */
-  --text-gray: #64748b;
+  --main-color: #1e3575;
+  /* Deep Navy */
+  --secondary-color: #3D90C6;
+  /* Blue-Grey */
+  --bg-color: #dee8ef;
+  /* Light Slate Gray */
+  --white: #ffffff;
+  --secondary-transparent: rgba(60, 95, 172, 0.468);
 }
 
 /* Base Body Style */
