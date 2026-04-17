@@ -512,3 +512,20 @@ section {
     margin-right: auto;
   }
 }
+
+/* Ensure carousel images are centered and responsive */
+.hero-bg-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Navigation arrows visibility on mobile (optional: hide on small screens) */
+@media (max-width: 767px) {
+
+  #carousel-prev,
+  #carousel-next {
+    display: none;
+  }
+}
