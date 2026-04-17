@@ -1,13 +1,15 @@
+/* styles/header.css */
 @import 'variables.css';
 
-/* --- Base Header --- */
+/* --- Base Header (Navy background) --- */
 .site-header {
   background-color: var(--main-color);
+  /* #0a1633 navy */
   height: 80px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
@@ -23,39 +25,51 @@
   align-items: center;
 }
 
-/* --- Logo Animation & Hover --- */
+/* --- Logo with white background box --- */
 .logo-group {
+  text-decoration: none;
+  z-index: 1100;
+}
+
+.logo-box {
   display: flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none;
-  z-index: 1100;
-  animation: logo-entrance 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+  background-color: #ffffff;
+  padding: 6px 18px 6px 12px;
+  border-radius: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-group:hover .logo-box {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .logo-icon {
-  width: 42px;
-  height: 42px;
-  background: var(--secondary-color);
-  color: var(--main-color);
-  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  background: var(--main-color);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.logo-group:hover .logo-icon {
-  transform: rotate(10deg) scale(1.05);
-  background: #fff;
+.logo-icon img {
+  width: 70%;
+  height: auto;
+}
+
+.logo-text {
+  line-height: 1.2;
 }
 
 .brand {
-  color: #fff;
-  font-size: 1.25rem;
+  color: var(--main-color);
+  font-size: 1.1rem;
   font-weight: 800;
-  line-height: 1;
   display: block;
 }
 
@@ -64,15 +78,14 @@
 }
 
 .subtext {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 9px;
+  color: rgba(10, 22, 51, 0.5);
+  font-size: 8px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 4px;
+  letter-spacing: 1.5px;
   display: block;
 }
 
-/* --- Desktop Navigation Links --- */
+/* --- Desktop Navigation Links (white text) --- */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -82,7 +95,7 @@
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   position: relative;
@@ -112,8 +125,8 @@
   width: 100%;
 }
 
-/* --- Glowing CTA Button (Desktop & Mobile) --- */
-.btn-cta-glow {
+/* --- CTA Button (light blue background, dark text) --- */
+.btn-cta {
   background: var(--secondary-color);
   color: var(--main-color);
   padding: 8px 24px;
@@ -124,35 +137,20 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
-  animation: pulse-glow 2s infinite;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.btn-cta-glow:hover {
-  background: white;
+.btn-cta:hover {
+  background: #ffffff;
+  color: var(--main-color);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
-  animation: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
-  }
-
-  70% {
-    box-shadow: 0 0 0 12px rgba(0, 212, 255, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
-  }
-}
-
-/* --- Language Switcher --- */
+/* --- Language Switcher (white border) --- */
 .lang-switch {
-  color: var(--secondary-color);
-  border: 1px solid rgba(255, 193, 7, 0.3);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 5px 12px;
   border-radius: 6px;
   text-decoration: none;
@@ -163,25 +161,27 @@
 .lang-switch:hover {
   background: var(--secondary-color);
   color: var(--main-color);
+  border-color: var(--secondary-color);
 }
 
 /* --- Mobile Elements --- */
 .menu-trigger-icon {
   background: none;
   border: none;
-  color: #fff;
+  color: #ffffff;
   font-size: 2rem;
   cursor: pointer;
   padding: 5px;
   z-index: 1100;
   transition: transform 0.3s ease;
+  display: none;
 }
 
 .menu-trigger-icon:hover {
   transform: scale(1.05);
 }
 
-/* Mobile Drawer – slides from RIGHT */
+/* Mobile Drawer (white background, dark text) */
 .mobile-drawer {
   position: fixed;
   top: 0;
@@ -189,27 +189,26 @@
   width: 80%;
   max-width: 320px;
   height: 100vh;
-  background: var(--main-color);
+  background: #ffffff;
   z-index: 2000;
   display: flex;
   flex-direction: column;
   padding: 100px 2rem 2rem;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-drawer.active {
   right: 0;
 }
 
-/* Close button inside drawer */
 .close-trigger-icon {
   position: absolute;
   top: 20px;
   right: 20px;
   background: none;
   border: none;
-  color: white;
+  color: var(--main-color);
   font-size: 2.5rem;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -229,81 +228,41 @@
 
 .mobile-links li {
   margin-bottom: 20px;
-  opacity: 0;
-  transform: translateX(20px);
-  animation: slideInLink 0.3s ease forwards;
-  animation-delay: calc(0.05s * var(--i, 0));
-}
-
-/* Staggered animation for mobile links */
-.mobile-links li:nth-child(1) {
-  --i: 1;
-}
-
-.mobile-links li:nth-child(2) {
-  --i: 2;
-}
-
-.mobile-links li:nth-child(3) {
-  --i: 3;
-}
-
-.mobile-links li:nth-child(4) {
-  --i: 4;
-}
-
-.mobile-links li:nth-child(5) {
-  --i: 5;
-}
-
-.mobile-links li:nth-child(6) {
-  --i: 6;
-}
-
-.mobile-links li:nth-child(7) {
-  --i: 7;
-}
-
-@keyframes slideInLink {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .mobile-links a {
-  color: white;
+  color: var(--main-color);
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
   transition: color 0.3s;
   display: block;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .mobile-links a:hover {
   color: var(--secondary-color);
-  padding-left: 10px;
 }
 
 .mobile-links .btn-cta-glow {
   display: inline-block;
   margin-top: 10px;
-  background: white;
-  color: var(--main-color) !important;
-  transform: translate(-2px);
+  background: var(--secondary-color);
+  color: var(--main-color);
   text-align: center;
   width: 100%;
   padding: 12px;
+  border-radius: 40px;
   font-size: 1rem;
+  border: none;
 }
 
-/* Backdrop */
+/* Backdrop (semi-transparent dark) */
 .menu-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(10, 22, 51, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   opacity: 0;
   visibility: hidden;
@@ -341,15 +300,151 @@
   }
 }
 
-/* Logo entrance animation */
-@keyframes logo-entrance {
-  0% {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
+/* The Main Header Bar */
+.site-header {
+  background-color: var(--main-color);
+  /* Your #1e3575 Navy */
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* The "Sigma" White Pill */
+.logo-pill {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 8px 24px 8px 10px;
+  border-radius: 50px;
+  /* Perfect pill shape */
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  /* Adds the 'Floating' effect */
+  transition: transform 0.3s ease;
+  margin-left: 20px;
+}
+
+.logo-pill:hover {
+  transform: translateY(2px);
+  /* Subtle physical interaction */
+}
+
+.logo-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+/* Typography matching your IDE-like preference */
+.logo-text-stack {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--main-color);
+  letter-spacing: -0.02em;
+}
+
+.brand-name .amp {
+  color: var(--secondary-color);
+  /* Ghost Blue/Gray accent */
+  font-weight: 400;
+}
+
+.brand-subtext {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #64748b;
+  /* Slate gray */
+}
+
+
+/* Ensure the header doesn't cut off the overlapping logo */
+.site-header {
+  overflow: visible !important;
+}
+
+.header-container {
+  position: relative;
+  /* Anchor point for the logo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* The Overlapping Logo Pill */
+.logo-pill {
+  position: absolute;
+  top: 1px;
+  /* Adjust this to move it up or down */
+  left: 30px;
+
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+
+  /* Size Increases */
+  padding: 12px 12px 12px 12px;
+  /* Larger internal breathing room */
+  /* Ensures it feels substantial */
+  width: auto;
+  height: 150px;
+
+  border-radius:30%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  /* Deeper shadow for "floating" look */
+  z-index: 1200;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-pill:hover {
+  transform: translateY(5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Scale the Icon */
+.logo-icon-wrapper {
+  border-radius: 10%;
+  border: 2px solid #f8fafc;
+  flex-shrink: 0;
+}
+
+/* Scale the Typography */
+.logo-text-stack {
+  margin-left: 5px;
+}
+
+.brand-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  /* Larger impact */
+  letter-spacing: -0.03em;
+  color: var(--main-color);
+}
+
+.brand-subtext {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #899cb5;
+  /* Your secondary gray/blue */
+  font-weight: 500;
 }
