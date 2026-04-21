@@ -1,7 +1,26 @@
 <!-- components/section-highlights.html -->
-<section id="highlights" class="py-24 bg-white relative overflow-hidden">
+<section id="highlights" class="py-24 relative overflow-hidden">
+  <!-- Background Video -->
+  <div class="absolute inset-0 w-full h-full z-0">
+    <video 
+      class="w-full h-full object-cover"
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      poster="https://via.placeholder.com/1920x1080/1e3575/ffffff?text=Water+Pumping+Video"
+    >
+      <source src="../assets/video.mp4" type="video/mp4">
+      <!-- Fallback for browsers that don't support video -->
+      <div class="absolute inset-0 bg-main/20"></div>
+    </video>
+  </div>
+
+  <!-- White Overlay for Readability -->
+  <div class="absolute inset-0 bg-white/85 z-5"></div>
+
   <!-- Decorative grid background -->
-  <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(#1e3575 1px, transparent 1px); background-size: 30px 30px;"></div>
+  <div class="absolute inset-0 opacity-[0.02] z-5" style="background-image: radial-gradient(#1e3575 1px, transparent 1px); background-size: 30px 30px;"></div>
   
   <div class="container mx-auto px-6 relative z-10">
     <div class="max-w-3xl mb-16 reveal-left">
