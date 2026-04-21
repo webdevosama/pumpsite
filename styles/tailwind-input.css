@@ -1,0 +1,15 @@
+/* styles/tailwind-input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import your existing custom styles (order matters) */
+@import 'variables.css';
+@import 'animations.css';
+@import 'components.css';
+@import 'gallery.css';
+@import 'header.css';
+@import 'marquees.css';
+@import 'waves.css';
+@import 'main.css';
+/* your main.css (the one you shared earlier) */
