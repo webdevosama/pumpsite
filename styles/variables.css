@@ -2,10 +2,10 @@
 :root {
   --main-color: #1e3575;
   /* Deep Navy */
-  --secondary-color: #899cb5;
+  --secondary-color: #879ab3;
   /* Blue-Grey */
-  --bg-color: #dee8ef;
+  --bg-color: #ffffff;
+  --bg-secondary: #ffffff;
   /* Light Slate Gray */
   --white: #ffffff;
-  --secondary-transparent: rgba(60, 95, 172, 0.468);
 }

@@ -11,8 +11,8 @@ module.exports = {
         extend: {
             colors: {
                 'main': '#1e3575',
-                'secondary': '#3D90C6',
-                'bg-color': '#dee8ef',
+                'secondary': '#879ab3',
+                'bg-color': '#ffffff',
                 'white': '#ffffff',
             },
             // any other custom extensions you have in variables.css
