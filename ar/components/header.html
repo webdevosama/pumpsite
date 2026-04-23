@@ -1,46 +1,67 @@
-<nav class="site-header">
+<!-- components/header-ar.html -->
+<nav class="site-header" dir="rtl">
   <div class="header-container">
+    <!-- Logo with white background pill (only image) -->
     <a href="/ar/index-ar.html" class="logo-group">
-      <div class="logo-icon"><i class="fa-solid fa-faucet-drip"></i></div>
-      <div class="logo-text">
-        <span class="brand">إ.أ.ح<span>&</span>شركاه</span>
-        <span class="subtext">هندسة السودان</span>
+      <div class="logo-pill">
+        <img src="/assets/logo.svg" alt="IAH Logo" class="logo-img" />
       </div>
     </a>
 
+    <!-- Company Name (outside pill, on navy background) -->
+    <a href="/ar/index-ar.html" class="company-name" id="company-name">
+      <span class="brand-subtext brand">شركة إبراهيم</span>
+      <span class="brand-name">أبو حسنين <span class="amp">و</span>شركاؤه</span>
+      <span class="brand-subtext brand">المحدودة.</span>
+    </a>
+
+    <!-- Desktop Navigation -->
     <div class="desktop-nav">
       <ul class="nav-links">
         <li><a href="/ar/index-ar.html" class="nav-link">الرئيسية</a></li>
         <li><a href="/ar/products-ar.html" class="nav-link">المنتجات</a></li>
-        <li><a href="/ar/gallery-ar.html" class="nav-link">معرض الأعمال</a></li>
+        <li><a href="/ar/gallery-ar.html" class="nav-link">المعرض</a></li>
         <li><a href="/ar/about-ar.html" class="nav-link">من نحن</a></li>
         <li><a href="/ar/contact-ar.html" class="nav-link">اتصل بنا</a></li>
       </ul>
-      <a href="/ar/contact-ar.html" class="btn-cta-glow">طلب عرض سعر</a>
+      <a href="/ar/contact-ar.html" class="btn-cta">طلب عرض سعر</a>
       <a href="/" class="lang-switch">English</a>
     </div>
 
-    <button id="mobile-menu-btn" class="menu-trigger-icon" aria-label="القائمة">
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="menu-trigger-icon"
+      aria-label="فتح القائمة"
+    >
       ☰
     </button>
   </div>
 
-  <div id="menu-backdrop" class="menu-backdrop"></div>
-
+  <!-- Mobile Menu (drawer) -->
   <div id="mobile-menu" class="mobile-drawer">
-    <button id="close-menu-btn" class="close-trigger-icon" aria-label="إغلاق">
+    <button
+      id="close-menu-btn"
+      class="close-trigger-icon"
+      aria-label="إغلاق القائمة"
+    >
       &times;
     </button>
     <ul class="mobile-links">
       <li><a href="/ar/index-ar.html">الرئيسية</a></li>
       <li><a href="/ar/products-ar.html">المنتجات</a></li>
-      <li><a href="/ar/gallery-ar.html">معرض الأعمال</a></li>
+      <li><a href="/ar/gallery-ar.html">المعرض</a></li>
       <li><a href="/ar/about-ar.html">من نحن</a></li>
       <li><a href="/ar/contact-ar.html">اتصل بنا</a></li>
       <li>
-        <a href="/ar/contact-ar.html" class="btn-cta-glow mobile-cta">طلب عرض سعر</a>
+        <a href="/ar/contact-ar.html" class="btn-cta-glow mobile-cta"
+          >طلب عرض سعر</a
+        >
       </li>
       <li><a href="/" class="lang-link-ar">English</a></li>
     </ul>
   </div>
+
+  <!-- Backdrop for mobile menu -->
+  <div id="menu-backdrop" class="menu-backdrop"></div>
 </nav>

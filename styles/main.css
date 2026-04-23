@@ -565,3 +565,153 @@ section {
   color: rgba(255, 255, 255, 0.7);
   margin-left: 0.25rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles/rtl.css - RTL overrides for Arabic version */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Header adjustments */
+[dir="rtl"] .header-container {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .company-name {
+  left: auto;
+  right: 111px;
+  text-align: right;
+}
+
+[dir="rtl"] .logo-group {
+  order: 1;
+}
+
+[dir="rtl"] .desktop-nav {
+  order: 0;
+}
+
+[dir="rtl"] .nav-links {
+  padding-right: 0;
+}
+
+[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .btn-cta i {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .btn-cta:hover i {
+  transform: translateX(-4px) rotate(180deg);
+}
+
+/* Mobile drawer slides from left instead of right */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: -100%;
+}
+
+[dir="rtl"] .mobile-drawer.active {
+  left: 0;
+  right: auto;
+}
+
+[dir="rtl"] .close-trigger-icon {
+  right: auto;
+  left: 20px;
+}
+
+/* Marquee (partners strip) - reverse direction */
+[dir="rtl"] .marquee-content {
+  animation-name: scroll-right;
+}
+
+[dir="rtl"] .marquee-container {
+  mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+}
+
+/* Hero section text alignment */
+[dir="rtl"] .slogan {
+  text-align: center;
+}
+
+/* Highlight cards - keep text centered but adjust icon margins */
+[dir="rtl"] .group.text-center {
+  text-align: center;
+}
+
+/* Footer adjustments */
+[dir="rtl"] footer .grid {
+  text-align: right;
+}
+
+[dir="rtl"] footer .flex.gap-4 {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] footer .border-t .flex {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 640px) {
+  [dir="rtl"] footer .border-t .flex {
+    flex-direction: column;
+  }
+}
+
+/* Reveal animation from right instead of left */
+[dir="rtl"] .reveal-left {
+  transform: translateX(30px);
+}
+
+[dir="rtl"] .reveal-left.active {
+  transform: translateX(0);
+}
+
+/* Counter numbers – keep LTR inside RTL */
+[dir="rtl"] .counter {
+  unicode-bidi: isolate;
+  direction: ltr;
+  display: inline-block;
+}
+
+/* Fix carousel arrow positions if needed */
+[dir="rtl"] #carousel-prev,
+[dir="rtl"] #carousel-next {
+  transform: scaleX(-1);
+}
+
+/* Arrow icon on "View Gallery" in RTL */
+[dir="rtl"] .fa-arrow-right-long {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .group:hover .fa-arrow-right-long {
+  transform: translateX(-4px) rotate(180deg);
+}
+
+/* Language switcher spacing */
+[dir="rtl"] .lang-switch {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* Fix for absolute positioned elements */
+[dir="rtl"] .waves {
+  direction: ltr;
+  /* keep wave animation LTR */
+}
