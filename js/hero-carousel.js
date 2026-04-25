@@ -3,18 +3,18 @@
  * Image carousel with auto-play, manual arrows, and dots.
  */
 const BG_IMAGES = [
-  '/assets/no_bg/image7.png',
-  '/assets/no_bg/image2.png',
-  '/assets/no_bg/image18.png',
-  '/assets/no_bg/image5.png',
-  '/assets/no_bg/image7.png',
-  '/assets/no_bg/image11.png',
-  '/assets/no_bg/image10.png',
-  '/assets/no_bg/image12.png',
-  '/assets/no_bg/image13.png',
-  '/assets/no_bg/image22.png',
-  '/assets/no_bg/image25.png',
-  '/assets/no_bg/image27.png',
+  '/assets/image7.webp',
+  '/assets/image2.webp',
+  '/assets/image18.webp',
+  '/assets/image5.webp',
+  '/assets/image7.webp',
+  '/assets/image11.webp',
+  '/assets/image10.webp',
+  '/assets/image12.webp',
+  '/assets/image13.webp',
+  '/assets/image22.webp',
+  '/assets/image25.webp',
+  '/assets/image27.webp',
 ];
 
 export function initHeroCarousel() {

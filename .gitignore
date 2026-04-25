@@ -3,3 +3,5 @@ alt-index.html
 node_modules/
 package-lock.json
 package.json
+backup
+/assets/images-backup

@@ -1,10 +1,75 @@
+# 1. BUILD SETTINGS
 [build]
-  publish = "."
+  publish = "." # Your root contains index.html, so we publish from root
 
+# 2. ASSET OPTIMIZATION
+[post_processing]
+  [post_processing.html]
+    minify = true
+  [post_processing.css]
+    bundle = true # This will help combine your multiple CSS files if not already done
+    minify = true
+  [post_processing.js]
+    bundle = true
+    minify = true
+
+# 3. HTTP HEADERS
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Referrer-Policy = "no-referrer-when-downgrade"
+
+# Cache output.css and all JS files (Step 2 & 4)
+[[headers]]
+  for = "/styles/output.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache all images and WebP in assets/ and subfolders (Step 1)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images in the no_bg and partners-logos specifically
+[[headers]]
+  for = "/assets/no_bg/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/partners-logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Optimize video loading
+[[headers]]
+  for = "/assets/video/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Prevent direct indexing/heavy caching of HTML component partials
+[[headers]]
+  for = "/components/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/ar/components/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# 4. LANGUAGE HANDLING (Optional)
+# This redirects users to the Arabic index if their browser language is set to Arabic
+[[redirects]]
+  from = "/"
+  to = "/ar/index-ar.html"
+  status = 302
+  conditions = {Language = ["ar"]}
