@@ -10,11 +10,11 @@
     </title>
     <meta
       name="description"
-      content="Browse our portfolio of pump installations, irrigation projects, and industrial solutions across Sudan. See our work in action."
+      content="Browse our portfolio of pump installations, irrigation projects, and industrial solutions across Sudan. See our work in action – photos and videos."
     />
     <meta
       name="keywords"
-      content="pump gallery Sudan, irrigation projects, industrial pumps installation, water pumping projects, Caprari installations"
+      content="pump gallery Sudan, irrigation projects, industrial pumps installation, water pumping projects, Caprari installations, video projects"
     />
     <meta name="author" content="Ibrahim Abu Hassanein & Partners Ltd." />
     <meta name="robots" content="index, follow" />
@@ -30,7 +30,7 @@
     />
     <meta
       property="og:description"
-      content="See our pumping solutions in action across Sudan."
+      content="See our pumping solutions in action across Sudan – photos and videos."
     />
     <meta
       property="og:url"
@@ -67,7 +67,7 @@
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Project Gallery – Ibrahim Abu Hassanein & Partners Ltd.",
-        "description": "Images of our pump installations, irrigation systems, and industrial projects across Sudan.",
+        "description": "Images and videos of our pump installations, irrigation systems, and industrial projects across Sudan.",
         "url": "https://abuhassanien.netlify.app/gallery.html",
         "mainEntity": {
           "@type": "Organization",
@@ -79,10 +79,8 @@
 
     <!-- === STYLES & FONTS === -->
     <link href="/styles/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/gallery.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -102,7 +100,28 @@
     </noscript>
 
     <style>
-      /* Gallery cards: slower entrance with staggered delay */
+      /* Gallery cards entrance */
+
+      /* Modal visibility fix */
+      #media-modal {
+        transition: opacity 0.3s ease;
+      }
+      #media-modal.show {
+        opacity: 1;
+      }
+      #media-modal .modal-content {
+        transition: transform 0.3s ease;
+        transform: scale(0.95);
+      }
+      #media-modal.show .modal-content {
+        transform: scale(1);
+      }
+      #media-modal.show {
+        opacity: 1;
+      }
+      #media-modal .modal-content {
+        transform: scale(1);
+      }
       .gallery-card {
         opacity: 0;
         transform: translateX(-30px);
@@ -111,25 +130,86 @@
           transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
         transition-delay: calc(var(--delay, 0) * 0.05s);
       }
-
       .gallery-card.revealed {
         opacity: 1;
         transform: translateX(0);
       }
-
-      .counter-badge {
-        transition: all 0.3s ease;
+      /* Video overlay icon */
+      .video-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
       }
-
+      .gallery-card:hover .video-overlay {
+        opacity: 1;
+      }
+      .video-overlay i {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      /* Modal video player */
+      .video-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+      }
+      .video-modal video {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 1rem;
+      }
+      .video-modal .close-video {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 2001;
+      }
+      /* Modal slide animations */
+      .modal-content {
+        transition: transform 0.3s ease;
+      }
+      .modal-content.slide-next {
+        transform: translateX(20px);
+      }
+      .modal-content.slide-prev {
+        transform: translateX(-20px);
+      }
+      /* Back to top */
       .back-to-top {
         transition: all 0.3s ease;
         opacity: 0;
         visibility: hidden;
       }
-
       .back-to-top.visible {
         opacity: 1;
         visibility: visible;
+      }
+      /* Filter buttons active state */
+      .filter-btn.active {
+        background-color: var(--main-color);
+        color: white;
+        box-shadow: 0 4px 12px rgba(30, 53, 117, 0.2);
+      }
+      .filter-btn:not(.active) {
+        background-color: #f3f4f6;
+        color: var(--main-color);
+      }
+      .filter-btn:not(.active):hover {
+        background-color: #e5e7eb;
       }
     </style>
   </head>
@@ -138,11 +218,11 @@
     <div id="header"></div>
 
     <main>
-      <!-- Hero Section (unchanged) -->
+      <!-- Hero Section -->
       <section class="relative pt-60 pb-32 overflow-hidden bg-[#0a1633]">
         <div class="absolute inset-0 z-0">
           <img
-            src="/assets/hd (7).webp"
+            src="/assets/gallery.webp"
             alt="Gallery Hero"
             class="w-full h-full object-cover"
           />
@@ -165,11 +245,12 @@
             class="text-white/70 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed"
           >
             A curated exhibition of our industrial installations and pumping
-            solutions across Sudan.
+            solutions across Sudan – photos & videos.
           </p>
         </div>
       </section>
 
+      <!-- Gallery Section -->
       <section class="py-20 bg-white" id="gallery">
         <div class="container mx-auto px-6">
           <!-- Filter bar with counter -->
@@ -207,9 +288,9 @@
         </div>
       </section>
 
-      <!-- Modal (unchanged) -->
+      <!-- Media Modal (Image/Video) -->
       <div
-        id="image-modal"
+        id="media-modal"
         class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-10 opacity-0 transition-opacity duration-300"
       >
         <div
@@ -225,6 +306,7 @@
           >
             <i class="fa-solid fa-xmark text-xl md:text-2xl"></i>
           </button>
+          <!-- Media container (image or video) -->
           <div
             class="w-full md:w-2/3 bg-gray-50 flex items-center justify-center overflow-hidden border-b md:border-b-0 md:border-r border-gray-100"
           >
@@ -232,8 +314,13 @@
               id="modal-img"
               src=""
               alt="Project Image"
-              class="max-w-full max-h-[60vh] md:max-h-full object-contain p-4 transition-opacity duration-300"
+              class="max-w-full max-h-[60vh] md:max-h-full object-contain p-4 transition-opacity duration-300 hidden"
             />
+            <video
+              id="modal-video"
+              controls
+              class="max-w-full max-h-[60vh] md:max-h-full w-auto h-auto hidden"
+            ></video>
           </div>
           <div
             class="w-full md:w-1/3 p-8 md:p-12 flex flex-col justify-center bg-white"
@@ -300,7 +387,7 @@
     <div id="footer"></div>
 
     <script>
-      (async function () {
+      (function () {
         const SUPABASE_URL = "https://alsmjjizeoquuciyuhaf.supabase.co";
         const SUPABASE_ANON_KEY =
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsc21qaml6ZW9xdXVjaXl1aGFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5NzMzMjAsImV4cCI6MjA4ODU0OTMyMH0.rjnOo6ToIOwGcuRzhgyE9pkff2s3KcHrRvextt7gdeQ";
@@ -313,8 +400,9 @@
 
         const filterContainer = document.getElementById("filter-buttons");
         const gridContainer = document.getElementById("gallery-grid");
-        const modal = document.getElementById("image-modal");
+        const modal = document.getElementById("media-modal");
         const modalImg = document.getElementById("modal-img");
+        const modalVideo = document.getElementById("modal-video");
         const modalTitle = document.getElementById("modal-title");
         const modalDesc = document.getElementById("modal-desc");
         const modalCategory = document.getElementById("modal-category");
@@ -331,54 +419,67 @@
           industrial: { en: "Industrial", ar: "صناعي" },
           municipal: { en: "Municipal", ar: "بلدي" },
           installation: { en: "Installation", ar: "تركيب" },
+          showroom: { en: "Showroom", ar: "معرض" },
+          centrifugal: { en: "Centrifugal", ar: "طرد مركزي" },
+          "double-suction": { en: "Double Suction", ar: "سحب مزدوج" },
+          submersible: { en: "Submersible", ar: "غاطسة" },
+          mobile: { en: "Mobile", ar: "متنقلة" },
+          generators: { en: "Generators", ar: "مولدات" },
+          solar: { en: "Solar", ar: "شمسية" },
         };
 
         let allItems = [];
         let currentFiltered = [];
         let currentIndex = 0;
 
-        // Fetch data
-        const { data, error } = await supabaseClient
-          .from("gallery")
-          .select("*")
-          .order("order", { ascending: true });
-
-        if (error) {
-          console.error("Error fetching gallery:", error);
-          gridContainer.innerHTML =
-            '<p class="text-center col-span-full py-20">Failed to load gallery.</p>';
-          return;
+        // Fetch gallery items
+        async function fetchGallery() {
+          const { data, error } = await supabaseClient
+            .from("gallery")
+            .select("*")
+            .order("order", { ascending: true });
+          if (error) {
+            console.error("Error fetching gallery:", error);
+            gridContainer.innerHTML =
+              '<p class="text-center col-span-full py-20">Failed to load gallery.</p>';
+            return [];
+          }
+          return data;
         }
-        allItems = data;
-        counterTotal.innerText = allItems.length;
 
-        // Generate filter buttons
-        const categories = [
-          ...new Set(allItems.map((i) => i.category).filter(Boolean)),
-        ];
-        const allText = isArabic ? "الكل" : "All Projects";
+        // Generate filter buttons dynamically
+        function generateFilters(items) {
+          const categories = [
+            ...new Set(items.map((i) => i.category).filter(Boolean)),
+          ];
+          const allText = isArabic ? "الكل" : "All Projects";
+          filterContainer.innerHTML = `
+            <button class="filter-btn active px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="all">${allText}</button>
+            ${categories
+              .map((cat) => {
+                const display = categoryNames[cat]
+                  ? categoryNames[cat][isArabic ? "ar" : "en"]
+                  : cat;
+                return `<button class="filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="${cat}">${display}</button>`;
+              })
+              .join("")}
+          `;
+        }
 
-        filterContainer.innerHTML = `
-        <button class="filter-btn active px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="all">
-          ${allText}
-        </button>
-        ${categories
-          .map((cat) => {
-            const display = categoryNames[cat]
-              ? categoryNames[cat][isArabic ? "ar" : "en"]
-              : cat;
-            return `<button class="filter-btn px-6 py-2 rounded-full text-sm font-bold transition-all" data-filter="${cat}">${display}</button>`;
-          })
-          .join("")}
-      `;
-
-        // Render gallery grid with staggered delay
+        // Render grid items (images and videos)
         function renderGallery(filter = "all") {
           currentFiltered =
             filter === "all"
               ? allItems
               : allItems.filter((i) => i.category === filter);
           counterCurrent.innerText = currentFiltered.length;
+          counterTotal.innerText = allItems.length;
+
+          if (currentFiltered.length === 0) {
+            gridContainer.innerHTML =
+              '<p class="text-center col-span-full py-20 text-gray-500">No items found in this category.</p>';
+            return;
+          }
 
           gridContainer.innerHTML = currentFiltered
             .map((item, idx) => {
@@ -388,19 +489,25 @@
               const catLabel = categoryNames[item.category]
                 ? categoryNames[item.category][isArabic ? "ar" : "en"]
                 : item.category;
+              const mediaUrl = item.is_video ? item.video_url : item.image_url;
+              const isVideo = item.is_video;
+              const thumbnailUrl = isVideo
+                ? item.video_thumbnail || item.image_url || mediaUrl
+                : mediaUrl;
               return `
-            <div class="gallery-card reveal-left" data-index="${idx}" style="--delay: ${idx}" onclick="openModal(${idx})">
-              <img src="${item.image_url}?width=600" alt="${title}" loading="lazy" class="w-full h-full aspect-[4/5] object-cover">
-              <div class="overlay absolute inset-0 flex flex-col justify-end p-5">
-                <span class="text-secondary text-xs font-bold uppercase tracking-wider">${catLabel}</span>
-                <h3 class="text-white font-semibold text-base mt-1">${title}</h3>
+              <div class="gallery-card relative cursor-pointer rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-index="${idx}" style="--delay: ${idx}" onclick="openMedia(${idx})">
+                <img src="${thumbnailUrl}?width=600" alt="${title}" loading="lazy" class="w-full h-full aspect-[4/5] object-cover transition-transform duration-500 hover:scale-105">
+                ${isVideo ? '<div class="video-overlay"><i class="fa-solid fa-circle-play"></i></div>' : ""}
+                <div class="absolute inset-0 flex flex-col justify-end p-5 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none">
+                  <span class="text-secondary text-xs font-bold uppercase tracking-wider">${catLabel}</span>
+                  <h3 class="text-white font-semibold text-base mt-1 line-clamp-2">${title}</h3>
+                </div>
               </div>
-            </div>
-          `;
+            `;
             })
             .join("");
 
-          // Trigger scroll reveal with slower, earlier activation
+          // Re-attach intersection observer for reveal animations
           const newCards = document.querySelectorAll(".gallery-card");
           const observer = new IntersectionObserver(
             (entries) => {
@@ -416,8 +523,8 @@
           newCards.forEach((card) => observer.observe(card));
         }
 
-        // Modal functions (unchanged)
-        window.openModal = (idx) => {
+        // Open modal for image or video
+        window.openMedia = (idx) => {
           currentIndex = idx;
           updateModalContent();
           modal.style.display = "flex";
@@ -428,31 +535,47 @@
         function updateModalContent() {
           const item = currentFiltered[currentIndex];
           if (!item) return;
-          modalImg.style.opacity = "0";
-          setTimeout(() => {
+          const isVideo = item.is_video;
+          const title = isArabic
+            ? item.title_ar || item.title_en
+            : item.title_en || item.title_ar;
+          const desc = isArabic
+            ? item.description_ar || item.description_en
+            : item.description_en || item.description_ar;
+          const catLabel = categoryNames[item.category]
+            ? categoryNames[item.category][isArabic ? "ar" : "en"]
+            : item.category;
+
+          modalTitle.textContent = title;
+          modalDesc.textContent = desc || "";
+          modalCategory.textContent = catLabel;
+
+          // Hide both media elements first
+          modalImg.classList.add("hidden");
+          modalVideo.classList.add("hidden");
+          modalVideo.pause();
+
+          if (isVideo && item.video_url) {
+            modalVideo.src = item.video_url;
+            modalVideo.classList.remove("hidden");
+            modalVideo.load();
+          } else if (item.image_url) {
             modalImg.src = item.image_url;
-            modalTitle.textContent = isArabic
-              ? item.title_ar || item.title_en
-              : item.title_en || item.title_ar;
-            modalDesc.textContent = isArabic
-              ? item.description_ar || item.description_en
-              : item.description_en || item.description_ar;
-            modalCategory.textContent = categoryNames[item.category]
-              ? categoryNames[item.category][isArabic ? "ar" : "en"]
-              : item.category;
-            modalImg.style.opacity = "1";
-          }, 200);
+            modalImg.classList.remove("hidden");
+          }
         }
 
         function closeModal() {
           modal.classList.remove("show");
           setTimeout(() => {
             modal.style.display = "none";
+            modalVideo.pause();
+            modalVideo.src = "";
           }, 300);
           document.body.style.overflow = "auto";
         }
 
-        function nextImage() {
+        function nextMedia() {
           const modalContent = document.querySelector(".modal-content");
           modalContent.classList.add("slide-next");
           setTimeout(() => {
@@ -462,7 +585,7 @@
           }, 200);
         }
 
-        function prevImage() {
+        function prevMedia() {
           const modalContent = document.querySelector(".modal-content");
           modalContent.classList.add("slide-prev");
           setTimeout(() => {
@@ -477,16 +600,16 @@
         // Event listeners
         closeModalBtn.addEventListener("click", closeModal);
         backdrop.addEventListener("click", closeModal);
-        nextBtn.addEventListener("click", nextImage);
-        prevBtn.addEventListener("click", prevImage);
-
+        nextBtn.addEventListener("click", nextMedia);
+        prevBtn.addEventListener("click", prevMedia);
         document.addEventListener("keydown", (e) => {
           if (!modal.classList.contains("show")) return;
           if (e.key === "Escape") closeModal();
-          if (e.key === "ArrowRight") nextImage();
-          if (e.key === "ArrowLeft") prevImage();
+          if (e.key === "ArrowRight") nextMedia();
+          if (e.key === "ArrowLeft") prevMedia();
         });
 
+        // Filter click handler
         filterContainer.addEventListener("click", (e) => {
           if (!e.target.classList.contains("filter-btn")) return;
           document
@@ -496,6 +619,7 @@
           renderGallery(e.target.dataset.filter);
         });
 
+        // Back to top
         window.addEventListener("scroll", () => {
           if (window.scrollY > 300) backToTopBtn.classList.add("visible");
           else backToTopBtn.classList.remove("visible");
@@ -504,7 +628,19 @@
           window.scrollTo({ top: 0, behavior: "smooth" }),
         );
 
-        renderGallery("all");
+        // Initialize
+        fetchGallery()
+          .then((data) => {
+            allItems = data;
+            counterTotal.innerText = allItems.length;
+            generateFilters(allItems);
+            renderGallery("all");
+          })
+          .catch((err) => {
+            console.error(err);
+            gridContainer.innerHTML =
+              '<p class="text-center col-span-full py-20 text-red-500">Failed to load gallery. Please try again later.</p>';
+          });
       })();
     </script>
   </body>
